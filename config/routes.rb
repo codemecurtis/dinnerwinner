@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
   devise_for :businesses
   devise_for :customers
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root '/'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -31,7 +34,7 @@ Rails.application.routes.draw do
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
-  #     resource :seller
+      # resource :seller
   #   end
 
   # Example resource route with more complex sub-resources:
