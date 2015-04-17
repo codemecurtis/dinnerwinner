@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :deals
   devise_for :businesses
   devise_for :customers
   # The priority is based upon order of creation: first created -> highest priority.
