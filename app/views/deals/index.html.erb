@@ -1,0 +1,9 @@
+<h1>Index page for deals</h1>
+
+<% @deals.each do |deal| %>
+
+<img src="<%= deal.deal_image %>">
+<h3><%= deal.name %></h3>
+<%= deal.short_description %>
+<hr>
+<% end %>

@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   devise_for :businesses
+  resources :businesses do
+    resources :deals
+  end
   devise_for :customers
 
-  resources :deals
+
+
 
 
 
