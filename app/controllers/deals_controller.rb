@@ -12,6 +12,9 @@ class DealsController < ApplicationController
   end
 
   def destroy
-
+    @deal = Deal.find(params[:id])
+    @deal.destroy
+    redirect_to business_deals_path, :business_id => params[:business_id]
+    # redirect '/businesses/params[:business_id]/deals'
   end
 end
