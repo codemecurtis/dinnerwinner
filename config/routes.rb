@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :businesses
+  resources :businesses do
+    resources :deals
+  end
   devise_for :customers
-  resources :deals
 
   root 'customers#index'
   # The priority is based upon order of creation: first created -> highest priority.
