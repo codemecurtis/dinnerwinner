@@ -12,4 +12,6 @@
  *
  *= require_tree .
  *= require_self
+ *= require responsive.gs.12col.css
+ *= require basic.css
  */
