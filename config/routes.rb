@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   devise_for :businesses
   devise_for :customers, :controllers => {registrations: 'registrations'}
+  resources :customers
 
   resources :businesses do
     resources :deals
   end
 
-  resources :customers
+  # devise_for :customers
 
   root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.

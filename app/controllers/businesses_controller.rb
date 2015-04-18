@@ -6,5 +6,4 @@ class BusinessesController < ApplicationController
     authenticate_business
   end
 
-
 end
