@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
+  devise_for :businesses
+  devise_for :customers
   get 'home/index'
 
   resources :businesses do
     resources :deals
   end
 
-  root 'customers#index'
+  root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
