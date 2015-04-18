@@ -1,4 +1,28 @@
-Hello
+<header>
+  <h1>Dinner Winner</h1>
+  <p>Welcome <%= current_customer.first_name %>!</p>
+  <a href="#">My Deals</a>
+  <a href="#"><i class="fa fa-cog"></i></a>
+</header>
+
+<h3>Find a Deal</h3>
+<div class="search-bar">
+
+  <%= form_for @ do |f| %>
+  <%= f.label :first_name %>:
+  <%= f.text_field :first_name %><br />
+
+  <%= f.label :last_name %>:
+  <%= f.text_field :last_name %><br />
+
+  <%= f.submit %>
+  <% end %>
+
+
+
+
+</div>
+
 <form action="/customers/sign_out" method="post"/>
   <input type="hidden" name="_method" value="delete">
   <input name="authenticity_token" type="hidden" value="token_value">
