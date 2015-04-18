@@ -1,0 +1,21 @@
+<header>
+  <div class="logo  col span_4">
+    <h1>Dinner Winner</h1>
+  </div>
+  <ul class="right right-links">
+    <li><a href="#">Create New Deal</a></li>
+    <li><a href="">My Deals</a></li>
+    <li>
+      <a href="<%= edit_business_path %>">
+        <i class="fa fa-cog"></i>
+      </a>
+    </li>
+    <li>
+      <form class="sign-out-form right" action="/businesses/sign_out" method="post"/>
+        <input type="hidden" name="_method" value="delete">
+        <input name="authenticity_token" type="hidden" value="token_value">
+        <input type="submit" value="Logout">
+      </form>
+    </li>
+  </ul>
+</header>
