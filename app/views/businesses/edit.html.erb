@@ -1,0 +1,39 @@
+
+<%= form_for @business do |f| %>
+
+    <div class="field">
+      <%= f.label :business_name %><br />
+      <%= f.text_field :name, autofocus: true %>
+    </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone_number %><br />
+    <%= f.telephone_field :phone_number, autofocus: true %>
+  </div>
+
+  <div class="field">
+      <%= f.label :logo %><br />
+      <%= f.text_field :logo, autofocus: true %>
+  </div>
+
+  <div class="field">
+      <%= f.label :location %><br />
+      <%= f.text_field :location, autofocus: true %>
+  </div>
+
+  <div class="field">
+      <%= f.label :short_description %><br />
+      <%= f.text_field :short_description, autofocus: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>
+
+<%= link_to "Back", :back %>
