@@ -5,18 +5,21 @@ class DealsController < ApplicationController
   end
 
   def show
-    @deals = Business.find(params[:business_id]).deals
+    @deals = Business.find(params[:business_id]).deals.order(:created_at).reverse()
     render :json => @deals
   end
 
   def create
-
+    @business = Business.find(params[:business_id])
+    @business.deals << Deal.create(name: params[:title], short_description: params[:content], deal_image: params[:image])
+    render :json => @business.deals
   end
 
-  def edit
+  def update
     @deal = Deal.find(params[:id])
-    @deal.update_attributes()
-    # render :json => id
+    p "#{@deal.name} --------------------"
+    @deal.update_attributes(name: params[:title], short_description: params[:edit_content], deal_image: params[:image])
+    render :json => @deal
   end
 
   def destroy

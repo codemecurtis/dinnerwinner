@@ -1,0 +1,5 @@
+.customer-signup-popup{
+  display: none;
+  background: orange;
+  z-index: 5;
+}
