@@ -17,7 +17,7 @@ Bundler.require(*Rails.groups)
 
 # require 'dotenv'
 # Dotenv::Railtie.load
-DINNER_WINNER = ENV['PUBLIC_KEY']
+# DINNER_WINNER = ENV['PUBLIC_KEY']
 
 module Dinnerwinner
   class Application < Rails::Application

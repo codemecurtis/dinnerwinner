@@ -43,8 +43,12 @@ ActiveRecord::Schema.define(version: 20150418005211) do
   create_table "customer_deals", force: :cascade do |t|
     t.integer  "customer_id"
     t.integer  "deal_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "party_size"
+    t.datetime "reservation_time"
+    t.boolean  "mass_deal",        default: false
+    t.boolean  "accepted",         default: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
   end
 
   create_table "customers", force: :cascade do |t|
