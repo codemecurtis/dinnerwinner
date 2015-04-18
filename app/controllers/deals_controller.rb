@@ -9,6 +9,8 @@ class DealsController < ApplicationController
   end
 
   def edit
+    # @deal = Deal.find(params[:id])
+    # render :json => id
   end
 
   def destroy

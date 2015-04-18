@@ -24,7 +24,16 @@ $(document).ready(function() {
     })
   })
 
-  // $('.edit-button').
+  // $('#wrapper').on("click", ".edit-button", function(e) {
+  //   e.preventDefault;
+  //   $.ajax({
+  //     url: window.location+/deals/+ $(this).attr('href'),
+  //     type: 'PATCH',
+  //   }).done(function(data){
+  //     // document.getElementById('tile-'+data).remove();
+  //     console.log("in the patch route");
+  //   })
+  // })
 
 
 })
