@@ -1,7 +1,5 @@
 $(document).ready(function() {
-  console.log("hello");
   $(window).load(function(e){
-    console.log('load dfsfsdf')
     $.ajax({
       url: window.location+'/deals',
       method: 'GET',
@@ -19,11 +17,14 @@ $(document).ready(function() {
   $('#wrapper').on("click", ".delete-button", function(e){
     e.preventDefault();
     $.ajax({
-      url: $(this).attr("href"),
+      url: window.location+/deals/+ $(this).attr('href'),
       type: 'DELETE',
     }).done(function(data){
-      console.log("delete works");
+      document.getElementById('tile-'+data).remove();
     })
   })
+
+  // $('.edit-button').
+
 
 })

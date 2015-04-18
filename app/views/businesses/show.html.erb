@@ -1,19 +1,18 @@
 <h1>Index page for deals</h1>
 
 <div id="wrapper">
-  <div class="deal-tile empty">
-    <i class="fa fa-plus"></i>
-  </div>
+  <script id="deals-template" type="text/x-handlebars-template">
+    {{#each deals}}
+      <div class="deal-tile" id="tile-{{id}}">
+      <a href="{{id}}" class="delete-button"><i class="fa fa-trash"></i></a>
+      <a href="{{id}}" class="edit-button"><i class="fa fa-pencil-square-o" ></i></a><br>
+      <img src="{{deal_image}}">
+      <h3> {{name}} </h3>
+      {{short_description}}
+      </div>
+    {{/each}}
+  </script>
 </div>
-
-<script id="deals-template" type="text/x-handlebars-template">
-  {{#each deals}}
-  <div class="deal-tile" id="tile-{{id}}">
-  <a href="/deals/{{id}}" class="delete-button"><i class="fa fa-trash"></i></a>
-  <a href="" class="edit-button"><i class="fa fa-pencil-square-o" ></i></a><br>
-  <img src="{{deal_image}}">
-  <h3> {{name}} </h3>
-  {{short_description}}
-  </div>
-  {{/each}}
-</script>
+<div class="deal-tile empty">
+  <i class="fa fa-plus"></i>
+</div>
