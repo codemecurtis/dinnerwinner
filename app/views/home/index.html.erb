@@ -1,8 +1,17 @@
 <header>
   <div class="container">
     <h1>Dinner Winner</h1>
-    <button class="customer-signup-link"><a href="/customers/sign_up">Sign up</a></button>
-    <button class="customer-login-link" href="/customers/sign_in">Login</button>
+
+    <% if customer_signed_in? %>
+
+    <% else %>
+      <button class="customer-signup-link">
+        <a href="/customers/sign_up">Sign up</a>
+      </button>
+      <button class="customer-login-link">
+        <a href="/customers/sign_in">Login</a>
+      </button>
+    <% end %>
   </div>
 </header>
 
