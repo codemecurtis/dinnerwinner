@@ -1,25 +1,49 @@
-
-<form action="/businesses/sign_out" method="post"/>
-  <input type="hidden" name="_method" value="delete">
-  <input name="authenticity_token" type="hidden" value="token_value">
-  <input type="submit" value="Logout">
-</form>
-
-<h1>Index page for deals</h1>
-
-<div id="wrapper">
-  <script id="deals-template" type="text/x-handlebars-template">
-    {{#each deals}}
-      <div class="deal-tile" id="tile-{{id}}">
-      <a href="{{id}}" class="delete-button"><i class="fa fa-trash"></i></a>
-      <a href="{{id}}" class="edit-button"><i class="fa fa-pencil-square-o" ></i></a><br>
-      <img src="{{deal_image}}">
-      <h3> {{name}} </h3>
-      {{short_description}}
+<%= render template: "partials/_header.html.erb" %>
+<div class="container">
+    <div class="business-info">
+      <div class="accepted-deals right">
+        <h3>
+          <% if @business.deals.count > 1 %>
+            <%= @business.deals.count %> Deals<br>
+            Accepted
+          <% else %>
+            <%= @business.deals.count %> Deal<br>
+            Accepted
+          <% end %>
+        </h3>
       </div>
-    {{/each}}
-  </script>
+      <div class="business-info">
+          <img class="business-logo" src="<%= @business.logo %>">
+          <p><%= @business.short_description %></p>
+      </div>
+    </div>
+  <hr>
+    <section class="mass-deals">
+      <h3 class="deals-subtitle">Current Mass Deals Offered</h3>
+      <ul class="mass-deals-list">
+        <% @business.deals.each do |deal| %>
+            <li class="deal deal-<%= deal.id %>">
+              <img src="<%= deal.deal_image %>">
+              <h3> <%= deal.name %> </h3>
+              <p><%= deal.short_description %></p>
+            </li>
+            <!-- <h3>You don't have any mass deals offered</h3> -->
+        <% end %>
+      </ul>
+    </section>
+  <hr>
+    <section class="accepted-deals">
+        <h3 class="deals-subtitle">Accepted Deals</h3>
+      <ul class="accepted-deals-list">
+        <% @business.deals.each do |deal| %>
+            <li class="deal deal-<%= deal.id %>">
+              <img src="<%= deal.deal_image %>">
+              <h3> <%= deal.name %> </h3>
+              <p><%= deal.short_description %></p>
+            </li>
+            <!-- <h3>You have not accepted any deals</h3> -->
+        <% end %>
+      </ul>
+    </section>
 </div>
-<div class="deal-tile empty">
-  <i class="fa fa-plus"></i>
-</div>
+<%= render template: "partials/_business_footer.html.erb" %>
