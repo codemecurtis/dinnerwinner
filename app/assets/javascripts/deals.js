@@ -1,11 +1,12 @@
 $(document).ready(function() {
+  //READ
+  //lists all of the deals in the current business
   $(window).load(function(e){
     $.ajax({
       url: window.location+'/deals',
       method: 'GET',
       dataType: 'JSON'
     }).done(function(data){
-      console.log("done done dlfkjlksjjklfs")
       var context = { deals: data };
       var source = $('#deals-template').html();
       var template = Handlebars.compile(source);
@@ -13,8 +14,8 @@ $(document).ready(function() {
       $('#wrapper').append(html);
     })
   });
-
-  //this is to get the modal to appear
+//UPDATE
+  //this is to get the edit modal to appear
   $('#wrapper').on('click', '.edit-button', function(e){
     e.preventDefault();
     document.getElementById("edit"+$(this).attr("href")).style.display = "block";
@@ -37,9 +38,11 @@ $(document).ready(function() {
       document.getElementById("edit"+that).style.display = "none";
       document.getElementById('h3'+that).innerHTML = data.name;
       document.getElementById('p'+that).innerHTML = data.short_description;
+      document.getElementById('img'+that).src = data.deal_image;
     })
   })
 
+//DESTROY
 // to delete fom a database
 $('#wrapper').on("click", ".delete-button", function(e){
   e.preventDefault();
@@ -51,6 +54,7 @@ $('#wrapper').on("click", ".delete-button", function(e){
   })
 })
 
+//CREATE
 //getting the create modal to appear
 $(document).on('click', '.create-button', function(e){
   e.preventDefault();
@@ -68,16 +72,18 @@ $(document).on("click", ".cancel-button", function(e){
   $.ajax({
     url: window.location,
     data:$(this).serialize(),
+    dataType: 'JSON',
     type: 'POST',
   }).done(function(data){
     document.getElementById('create_form_container').style.display = "none";
+    $('#create_form').trigger('reset')
     console.log(data)
     console.log("created data base entry")
     var context = { deals: data };
     var source = $('#deals-template').html();
     var template = Handlebars.compile(source);
     var html = template(context);
-    $('#wrapper').append(html);
+    document.getElementById('wrapper').innerHTML=html
   })
 })
 
