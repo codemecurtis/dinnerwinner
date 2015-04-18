@@ -7,10 +7,18 @@ class CustomersController < ApplicationController
 
   end
 
-  def search(city)
-    parameters = {term: params[:term], limit: 10}
-    render json: Yelp.client.search(city, parameters)
-  end
 
 
 end
+
+
+# class Yelp
+#   def initialize
+#     @hash = Yelp.client.business('yelp-san-francisco')
+#   end
+# end
+
+# results = Yelp.new
+# results.instance_variable_get(:@hash)
+# results.instance_variables
+#Will list what is inside
