@@ -8,9 +8,9 @@ class CustomersController < ApplicationController
 
   end
 
-  def search
+  def search(city)
     parameters = {term: params[:term], limit: 10}
-    render json: Yelp.client.search('San Francisco', parameters)
+    render json: Yelp.client.search(city, parameters)
   end
 
 
