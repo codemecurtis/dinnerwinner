@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150417200735) do
+ActiveRecord::Schema.define(version: 20150418005211) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 20150417200735) do
   create_table "businesses", force: :cascade do |t|
     t.string   "name"
     t.string   "phone_number"
-    t.string   "location"
     t.string   "logo"
+    t.string   "location"
     t.text     "short_description"
     t.integer  "rating"
     t.string   "email",                  default: "", null: false
@@ -50,8 +50,8 @@ ActiveRecord::Schema.define(version: 20150417200735) do
   create_table "customers", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "avatar"
     t.string   "phone_number"
+    t.string   "avatar"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -70,9 +70,9 @@ ActiveRecord::Schema.define(version: 20150417200735) do
   add_index "customers", ["reset_password_token"], name: "index_customers_on_reset_password_token", unique: true, using: :btree
 
   create_table "deals", force: :cascade do |t|
-    t.integer  "name"
-    t.integer  "short_description"
-    t.integer  "deal_image"
+    t.string   "name"
+    t.string   "short_description"
+    t.string   "deal_image"
     t.integer  "business_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false

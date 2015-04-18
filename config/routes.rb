@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   devise_for :businesses
-  devise_for :customers
-  get 'home/index'
+  devise_for :customers, :controllers => {registrations: 'registrations'}
 
   resources :businesses do
     resources :deals
