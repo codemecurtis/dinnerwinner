@@ -1,23 +1,19 @@
 Rails.application.routes.draw do
   devise_for :businesses
+  devise_for :customers, :controllers => {registrations: 'registrations'}
+  resources :customers
+
   resources :businesses do
     resources :deals
   end
 
-  # resources :deals
+  # devise_for :customers
 
-  devise_for :customers
-
-  # namespace :mybiz do
-  #   resources :deals
-  # end
-
+  root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'customers#index'
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
