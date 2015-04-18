@@ -1,7 +1,7 @@
 $(document).ready(function() {
-  $(window).load(function(e){
+  $('#wrapper').load(function(e){
     $.ajax({
-      url: window.location+'/deals',
+      url: window.location+'deals',
       method: 'GET',
       dataType: 'JSON'
     }).done(function(data){

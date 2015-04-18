@@ -4,7 +4,6 @@
   <%= devise_error_messages! %>
 
   <% if resource.class == Customer %>
-  <div class="customer-signup-popup">
     <div class="field">
       <%= f.label :first_name %><br />
       <%= f.text_field :first_name, autofocus: true %>
@@ -38,7 +37,6 @@
       <%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
     </div>
-  </div>
 
   <% else %>
 
