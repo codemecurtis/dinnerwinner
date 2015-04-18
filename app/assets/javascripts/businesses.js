@@ -1,9 +1,10 @@
 $(document).ready(function() {
-  $(window).load(function(e){
+  $("#wrapper").load(function(e){
+    console.log('this is being called')
     $.ajax({
       url: window.location+'/deals',
       method: 'GET',
-      dataType: 'JSON'
+      // dataType: 'JSON'
     }).done(function(data){
       console.log("done done dlfkjlksjjklfs")
       var context = { deals: data };
