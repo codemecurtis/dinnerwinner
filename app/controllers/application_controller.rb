@@ -3,15 +3,32 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  def authenticate
+  def authenticate_customer
     redirect_to(new_customer_session_path) if current_customer.nil?
   end
 
-  def after_sign_in_path_for(customer)
-    "/customers/#{customer.id}"
+  def authenticate_business
+    redirect_to(new_business_session_path) if current_business.nil?
   end
 
-  def after_sign_up_path_for(customer)
-    "/customers/#{customer.id}"
+
+  def after_sign_in_path_for(resource)
+    if resource.class == Customer
+      "/customers/#{resource.id}"
+    else
+      "/businesses/#{resource.id}"
+    end
   end
+
+  def after_sign_up_path_for(resource)
+    if resource.class == Customer
+      "/customers/#{resource.id}"
+    else
+      "/businesses/#{resource.id}"
+    end
+  end
+
+
+
+
 end
