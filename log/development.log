@@ -10749,3 +10749,2205 @@ ActionController::RoutingError (No route matches [GET] "/businesses/20/92"):
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
   Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (43.0ms)
+
+
+Started GET "/businesses/20/92" for ::1 at 2015-04-17 20:41:22 -0700
+
+ActionController::RoutingError (No route matches [GET] "/businesses/20/92"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (80.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (122.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (18.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (38.9ms)
+
+
+Started GET "/businesses/20" for ::1 at 2015-04-17 20:41:25 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"20"}
+  Rendered businesses/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 278ms (Views: 277.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/businesses.self-b2d9d6b2b878478279e37e091cf6fc181a9458bcfa48a2d72d8d173cb5765e81.js?body=1" for ::1 at 2015-04-17 20:41:25 -0700
+
+
+Started GET "/businesses/20/deals" for ::1 at 2015-04-17 20:41:26 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"20"}
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  [1m[35mDeal Load (0.4ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 20]]
+Completed 200 OK in 54ms (Views: 9.4ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-17 20:41:30 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 119ms (Views: 118.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-17 20:41:30 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-17 20:42:10 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 47ms (Views: 46.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-17 20:42:10 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-17 20:42:10 -0700
+
+
+Started GET "/assets/businesses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-17 20:42:10 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-17 20:42:10 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-17 20:42:10 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-17 20:42:10 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-17 20:42:10 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-17 20:42:10 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-17 20:42:10 -0700
+
+
+Started GET "/assets/businesses.self-b2d9d6b2b878478279e37e091cf6fc181a9458bcfa48a2d72d8d173cb5765e81.js?body=1" for ::1 at 2015-04-17 20:42:10 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-17 20:42:10 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-17 20:42:10 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-17 20:42:11 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.3ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-17 20:43:33 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 266ms (Views: 264.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/businesses.self-b5bb3ebf7e5db759d36b7f8cfa32a5f1bfd51fe9c430f5d330eba8418690fc6a.css?body=1" for ::1 at 2015-04-17 20:43:34 -0700
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-17 20:43:34 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-17 20:43:34 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-17 20:43:34 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-17 20:43:34 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-17 20:43:34 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-17 20:43:34 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-17 20:43:34 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-17 20:43:34 -0700
+
+
+Started GET "/assets/businesses.self-b2d9d6b2b878478279e37e091cf6fc181a9458bcfa48a2d72d8d173cb5765e81.js?body=1" for ::1 at 2015-04-17 20:43:34 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-17 20:43:34 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-17 20:43:34 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-17 20:43:34 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (1.7ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (2.3ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 17ms (Views: 9.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-17 20:43:48 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 47ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-17 20:43:48 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-17 20:43:48 -0700
+
+
+Started GET "/assets/businesses.self-b5bb3ebf7e5db759d36b7f8cfa32a5f1bfd51fe9c430f5d330eba8418690fc6a.css?body=1" for ::1 at 2015-04-17 20:43:48 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-17 20:43:48 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-17 20:43:48 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-17 20:43:48 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-17 20:43:48 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-17 20:43:48 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-17 20:43:48 -0700
+
+
+Started GET "/assets/businesses.self-b2d9d6b2b878478279e37e091cf6fc181a9458bcfa48a2d72d8d173cb5765e81.js?body=1" for ::1 at 2015-04-17 20:43:48 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-17 20:43:48 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-17 20:43:48 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-17 20:43:48 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.6ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-17 20:44:04 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 253ms (Views: 252.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-17 20:44:04 -0700
+
+
+Started GET "/assets/businesses.self-32c0d46eadabf9057a385879070d771fcc7603be65fd97a71bfad7b7e92e6f75.css?body=1" for ::1 at 2015-04-17 20:44:04 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-17 20:44:04 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-17 20:44:04 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-17 20:44:04 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-17 20:44:04 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-17 20:44:04 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-17 20:44:04 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-17 20:44:04 -0700
+
+
+Started GET "/assets/businesses.self-b2d9d6b2b878478279e37e091cf6fc181a9458bcfa48a2d72d8d173cb5765e81.js?body=1" for ::1 at 2015-04-17 20:44:04 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-17 20:44:04 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-17 20:44:04 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-17 20:44:04 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-17 20:44:18 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 123ms (Views: 121.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-17 20:44:18 -0700
+
+
+Started GET "/assets/businesses.self-32c0d46eadabf9057a385879070d771fcc7603be65fd97a71bfad7b7e92e6f75.css?body=1" for ::1 at 2015-04-17 20:44:18 -0700
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-17 20:44:18 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-17 20:44:18 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-17 20:44:18 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-17 20:44:18 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-17 20:44:18 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-17 20:44:18 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-17 20:44:18 -0700
+
+
+Started GET "/assets/businesses.self-b2d9d6b2b878478279e37e091cf6fc181a9458bcfa48a2d72d8d173cb5765e81.js?body=1" for ::1 at 2015-04-17 20:44:18 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-17 20:44:18 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-17 20:44:18 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-17 20:44:18 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.3ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-17 21:00:19 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 166ms (Views: 165.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/businesses.self-8c9d05f4c2844b8373dcbedafc92431e55ae9c11ae1f942a97b368da6f0607b4.css?body=1" for ::1 at 2015-04-17 21:00:20 -0700
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-17 21:00:20 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-17 21:00:20 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-17 21:00:20 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-17 21:00:20 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-17 21:00:20 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-17 21:00:20 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-17 21:00:20 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-17 21:00:20 -0700
+
+
+Started GET "/assets/businesses.self-b2d9d6b2b878478279e37e091cf6fc181a9458bcfa48a2d72d8d173cb5765e81.js?body=1" for ::1 at 2015-04-17 21:00:20 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-17 21:00:20 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-17 21:00:20 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-17 21:00:20 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.3ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 17ms (Views: 5.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-17 21:00:31 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 168ms (Views: 166.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/businesses.self-1a2763851e99ff1ef96883b876ee8b85188a72147ecf1670c04c93b3d2df1832.css?body=1" for ::1 at 2015-04-17 21:00:31 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-17 21:00:31 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-17 21:00:31 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-17 21:00:31 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-17 21:00:31 -0700
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-17 21:00:31 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-17 21:00:31 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-17 21:00:31 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-17 21:00:31 -0700
+
+
+Started GET "/assets/businesses.self-b2d9d6b2b878478279e37e091cf6fc181a9458bcfa48a2d72d8d173cb5765e81.js?body=1" for ::1 at 2015-04-17 21:00:31 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-17 21:00:31 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-17 21:00:31 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-17 21:00:31 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-17 21:00:56 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 168ms (Views: 166.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/businesses.self-c29f8284b2c8bdf46364e6a845e5a0fca94f2ae95371148348b1ab503928e966.css?body=1" for ::1 at 2015-04-17 21:00:57 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-17 21:00:57 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-17 21:00:57 -0700
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-17 21:00:57 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-17 21:00:57 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-17 21:00:57 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-17 21:00:57 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-17 21:00:57 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-17 21:00:57 -0700
+
+
+Started GET "/assets/businesses.self-b2d9d6b2b878478279e37e091cf6fc181a9458bcfa48a2d72d8d173cb5765e81.js?body=1" for ::1 at 2015-04-17 21:00:57 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-17 21:00:57 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-17 21:00:57 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-17 21:00:57 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.4ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.6ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-17 21:03:29 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 121ms (Views: 120.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-17 21:03:30 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-17 21:03:30 -0700
+
+
+Started GET "/assets/businesses.self-c29f8284b2c8bdf46364e6a845e5a0fca94f2ae95371148348b1ab503928e966.css?body=1" for ::1 at 2015-04-17 21:03:30 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-17 21:03:30 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-17 21:03:30 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-17 21:03:30 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-17 21:03:30 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-17 21:03:30 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-17 21:03:30 -0700
+
+
+Started GET "/assets/businesses.self-b2d9d6b2b878478279e37e091cf6fc181a9458bcfa48a2d72d8d173cb5765e81.js?body=1" for ::1 at 2015-04-17 21:03:30 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-17 21:03:30 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-17 21:03:30 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-17 21:03:30 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.3ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-17 21:05:31 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 417ms (Views: 416.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/businesses.self-ff2bca6a4aa0e0b25bebed6a468d5ce43c1fb20cfe630bbec602a2fff21dd9a3.css?body=1" for ::1 at 2015-04-17 21:05:32 -0700
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-17 21:05:32 -0700
+
+
+Started GET "/assets/businesses.self-fe1858652cfd0db2d04229d3fc3457dd4ac3f6a53e5ec623de1c4b1f6af5ff64.js?body=1" for ::1 at 2015-04-17 21:05:32 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-17 21:05:32 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-17 21:05:32 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-17 21:05:32 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-17 21:05:32 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-17 21:05:32 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-17 21:05:32 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-17 21:05:32 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-17 21:05:32 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-17 21:05:32 -0700
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-17 21:05:45 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 278ms (Views: 276.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-17 21:05:45 -0700
+
+
+Started GET "/assets/businesses.self-46684ca21cca29d3f00f5f15218677b419620653b71dd97e6289d5805b4124cc.js?body=1" for ::1 at 2015-04-17 21:05:45 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-17 21:05:45 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-17 21:05:45 -0700
+
+
+Started GET "/assets/businesses.self-ff2bca6a4aa0e0b25bebed6a468d5ce43c1fb20cfe630bbec602a2fff21dd9a3.css?body=1" for ::1 at 2015-04-17 21:05:45 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-17 21:05:45 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-17 21:05:45 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-17 21:05:45 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-17 21:05:45 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-17 21:05:45 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-17 21:05:45 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-17 21:05:45 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-17 21:05:45 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.9ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.4ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 9ms (Views: 3.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-17 21:06:07 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 242ms (Views: 241.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/businesses.self-dd6b47b396bf49643771da8bcf84e61139c5eac93b1c0bd53d393e306957c76b.css?body=1" for ::1 at 2015-04-17 21:06:07 -0700
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-17 21:06:07 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-17 21:06:07 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-17 21:06:07 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-17 21:06:07 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-17 21:06:07 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-17 21:06:07 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-17 21:06:07 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-17 21:06:07 -0700
+
+
+Started GET "/assets/businesses.self-46684ca21cca29d3f00f5f15218677b419620653b71dd97e6289d5805b4124cc.js?body=1" for ::1 at 2015-04-17 21:06:07 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-17 21:06:07 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-17 21:06:07 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-17 21:06:07 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.5ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.8ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 9ms (Views: 4.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-17 21:06:16 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 170ms (Views: 168.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/businesses.self-c86a21893f013bb7778bd6b12b8372826b27ad6f6f69f5ef29750b85a5e545ba.css?body=1" for ::1 at 2015-04-17 21:06:16 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-17 21:06:16 -0700
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-17 21:06:16 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-17 21:06:16 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-17 21:06:16 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-17 21:06:16 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-17 21:06:16 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-17 21:06:16 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-17 21:06:16 -0700
+
+
+Started GET "/assets/businesses.self-46684ca21cca29d3f00f5f15218677b419620653b71dd97e6289d5805b4124cc.js?body=1" for ::1 at 2015-04-17 21:06:16 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-17 21:06:16 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-17 21:06:16 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-17 21:06:16 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.3ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-17 21:06:43 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 44ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-17 21:06:43 -0700
+
+
+Started GET "/assets/businesses.self-c86a21893f013bb7778bd6b12b8372826b27ad6f6f69f5ef29750b85a5e545ba.css?body=1" for ::1 at 2015-04-17 21:06:43 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-17 21:06:43 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-17 21:06:43 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-17 21:06:43 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-17 21:06:43 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-17 21:06:43 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-17 21:06:43 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-17 21:06:43 -0700
+
+
+Started GET "/assets/businesses.self-46684ca21cca29d3f00f5f15218677b419620653b71dd97e6289d5805b4124cc.js?body=1" for ::1 at 2015-04-17 21:06:43 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-17 21:06:43 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-17 21:06:43 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-17 21:06:43 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (1.1ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (1.0ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 9ms (Views: 3.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-17 21:10:50 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 494ms (Views: 492.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/businesses.self-616478d59089221c76bde32dfca79b5205b3097f5dc021a1aadec011a7cf0746.css?body=1" for ::1 at 2015-04-17 21:10:50 -0700
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-17 21:10:50 -0700
+
+
+Started GET "/assets/businesses.self-27240907759fbb413bd5f52a55d8688ad34d0901ae3d8b06fed9257a4ed5c3f8.js?body=1" for ::1 at 2015-04-17 21:10:50 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-17 21:10:50 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-17 21:10:50 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-17 21:10:50 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-17 21:10:50 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-17 21:10:50 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-17 21:10:50 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-17 21:10:50 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-17 21:10:50 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-17 21:10:50 -0700
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-17 21:13:40 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 287ms (Views: 286.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/businesses.self-eb6acf90f4c46c87e08738c64f5bccadbca61e34b54f14a6c7d7ecab83fd3268.js?body=1" for ::1 at 2015-04-17 21:13:41 -0700
+
+
+Started GET "/assets/businesses.self-616478d59089221c76bde32dfca79b5205b3097f5dc021a1aadec011a7cf0746.css?body=1" for ::1 at 2015-04-17 21:13:41 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-17 21:13:41 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-17 21:13:41 -0700
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-17 21:13:41 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-17 21:13:41 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-17 21:13:41 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-17 21:13:41 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-17 21:13:41 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-17 21:13:41 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-17 21:13:41 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-17 21:13:41 -0700
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-17 21:13:55 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 371ms (Views: 369.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/businesses.self-135624f65f805537c5e9b29ac9d9b31ffabcfb26967d2352a899d6e3d3ac724d.js?body=1" for ::1 at 2015-04-17 21:13:55 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-17 21:13:55 -0700
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-17 21:13:55 -0700
+
+
+Started GET "/assets/businesses.self-616478d59089221c76bde32dfca79b5205b3097f5dc021a1aadec011a7cf0746.css?body=1" for ::1 at 2015-04-17 21:13:55 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-17 21:13:55 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-17 21:13:55 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-17 21:13:55 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-17 21:13:55 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-17 21:13:55 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-17 21:13:55 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-17 21:13:55 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-17 21:13:55 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-17 21:13:55 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/businesses/94" for ::1 at 2015-04-17 21:13:57 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"94"}
+  Rendered businesses/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 45ms (Views: 44.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-17 21:16:38 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 296ms (Views: 294.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-17 21:16:38 -0700
+
+
+Started GET "/assets/businesses.self-616478d59089221c76bde32dfca79b5205b3097f5dc021a1aadec011a7cf0746.css?body=1" for ::1 at 2015-04-17 21:16:38 -0700
+
+
+Started GET "/assets/businesses.self-cf14ebc9e1e1be786dd9dce268ac5c17b157f392f49bcdc5e3a9607bb007868d.js?body=1" for ::1 at 2015-04-17 21:16:38 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-17 21:16:38 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-17 21:16:38 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-17 21:16:38 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-17 21:16:38 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-17 21:16:38 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-17 21:16:38 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-17 21:16:38 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-17 21:16:38 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-17 21:16:38 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-17 21:16:38 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.3ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 12ms (Views: 7.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/businesses/95" for ::1 at 2015-04-17 21:16:40 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"95"}
+  Rendered businesses/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 147ms (Views: 145.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/businesses/94" for ::1 at 2015-04-17 21:16:49 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"94"}
+  Rendered businesses/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-17 21:17:02 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 288ms (Views: 287.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/businesses.self-a2bccb2252a1626c9ce4a2ba28bbe8f1ec1550ee7ee6856792dd402b6f570274.js?body=1" for ::1 at 2015-04-17 21:17:02 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-17 21:17:02 -0700
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-17 21:17:02 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-17 21:17:02 -0700
+
+
+Started GET "/assets/businesses.self-616478d59089221c76bde32dfca79b5205b3097f5dc021a1aadec011a7cf0746.css?body=1" for ::1 at 2015-04-17 21:17:02 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-17 21:17:02 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-17 21:17:02 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-17 21:17:02 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-17 21:17:02 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-17 21:17:02 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-17 21:17:02 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-17 21:17:02 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-17 21:17:02 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.6ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.4ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 8ms (Views: 3.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-17 21:17:07 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 123ms (Views: 122.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-17 21:17:07 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-17 21:17:07 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-17 21:17:07 -0700
+
+
+Started GET "/assets/businesses.self-616478d59089221c76bde32dfca79b5205b3097f5dc021a1aadec011a7cf0746.css?body=1" for ::1 at 2015-04-17 21:17:07 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-17 21:17:07 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-17 21:17:07 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-17 21:17:07 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-17 21:17:07 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-17 21:17:07 -0700
+
+
+Started GET "/assets/businesses.self-a2bccb2252a1626c9ce4a2ba28bbe8f1ec1550ee7ee6856792dd402b6f570274.js?body=1" for ::1 at 2015-04-17 21:17:07 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-17 21:17:07 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-17 21:17:07 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-17 21:17:07 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.3ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-18 10:23:08 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 396ms (Views: 395.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/businesses.self-91b03a7c10e17510f58d0abb6b937e05ae00c57bb1bf2854ea5d1897801c3b73.js?body=1" for ::1 at 2015-04-18 10:23:09 -0700
+
+
+Started GET "/assets/businesses.self-616478d59089221c76bde32dfca79b5205b3097f5dc021a1aadec011a7cf0746.css?body=1" for ::1 at 2015-04-18 10:23:09 -0700
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 10:23:09 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-18 10:23:09 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 10:23:09 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 10:23:09 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 10:23:09 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 10:23:09 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 10:23:09 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 10:23:09 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 10:23:09 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-18 10:23:09 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 10:23:09 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.4ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.4ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 15ms (Views: 7.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-18 10:23:12 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 118ms (Views: 116.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 10:23:12 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-18 10:23:12 -0700
+
+
+Started GET "/assets/businesses.self-616478d59089221c76bde32dfca79b5205b3097f5dc021a1aadec011a7cf0746.css?body=1" for ::1 at 2015-04-18 10:23:12 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 10:23:12 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 10:23:12 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 10:23:12 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 10:23:12 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 10:23:13 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 10:23:13 -0700
+
+
+Started GET "/assets/businesses.self-91b03a7c10e17510f58d0abb6b937e05ae00c57bb1bf2854ea5d1897801c3b73.js?body=1" for ::1 at 2015-04-18 10:23:13 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 10:23:13 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-18 10:23:13 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 10:23:13 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.9ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.5ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 9ms (Views: 4.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-18 10:23:15 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 10:23:15 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 10:23:15 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-18 10:23:16 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 10:23:16 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 10:23:16 -0700
+
+
+Started GET "/assets/businesses.self-616478d59089221c76bde32dfca79b5205b3097f5dc021a1aadec011a7cf0746.css?body=1" for ::1 at 2015-04-18 10:23:16 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 10:23:16 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 10:23:16 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 10:23:16 -0700
+
+
+Started GET "/assets/businesses.self-91b03a7c10e17510f58d0abb6b937e05ae00c57bb1bf2854ea5d1897801c3b73.js?body=1" for ::1 at 2015-04-18 10:23:16 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 10:23:16 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-18 10:23:16 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 10:23:16 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.5ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (1.5ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 8ms (Views: 3.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-18 10:23:21 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 42ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 10:23:21 -0700
+
+
+Started GET "/assets/businesses.self-616478d59089221c76bde32dfca79b5205b3097f5dc021a1aadec011a7cf0746.css?body=1" for ::1 at 2015-04-18 10:23:22 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 10:23:22 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-18 10:23:22 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 10:23:22 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 10:23:22 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 10:23:22 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 10:23:22 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 10:23:22 -0700
+
+
+Started GET "/assets/businesses.self-91b03a7c10e17510f58d0abb6b937e05ae00c57bb1bf2854ea5d1897801c3b73.js?body=1" for ::1 at 2015-04-18 10:23:22 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 10:23:22 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-18 10:23:22 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 10:23:22 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-18 10:23:24 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 45ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 10:23:24 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 10:23:24 -0700
+
+
+Started GET "/assets/businesses.self-616478d59089221c76bde32dfca79b5205b3097f5dc021a1aadec011a7cf0746.css?body=1" for ::1 at 2015-04-18 10:23:24 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 10:23:24 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-18 10:23:24 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 10:23:24 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 10:23:24 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 10:23:24 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 10:23:24 -0700
+
+
+Started GET "/assets/businesses.self-91b03a7c10e17510f58d0abb6b937e05ae00c57bb1bf2854ea5d1897801c3b73.js?body=1" for ::1 at 2015-04-18 10:23:24 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 10:23:24 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-18 10:23:24 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 10:23:24 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-18 10:26:56 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 260ms (Views: 259.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 10:26:57 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 10:26:57 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 10:26:57 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-18 10:26:57 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 10:26:57 -0700
+
+
+Started GET "/assets/businesses.self-2fb1adb779f26ccee1eb0df1dfd9dc7026bbad7f5132753bf377e30654fa94d2.css?body=1" for ::1 at 2015-04-18 10:26:57 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 10:26:57 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 10:26:57 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 10:26:57 -0700
+
+
+Started GET "/assets/businesses.self-91b03a7c10e17510f58d0abb6b937e05ae00c57bb1bf2854ea5d1897801c3b73.js?body=1" for ::1 at 2015-04-18 10:26:57 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 10:26:57 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-18 10:26:57 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 10:26:57 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-18 10:27:02 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 10:27:02 -0700
+
+
+Started GET "/assets/businesses.self-2fb1adb779f26ccee1eb0df1dfd9dc7026bbad7f5132753bf377e30654fa94d2.css?body=1" for ::1 at 2015-04-18 10:27:02 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 10:27:02 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 10:27:02 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-18 10:27:02 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 10:27:02 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 10:27:02 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 10:27:02 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 10:27:02 -0700
+
+
+Started GET "/assets/businesses.self-91b03a7c10e17510f58d0abb6b937e05ae00c57bb1bf2854ea5d1897801c3b73.js?body=1" for ::1 at 2015-04-18 10:27:02 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 10:27:02 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-18 10:27:02 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 10:27:03 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.4ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-18 10:27:04 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 10:27:04 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 10:27:04 -0700
+
+
+Started GET "/assets/businesses.self-2fb1adb779f26ccee1eb0df1dfd9dc7026bbad7f5132753bf377e30654fa94d2.css?body=1" for ::1 at 2015-04-18 10:27:04 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 10:27:04 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-18 10:27:04 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 10:27:04 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 10:27:04 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 10:27:04 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 10:27:04 -0700
+
+
+Started GET "/assets/businesses.self-91b03a7c10e17510f58d0abb6b937e05ae00c57bb1bf2854ea5d1897801c3b73.js?body=1" for ::1 at 2015-04-18 10:27:04 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 10:27:04 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-18 10:27:04 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 10:27:04 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.3ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-18 10:27:06 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 46ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 10:27:06 -0700
+
+
+Started GET "/assets/businesses.self-2fb1adb779f26ccee1eb0df1dfd9dc7026bbad7f5132753bf377e30654fa94d2.css?body=1" for ::1 at 2015-04-18 10:27:06 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-18 10:27:06 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 10:27:06 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 10:27:06 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 10:27:06 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 10:27:06 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 10:27:06 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 10:27:06 -0700
+
+
+Started GET "/assets/businesses.self-91b03a7c10e17510f58d0abb6b937e05ae00c57bb1bf2854ea5d1897801c3b73.js?body=1" for ::1 at 2015-04-18 10:27:06 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 10:27:06 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-18 10:27:06 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 10:27:06 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-18 10:27:08 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 137ms (Views: 136.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 10:27:08 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 10:27:08 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 10:27:08 -0700
+
+
+Started GET "/assets/businesses.self-2fb1adb779f26ccee1eb0df1dfd9dc7026bbad7f5132753bf377e30654fa94d2.css?body=1" for ::1 at 2015-04-18 10:27:08 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 10:27:08 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-18 10:27:08 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 10:27:08 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 10:27:08 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 10:27:08 -0700
+
+
+Started GET "/assets/businesses.self-91b03a7c10e17510f58d0abb6b937e05ae00c57bb1bf2854ea5d1897801c3b73.js?body=1" for ::1 at 2015-04-18 10:27:08 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 10:27:08 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-18 10:27:08 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 10:27:08 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-18 10:27:28 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 39ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/businesses.self-2fb1adb779f26ccee1eb0df1dfd9dc7026bbad7f5132753bf377e30654fa94d2.css?body=1" for ::1 at 2015-04-18 10:27:28 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-18 10:27:28 -0700
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 10:27:28 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 10:27:28 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 10:27:28 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 10:27:28 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 10:27:28 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 10:27:28 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 10:27:28 -0700
+
+
+Started GET "/assets/businesses.self-91b03a7c10e17510f58d0abb6b937e05ae00c57bb1bf2854ea5d1897801c3b73.js?body=1" for ::1 at 2015-04-18 10:27:28 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 10:27:28 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-18 10:27:28 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 10:27:28 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.4ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.3ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-18 10:27:30 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 128ms (Views: 127.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 10:27:30 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 10:27:30 -0700
+
+
+Started GET "/assets/businesses.self-2fb1adb779f26ccee1eb0df1dfd9dc7026bbad7f5132753bf377e30654fa94d2.css?body=1" for ::1 at 2015-04-18 10:27:30 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-18 10:27:30 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 10:27:30 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 10:27:31 -0700
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 10:27:31 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 10:27:31 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 10:27:31 -0700
+
+
+Started GET "/assets/businesses.self-91b03a7c10e17510f58d0abb6b937e05ae00c57bb1bf2854ea5d1897801c3b73.js?body=1" for ::1 at 2015-04-18 10:27:31 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 10:27:31 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-18 10:27:31 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 10:27:31 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-18 10:33:49 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 433ms (Views: 432.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/businesses.self-ebd29236d8ac4a0770a3cb1b397eb3b6564caacf1fcbf5c1c5a8fcc9f13be0ab.js?body=1" for ::1 at 2015-04-18 10:33:50 -0700
+
+
+Started GET "/assets/businesses.self-4c5cb528454e77dac133dff404b8e04a1db83b74e5f32538bd25c868f0454a24.css?body=1" for ::1 at 2015-04-18 10:33:50 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-18 10:33:50 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 10:33:50 -0700
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 10:33:50 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 10:33:50 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 10:33:50 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 10:33:50 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 10:33:50 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 10:33:50 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 10:33:50 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-18 10:33:50 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 10:33:50 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.3ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-18 10:35:11 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 42ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 10:35:11 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 10:35:11 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 10:35:11 -0700
+
+
+Started GET "/assets/businesses.self-4c5cb528454e77dac133dff404b8e04a1db83b74e5f32538bd25c868f0454a24.css?body=1" for ::1 at 2015-04-18 10:35:11 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 10:35:11 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-18 10:35:11 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 10:35:11 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 10:35:12 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 10:35:12 -0700
+
+
+Started GET "/assets/businesses.self-ebd29236d8ac4a0770a3cb1b397eb3b6564caacf1fcbf5c1c5a8fcc9f13be0ab.js?body=1" for ::1 at 2015-04-18 10:35:12 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 10:35:12 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-18 10:35:12 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 10:35:12 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.5ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 9ms (Views: 4.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/businesses/21" for ::1 at 2015-04-18 10:35:27 -0700
+Processing by BusinessesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendered businesses/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 40ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 10:35:27 -0700
+
+
+Started GET "/assets/businesses.self-4c5cb528454e77dac133dff404b8e04a1db83b74e5f32538bd25c868f0454a24.css?body=1" for ::1 at 2015-04-18 10:35:27 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-18 10:35:27 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 10:35:27 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 10:35:27 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 10:35:27 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 10:35:27 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 10:35:27 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 10:35:27 -0700
+
+
+Started GET "/assets/businesses.self-ebd29236d8ac4a0770a3cb1b397eb3b6564caacf1fcbf5c1c5a8fcc9f13be0ab.js?body=1" for ::1 at 2015-04-18 10:35:27 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 10:35:27 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-18 10:35:27 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 10:35:27 -0700
+Processing by DealsController#index as JSON
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.3ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 0.6ms)
+  [1m[36mDeal Load (1.0ms)[0m  [1mSELECT "deals".* FROM "deals"[0m
+
+
+Started GET "/questions" for ::1 at 2015-04-18 11:10:11 -0700
+
+ActionController::RoutingError (No route matches [GET] "/questions"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (70.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (22.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (47.4ms)
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 11:10:20 -0700
+Processing by DealsController#index as HTML
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 112ms (Views: 7.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 11:10:33 -0700
+Processing by DealsController#index as HTML
+  Parameters: {"business_id"=>"21"}
+  Rendered deals/index.html within layouts/application (0.4ms)
+Completed 200 OK in 533ms (Views: 532.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/businesses.self-57ecd1a5ab0b9462e58ae890ba20f6ee2e122f9810fa3ffc11417f9c36cd4e19.css?body=1" for ::1 at 2015-04-18 11:10:34 -0700
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 11:10:34 -0700
+
+
+Started GET "/assets/businesses.self-ab75e9e551e94c4558713321c72c4ea468090a58a88bd03bf8a22d0ce5751f40.js?body=1" for ::1 at 2015-04-18 11:10:34 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-18 11:10:34 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 11:10:34 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 11:10:34 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 11:10:34 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 11:10:34 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 11:10:34 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 11:10:34 -0700
+
+
+Started GET "/assets/deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 11:10:34 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-18 11:10:34 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 11:10:50 -0700
+Processing by DealsController#index as HTML
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.3ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 30ms (Views: 7.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 11:12:09 -0700
+Processing by DealsController#index as HTML
+  Parameters: {"business_id"=>"21"}
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 11:12:53 -0700
+Processing by DealsController#index as HTML
+  Parameters: {"business_id"=>"21"}
+  Rendered deals/index.html within layouts/application (0.1ms)
+Completed 200 OK in 287ms (Views: 286.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 11:12:53 -0700
+
+
+Started GET "/assets/businesses.self-57ecd1a5ab0b9462e58ae890ba20f6ee2e122f9810fa3ffc11417f9c36cd4e19.css?body=1" for ::1 at 2015-04-18 11:12:53 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 11:12:53 -0700
+
+
+Started GET "/assets/deals.self-d64d63125ea210200cb30549be1b9939340727f3ba30e7fde237efc985ae42d7.js?body=1" for ::1 at 2015-04-18 11:12:53 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 11:12:53 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-18 11:12:53 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 11:12:53 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 11:12:53 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 11:12:53 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 11:12:53 -0700
+
+
+Started GET "/assets/businesses.self-ab75e9e551e94c4558713321c72c4ea468090a58a88bd03bf8a22d0ce5751f40.js?body=1" for ::1 at 2015-04-18 11:12:53 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-18 11:12:53 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 11:13:25 -0700
+Processing by DealsController#index as HTML
+  Parameters: {"business_id"=>"21"}
+  Rendered deals/index.html within layouts/application (0.1ms)
+Completed 200 OK in 286ms (Views: 284.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/deals.self-ab75e9e551e94c4558713321c72c4ea468090a58a88bd03bf8a22d0ce5751f40.js?body=1" for ::1 at 2015-04-18 11:13:25 -0700
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 11:13:25 -0700
+
+
+Started GET "/assets/businesses.self-57ecd1a5ab0b9462e58ae890ba20f6ee2e122f9810fa3ffc11417f9c36cd4e19.css?body=1" for ::1 at 2015-04-18 11:13:25 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 11:13:25 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 11:13:25 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 11:13:25 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 11:13:25 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-18 11:13:25 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 11:13:25 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 11:13:25 -0700
+
+
+Started GET "/assets/businesses.self-ab75e9e551e94c4558713321c72c4ea468090a58a88bd03bf8a22d0ce5751f40.js?body=1" for ::1 at 2015-04-18 11:13:25 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-18 11:13:25 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 11:13:27 -0700
+Processing by DealsController#index as HTML
+  Parameters: {"business_id"=>"21"}
+  Rendered deals/index.html within layouts/application (0.1ms)
+Completed 200 OK in 128ms (Views: 127.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 11:13:27 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 11:13:27 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-18 11:13:27 -0700
+
+
+Started GET "/assets/businesses.self-57ecd1a5ab0b9462e58ae890ba20f6ee2e122f9810fa3ffc11417f9c36cd4e19.css?body=1" for ::1 at 2015-04-18 11:13:27 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 11:13:27 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 11:13:27 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 11:13:27 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 11:13:27 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 11:13:27 -0700
+
+
+Started GET "/assets/businesses.self-ab75e9e551e94c4558713321c72c4ea468090a58a88bd03bf8a22d0ce5751f40.js?body=1" for ::1 at 2015-04-18 11:13:27 -0700
+
+
+Started GET "/assets/deals.self-ab75e9e551e94c4558713321c72c4ea468090a58a88bd03bf8a22d0ce5751f40.js?body=1" for ::1 at 2015-04-18 11:13:27 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-18 11:13:27 -0700
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 11:14:01 -0700
+Processing by DealsController#index as HTML
+  Parameters: {"business_id"=>"21"}
+  Rendered deals/index.html within layouts/application (0.1ms)
+Completed 200 OK in 291ms (Views: 290.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 11:14:01 -0700
+
+
+Started GET "/assets/businesses.self-57ecd1a5ab0b9462e58ae890ba20f6ee2e122f9810fa3ffc11417f9c36cd4e19.css?body=1" for ::1 at 2015-04-18 11:14:02 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 11:14:02 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-18 11:14:02 -0700
+
+
+Started GET "/assets/deals.self-c4b9ee13d8fd090b1391172a98e946701476b4969ae438b6b28f9770233f34f0.js?body=1" for ::1 at 2015-04-18 11:14:02 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 11:14:02 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 11:14:02 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 11:14:02 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 11:14:02 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 11:14:02 -0700
+
+
+Started GET "/assets/businesses.self-ab75e9e551e94c4558713321c72c4ea468090a58a88bd03bf8a22d0ce5751f40.js?body=1" for ::1 at 2015-04-18 11:14:02 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-18 11:14:02 -0700
+
+
+Started GET "/businesses/21/deals/deals" for ::1 at 2015-04-18 11:14:02 -0700
+Processing by DealsController#show as JSON
+  Parameters: {"business_id"=>"21", "id"=>"deals"}
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.3ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 138ms (Views: 93.1ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/businesses/21/deals" for ::1 at 2015-04-18 11:15:44 -0700
+Processing by DealsController#index as HTML
+  Parameters: {"business_id"=>"21"}
+  Rendered deals/index.html within layouts/application (0.1ms)
+Completed 200 OK in 280ms (Views: 279.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 11:15:44 -0700
+
+
+Started GET "/assets/businesses.self-57ecd1a5ab0b9462e58ae890ba20f6ee2e122f9810fa3ffc11417f9c36cd4e19.css?body=1" for ::1 at 2015-04-18 11:15:44 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 11:15:44 -0700
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 11:15:44 -0700
+
+
+Started GET "/assets/businesses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 11:15:44 -0700
+
+
+Started GET "/assets/application.self-860170c7ab1ca088027e93d68592059edd583aacf6fd47eea1c1c5332b5a9db9.css?body=1" for ::1 at 2015-04-18 11:15:44 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 11:15:44 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 11:15:44 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 11:15:44 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 11:15:44 -0700
+
+
+Started GET "/assets/deals.self-c4b9ee13d8fd090b1391172a98e946701476b4969ae438b6b28f9770233f34f0.js?body=1" for ::1 at 2015-04-18 11:15:44 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-04-18 11:15:44 -0700
+
+
+Started GET "/businesses/21/deals/deals" for ::1 at 2015-04-18 11:15:44 -0700
+Processing by DealsController#show as JSON
+  Parameters: {"business_id"=>"21", "id"=>"deals"}
+  [1m[36mBusiness Load (6.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mDeal Load (0.5ms)[0m  SELECT "deals".* FROM "deals" WHERE "deals"."business_id" = $1  [["business_id", 21]]
+Completed 200 OK in 14ms (Views: 2.9ms | ActiveRecord: 6.8ms)
