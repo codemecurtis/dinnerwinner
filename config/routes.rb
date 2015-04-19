@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'businesses/mass_deal'
   devise_for :businesses
   devise_for :customers, :controllers => {registrations: 'registrations'}
   resources :customers
@@ -6,6 +7,7 @@ Rails.application.routes.draw do
   resources :businesses do
     resources :deals
   end
+
 
   # devise_for :customers
 

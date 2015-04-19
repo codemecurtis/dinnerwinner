@@ -12,4 +12,11 @@ class BusinessesController < ApplicationController
     viewed_business
   end
 
+  def create_mass_deal
+    # CustomerDeal.new(business_id:, customer_id:)
+  end
+
+  def mass_deal
+  end
+
 end
