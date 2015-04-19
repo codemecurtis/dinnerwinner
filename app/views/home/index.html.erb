@@ -1,47 +1,52 @@
-<header>
-  <div class="container">
-    <h1>Dinner Winner</h1>
+<div class="welcome span_12_of_12">
+  <header class="welcome-element">
+    <div class="header-container span_5_of_12 ">
+      <h1>Dinner Winner</h1>
 
-    <% if customer_signed_in? %>
+      <% if customer_signed_in? %>
 
-    <% else %>
-      <button class="customer-signup-link">
-        <a href="/customers/sign_up">Sign up</a>
-      </button>
-      <button class="customer-login-link">
-        <a href="/customers/sign_in">Login</a>
-      </button>
-    <% end %>
-  </div>
-</header>
+      <% else %>
+        <button class="customer-signup-link welcome-buttons span_4_of_12">
+          <a href="/customers/sign_up">Sign up</a>
+        </button>
+        <button class="customer-login-link welcome-buttons span_4_of_12">
+          <a href="/customers/sign_in">Login</a>
+        </button>
+      <% end %>
+    </div>
+  </header>
 
-<section class="about">
-  <div class="container">
-    <h2>How it works</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div>
-</section>
+  <section class="about span_12_of_12 welcome-element">
+    <div class="about-container span_9_of_12">
+      <h2>How it works</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </section>
 
-<section class="feedback">
-  <div class="container">
-    <input type="text" placeholder="title">
-    <textarea placeholder="your feedback"></textarea>
-    <input type="submit">
-  </div>
-</section>
+  <section class="feedback welcome-element">
+    <div class="span_6_of_12">
+      <input class="span_8_of_12" type="text" placeholder="title"><br><br>
+      <textarea class="span_8_of_12" placeholder="your feedback"></textarea><br><br>
+      <input class="welcome-buttons span_4_of_12" type="submit">
+    </div>
+  </section>
 
-<footer>
-  <div class="container">
-    <ul class="social left">
-      <li>Twitter</li>
-      <li>Twitter</li>
-      <li>Twitter</li>
-    </ul>
-    <a class="right" href="/businesses">Business Login</a>
-  </div>
-</footer>
+  <footer class="welcome-element span_12_of_12">
+    <div class="auto span_9_of_12">
+      <ul class="social left">
+        <li><i class="fa fa-twitter"></i></li>
+        <li><i class="fa fa-pinterest-p"></i></li>
+        <li><i class="fa fa-google-plus"></i></li>
+      </ul>
+      <a class="right" href="/businesses">Business Login</a>
+    </div>
+  </footer>
+</div>
+
+<% render 'new' %>
+

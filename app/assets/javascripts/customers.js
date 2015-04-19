@@ -1,5 +1,15 @@
 $(document).on('page:change', function(){
 
+  //signup popup
+
+  $('.customer-signup-link').on('click', function(e){
+    e.preventDefault();
+
+
+    console.log($('.customer-signup-popup'))
+  })
+
+  // Customer creates request to restaurants
   $('.create-customer-deal').on('click', function(e){
     e.preventDefault();
 
