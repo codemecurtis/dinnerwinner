@@ -5,7 +5,19 @@ class CustomersController < ApplicationController
   end
 
   def show
-
+    # customer_deals = current_customer.deals
+    # p @all_customer_deals = CustomerDeal.where(deal_id: , customer_id:, accepted: false)
+    @all_customer_deals = CustomerDeal.where(customer_id: current_customer.id)
+    @pending_deals = []
+    @accepted_deals = []
+    @all_customer_deals.each do |deal|
+      if deal.accepted == false && deal.deal_id != nil
+        @pending_deals << deal
+      elsif deal.deal_id != nil
+        @accepted_deals << deal
+      end
+    end
+    p @accepted_deals
     @neighborhoods = [
       "Alamo Square",
       "Anza Vista",
