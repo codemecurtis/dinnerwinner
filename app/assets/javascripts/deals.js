@@ -1,7 +1,20 @@
-$(document).ready(function() {
+ // $.ajax({
+ //      url: window.location+'/deals',
+ //      method: 'GET',
+ //      dataType: 'JSON'
+ //    }).done(function(data){
+ //      var context = { deals: data };
+ //      var source = $('#deals-template').html();
+ //      var template = Handlebars.compile(source);
+ //      var html = template(context);
+ //      $('#wrapper').append(html);
+ //    })
+
+// $(document).ready(function() {
+  $(document).on("page:change",function(){
   //READ
   //lists all of the deals in the current business
-  $(window).load(function(e){
+  // $(window).load(function(e){
     $.ajax({
       url: window.location+'/deals',
       method: 'GET',
@@ -13,13 +26,14 @@ $(document).ready(function() {
       var html = template(context);
       $('#wrapper').append(html);
     })
-  });
+  // });
 //UPDATE
   //this is to get the edit modal to appear
   $('#wrapper').on('click', '.edit-button', function(e){
     e.preventDefault();
     document.getElementById("edit"+$(this).attr("href")).style.display = "block";
   })
+
   // and disappear
   $('#wrapper').on("click", ".cancel-button", function(e){
     e.preventDefault();
@@ -56,18 +70,18 @@ $('#wrapper').on("click", ".delete-button", function(e){
 
 //CREATE
 //getting the create modal to appear
-$(document).on('click', '.create-button', function(e){
+$('body').on('click', '.create-button', function(e){
   e.preventDefault();
   document.getElementById('create_form_container').style.display = "block";
 })
 // and disappear
-$(document).on("click", ".cancel-button", function(e){
+$('body').on("click", ".cancel-button", function(e){
   e.preventDefault();
   document.getElementById('create_form_container').style.display = "none";
 })
 
  //sending create data to the DB
- $(document).on("submit",'#create_form', function(e){
+ $('body').on("submit",'.create_form', function(e){
   e.preventDefault();
   $.ajax({
     url: window.location,

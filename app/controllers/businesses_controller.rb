@@ -17,6 +17,8 @@ class BusinessesController < ApplicationController
       end
     end
 
+    @my_deals_templates = Deal.where(business_id:params[:id])
+
     @accepted_deals = []
     business_deals.each do |deal|
       CustomerDeal.where(deal_id: deal.id).each do |deals|
@@ -36,11 +38,14 @@ class BusinessesController < ApplicationController
       bneigh = JSON.parse(@business.neighborhoods).map { |e| e.downcase }
       dneigh = JSON.parse(deal.neighborhoods).map { |e| e.downcase }
       if bneigh.any? {|e| dneigh.include?(e)}
-        @requests << deal
+        name_customer = Customer.find(deal.customer_id).first_name
+        time_customer = deal.reservation_time
+        size_customer = deal.party_size
+        # thisdeal={name:name_customer, time:time_customer, size:size_customer}
+        @requests << {name:name_customer, time:time_customer, size:size_customer}
       end
     end
-    p 'r'*90
-p @requests
+    p @requests
     render :json => @requests
 
   end

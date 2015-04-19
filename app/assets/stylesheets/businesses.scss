@@ -16,18 +16,27 @@
   z-index: 3;
 }
 
+.offer_images{
+  width: 200px;
+}
+
+
 .cancel-button{
   float: right;
 }
 
 .make_an_offer_modal{
+  display: none
+}
 
+.edit_deal_modal{
+  display: none
 }
 
 .create_modal{
   display: none;
   position: fixed;
-  left: 40%;
+  left: 10%;
   top: 30%;
   width: 400px;
   height: 400px;
@@ -35,7 +44,7 @@
   border-radius: 10px;
   background-color: blue;
   padding: 3%;
-  z-index: 3;
+  z-index: 25;
 }
 .deals-subtitle {
   text-align:center;

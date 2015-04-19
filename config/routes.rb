@@ -7,7 +7,6 @@ Rails.application.routes.draw do
       get 'mass_deal'
       post 'create_mass_deal'
       resources :deals
-
   end
 
 
