@@ -6,6 +6,7 @@ $(document).on('page:change', function(){
     e.preventDefault();
 
 
+    console.log($('.customer-signup-popup'))
   })
 
   // Customer creates request to restaurants
