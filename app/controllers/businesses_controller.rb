@@ -17,23 +17,6 @@ class BusinessesController < ApplicationController
       end
     end
 
-    @array_of_requests=[]
-    CustomerDeal.all.each do |deal|
-      # temp = Deal.find(deal.deal_id)
-      bneigh = JSON.parse(Business.find(params[:id]).neighborhoods).map { |e| e.downcase }
-      dneigh = JSON.parse(deal.neighborhoods).map { |e| e.downcase }
-      if bneigh.any? {|e| dneigh.include?(e)}
-      p "r"*80
-        p deal
-      p "r"*80
-        @array_of_requests << deal
-      end
-      p bneigh
-      p dneigh
-      p @array_of_requests
-    end
-
-
     @accepted_deals = []
     business_deals.each do |deal|
       CustomerDeal.where(deal_id: deal.id).each do |deals|
@@ -43,6 +26,23 @@ class BusinessesController < ApplicationController
       end
     end
     authenticate_business
+  end
+
+  def request_list
+    @business = Business.find(params[:business_id])
+    @requests=[]
+    CustomerDeal.all.each do |deal|
+      # temp = Deal.find(deal.deal_id)
+      bneigh = JSON.parse(@business.neighborhoods).map { |e| e.downcase }
+      dneigh = JSON.parse(deal.neighborhoods).map { |e| e.downcase }
+      if bneigh.any? {|e| dneigh.include?(e)}
+        @requests << deal
+      end
+    end
+    p 'r'*90
+p @requests
+    render :json => @requests
+
   end
 
 

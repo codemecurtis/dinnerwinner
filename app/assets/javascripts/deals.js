@@ -3,7 +3,7 @@ $(document).ready(function() {
   //lists all of the deals in the current business
   $(window).load(function(e){
     $.ajax({
-      url: window.location+'deals',
+      url: window.location+'/deals',
       method: 'GET',
       dataType: 'JSON'
     }).done(function(data){
