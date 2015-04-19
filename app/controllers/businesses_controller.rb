@@ -15,6 +15,15 @@ class BusinessesController < ApplicationController
         end
       end
     end
+
+    @accepted_deals = []
+    business_deals.each do |deal|
+      CustomerDeal.where(deal_id: deal.id).each do |deals|
+        if deals.accepted
+          @accepted_deals << deals
+        end
+      end
+    end
     authenticate_business
   end
 

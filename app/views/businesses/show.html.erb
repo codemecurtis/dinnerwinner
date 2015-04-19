@@ -39,13 +39,14 @@
     <section class="accepted-deals">
         <h3 class="deals-subtitle">Accepted Deals</h3>
       <ul class="accepted-deals-list">
-        <% @business.deals.each do |deal| %>
-            <li class="deal deal-<%= deal.id %>">
-              <img src="<%= deal.deal_image %>">
-              <h3> <%= deal.name %> </h3>
-              <p><%= deal.short_description %></p>
+        <% @accepted_deals.each do |deal| %>
+          <% temp = Deal.find(deal.deal_id) %>
+            <li class="deal deal-<%= temp.id %>">
+              <img src="<%= temp.deal_image %>">
+              <h3> <%= temp.name %> </h3>
+              <p><%= temp.short_description %></p>
             </li>
-            <!-- <h3>You have not accepted any deals</h3> -->
+            <!-- <h3>You don't have any mass deals offered</h3> -->
         <% end %>
       </ul>
     </section>
