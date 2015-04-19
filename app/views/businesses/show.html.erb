@@ -18,6 +18,22 @@
       </div>
     </div>
   <hr>
+<section class="requests">
+    <h3 class="deals-subtitle">Requests</h3>
+      <ul class="requests-list">
+
+        <% @array_of_requests.each do |deal| %>
+          <% temp = Deal.find(deal.deal_id) %>
+            <li class="deal deal-<%= temp.id %>">
+              <img src="<%= temp.deal_image %>">
+              <h3> <%= temp.name %> </h3>
+              <p><%= temp.short_description %></p>
+            </li>
+            <!-- <h3>You don't have any mass deals offered</h3> -->
+        <% end %>
+      </ul>
+</section>
+
     <section class="mass-deals">
       <h3 class="deals-subtitle">Current Mass Deals Offered</h3>
       <ul class="mass-deals-list">
