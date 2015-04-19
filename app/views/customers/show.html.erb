@@ -7,7 +7,9 @@
 
 <h3>Find a Deal</h3>
 <div class="request-bar">
-  <%= select_tag(:city_id, '<option value="1">Lisbon</option>...') %>
+  Neighborhood: <%= select_tag(:neighborhoods, options_for_select(@uniq_neighborhoods)) %>
+  Party Size: <%= select_tag(:party_size, options_for_select((1..10))) %>
+  <%= submit_tag(value = "Request a Deal!") %>
 </div>
 
 <form action="/customers/sign_out" method="post"/>

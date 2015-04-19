@@ -4,7 +4,11 @@ class CustomersController < ApplicationController
   end
 
   def show
-
+    @neighborhoods = []
+    Business.all.each do |b|
+      @neighborhoods << b.neighborhoods.gsub(/\W+/, ' ')
+    end
+    @uniq_neighborhoods = @neighborhoods.uniq
   end
 
 
