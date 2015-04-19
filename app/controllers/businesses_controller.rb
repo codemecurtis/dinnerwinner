@@ -19,12 +19,18 @@ class BusinessesController < ApplicationController
 
     @array_of_requests=[]
     CustomerDeal.all.each do |deal|
-      temp = Deal.find(deal.deal_id)
-      bneigh = JSON.parse(Business.find(params[:id]).neighborhoods)
-      dneigh = deal.neighborhoods
+      # temp = Deal.find(deal.deal_id)
+      bneigh = JSON.parse(Business.find(params[:id]).neighborhoods).map { |e| e.downcase }
+      dneigh = JSON.parse(deal.neighborhoods).map { |e| e.downcase }
       if bneigh.any? {|e| dneigh.include?(e)}
+      p "r"*80
+        p deal
+      p "r"*80
         @array_of_requests << deal
       end
+      p bneigh
+      p dneigh
+      p @array_of_requests
     end
 
 
