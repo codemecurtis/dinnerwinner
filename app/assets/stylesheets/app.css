@@ -1,5 +1,74 @@
-.customer-signup-popup{
-  display: none;
-  background: orange;
-  z-index: 5;
+html{
+  width: 100%;
+}
+input, button, textarea{
+  border: none;
+}
+a{
+  text-decoration: none;
+}
+.span_12_of_12{
+  text-align: center;
+}
+.welcome .header-container, .welcome .about-container, .welcome .auto{
+  margin: auto;
+}
+.welcome-element{
+  margin-bottom: 7em;
+}
+.welcome p, .welcome h2{
+  line-height: 2em;
+}
+.welcome header{
+  background: url('wine.jpg') no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+.welcome header h1{
+  font-size: 3.5em;
+}
+.welcome .header-container{
+  /*border: 2px solid red;*/
+  position: relative;
+  top: 30%;
+}
+.welcome .welcome-buttons{
+  background: #FFD6A6;
+  height: 3.3em;
+  margin: 10px;
+}
+.welcome .about{
+  background: red;
+}
+.welcome .feedback{
+  background: yellow;
+  padding: 4em;
+}
+.welcome .feedback div{
+  margin: auto;
+  font-size: 1.3em;
+}
+.feedback input, .feedback textarea{
+  padding: 10px;
+}
+.feedback textarea{
+  min-height: 7em;
+}
+.welcome footer{
+  padding: 3em;
+  background: lightgrey
+}
+.social{
+  padding-left: 7em;
+}
+.social li{
+  display: inline-block;
+}
+.social li i{
+  background: blue;
+  color: white;
+  padding: 10px;
 }
