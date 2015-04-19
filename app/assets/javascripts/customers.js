@@ -4,9 +4,9 @@ $(document).on('page:change', function(){
 
   $('.customer-signup-link').on('click', function(e){
     e.preventDefault();
-
-
-    console.log($('.customer-signup-popup'))
+    $('.customer-signup-modal').modal({
+      overlayClose: true
+    })
   })
 
   // Customer creates request to restaurants
