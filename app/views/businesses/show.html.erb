@@ -3,7 +3,7 @@
     <div class="business-info">
       <div class="accepted-deals right">
         <h3>
-          <% if @business.deals.count > 1 %>
+          <% if @business.deals.count > 1%>
             <%= @business.deals.count %> Deals<br>
             Accepted
           <% else %>
@@ -21,6 +21,9 @@
     <section class="mass-deals">
       <h3 class="deals-subtitle">Current Mass Deals Offered</h3>
       <ul class="mass-deals-list">
+        <li class="deal new-deal">
+          <span><a href="">+</a></span>
+        </li>
         <% @business.deals.each do |deal| %>
             <li class="deal deal-<%= deal.id %>">
               <img src="<%= deal.deal_image %>">
