@@ -2,7 +2,7 @@ class DeviseCreateBusinesses < ActiveRecord::Migration
   def change
     create_table(:businesses) do |t|
 
-      t.string :name, :phone_number, :logo, :location
+      t.string :name, :phone_number, :logo, :city, :address, :neighborhoods
       t.text :short_description
       t.integer :rating
       ## Database authenticatable

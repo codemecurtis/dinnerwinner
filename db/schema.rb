@@ -20,7 +20,9 @@ ActiveRecord::Schema.define(version: 20150418005211) do
     t.string   "name"
     t.string   "phone_number"
     t.string   "logo"
-    t.string   "location"
+    t.string   "city"
+    t.string   "address"
+    t.string   "neighborhoods"
     t.text     "short_description"
     t.integer  "rating"
     t.string   "email",                  default: "", null: false
