@@ -26,10 +26,10 @@ end
 # end
 params = {term: "food"}
 
-100.times do
+50.times do
   response = Yelp.client.search('san-francisco', params)
   response.businesses.each do |business|
-    b = Business.new(name: business.name, rating: business.rating, location: business.location.display_address, password: 'password', email:Faker::Internet.email)
+    b = Business.new(name: business.name, rating: business.rating, city: business.location.city, address: business.location.display_address, neighborhoods: business.location.neighborhoods, password: 'password', email:Faker::Internet.email, logo: business.image_url, phone_number: business.display_phone, short_description: business.snippet_text)
     b.save
   end
 end

@@ -1,40 +1,41 @@
 class BusinessesController < ApplicationController
- skip_before_action :verify_authenticity_token, only: :create_mass_deal
- include BusinessesHelper
- def index
- end
+  skip_before_action :verify_authenticity_token, only: :create_mass_deal
+  include BusinessesHelper
 
- def show
-  viewed_business
-  business_deals = Deal.where(business_id: params[:id])
-  @mass_deal = []
-  business_deals.each do |deal|
-    CustomerDeal.where(deal_id: deal.id).each do |deals|
-      if deals.mass_deal
-        @mass_deal << deals
-      end
-    end
+  def index
   end
 
-  @array_of_requests=[]
-  CustomerDeal.all.each do |deal|
-    temp = Deal.find(deal.deal_id)
-    if Business.find(params[:id]).neighborhood == deal.neighborhood
+  def show
+    viewed_business
+    business_deals = Deal.where(business_id: params[:id])
+    @mass_deal = []
+    business_deals.each do |deal|
+      CustomerDeal.where(deal_id: deal.id).each do |deals|
+        if deals.mass_deal
+          @mass_deal << deals
+        end
+      end
+    end
+
+    @array_of_requests=[]
+    CustomerDeal.all.each do |deal|
+      temp = Deal.find(deal.deal_id)
+      if Business.find(params[:id]).neighborhood == deal.neighborhood
     # if params[:id]==temp.business_id
-      @array_of_requests << deal
-    end
+    @array_of_requests << deal
   end
+end
 
 
-  @accepted_deals = []
-  business_deals.each do |deal|
-    CustomerDeal.where(deal_id: deal.id).each do |deals|
-      if deals.accepted
-        @accepted_deals << deals
-      end
+@accepted_deals = []
+business_deals.each do |deal|
+  CustomerDeal.where(deal_id: deal.id).each do |deals|
+    if deals.accepted
+      @accepted_deals << deals
     end
   end
-  authenticate_business
+end
+authenticate_business
 end
 
 def edit

@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   end
 
 
+  resources :customer_deals
+
   # devise_for :customers
 
   root 'home#index'
