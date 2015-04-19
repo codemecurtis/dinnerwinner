@@ -142,8 +142,17 @@
   <%= submit_tag("Request a Deal!", class: "create-customer-deal") %>
 </div>
 
+<script id="pending-deals" type="text/x-handlebars-template">
+    {{business.name}}
+    {{business.rating}}
+    {{business.address}}
+    {{business.short_description}}
+    {{deal.name}}
+    <img src="{{deal.deal_image}}"/>
+    <a href="/customer_deal/{{customer_deal.id}}/edit">Accept Deal!</a>
+</script>
+
 <div class="customer-deal-modal">
 
 </div>
-
 

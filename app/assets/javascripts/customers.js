@@ -19,14 +19,21 @@ $(document).on('page:change', function(){
 
   $('.pending-deals li').on('click', function(e) {
       var id = $(this).attr('class')
-
+      var source = $('#pending-deals').html();
+      var template = Handlebars.compile(source)
+      var context = {}
       $.ajax({
         url: '/customer_deals/'+ id,
         type: 'GET',
         dataType: 'JSON',
       })
       .done(function(response) {
-        console.log(response)
+        console.log(response);
+        context.business = response.requested_business
+        context.deal = response.pending_deal
+        context.customer_deal = response.customer_deal
+        $('.customer-deal-modal').append(template(context))
+        $('.customer-deal-modal').modal();
         console.log("success");
       })
       .fail(function() {

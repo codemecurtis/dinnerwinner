@@ -3,8 +3,9 @@ class CustomerDealsController < ApplicationController
   def show
     @customer_deal = CustomerDeal.find(params[:id])
     @business_id = @customer_deal.deal.business_id
+    @pending_deal = @customer_deal.deal
     @requested_business = Business.find(@business_id)
-    render json: @requested_business
+    render json: { requested_business: @requested_business, pending_deal: @pending_deal, customer_deal: @customer_deal }
   end
 
   def new
