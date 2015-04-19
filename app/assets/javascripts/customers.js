@@ -1,21 +1,5 @@
 $(document).on('page:change', function(){
 
-  //signup popup
-
-  $('.customer-signup-link').on('click', function(e){
-    e.preventDefault();
-    $('.customer-signup-modal').modal({
-      overlayClose: true
-    })
-  })
-
-  $('.customer-login-link').on('click', function(e){
-    e.preventDefault();
-    $('.customer-login-modal').modal({
-      overlayClose: true
-    })
-  })
-
   // Customer creates request to restaurants
   $('.create-customer-deal').on('click', function(e){
     e.preventDefault();
@@ -32,6 +16,5 @@ $(document).on('page:change', function(){
       alert(response);
     });
   });
-
 
 });
