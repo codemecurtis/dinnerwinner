@@ -1,0 +1,12 @@
+<form action="/businesses/<%= params[:business_id] %>/create_mass_deal" method="post">
+  <input name="authenticity_token" type="hidden" value="token_value">
+  <input type="number" name="party_size" placeholder="How many people"><br>
+  <% @deals.each do |deal| %>
+    <img src="<%= deal.deal_image %>">
+    <input type="radio" name="deal" value="<%= deal.id %>"><%= deal.name %>
+  <% end %>
+  <button type="submit">Submit</button>
+</form>
+
+<ul class="deals">
+</ul>

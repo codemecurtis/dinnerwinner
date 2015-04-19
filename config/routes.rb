@@ -4,8 +4,12 @@ Rails.application.routes.draw do
   resources :customers
 
   resources :businesses do
-    resources :deals
+      get 'mass_deal'
+      post 'create_mass_deal'
+      resources :deals
+
   end
+
 
   resources :customer_deals
 
