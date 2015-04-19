@@ -8,7 +8,7 @@
       </a>
       <ul class="pending-deals">
         <% @pending_deals.each do |customer_deal| %>
-        <li class="<%= customer_deal.deal.id %>"><%= customer_deal.deal.name %></li>
+        <li class="<%= customer_deal.id %>"><%= customer_deal.deal.name %></li>
         <% end %>
       </ul>
     </li>
@@ -142,6 +142,19 @@
   <%= submit_tag("Request a Deal!", class: "create-customer-deal") %>
 </div>
 
+<div class="accepted-deals">
+  <% @accepted_deals.each do |accepted| %>
+  <div class="deal-tile" id="tile-<%= accepted.deal.id %>">
+    <img id="img<%= accepted.deal.id %>" src="<%= accepted.deal.deal_image %>">
+    <h3 id="h3<%= accepted.deal.id %>">
+    <%= accepted.deal.name %>
+    </h3>
+    <p><%= accepted.deal.created_at %></p>
+    <p id="p<%= accepted.deal.id %>"><%= accepted.deal.short_description %></p>
+    </div>
+  <% end %>
+</div>
+
 <script id="pending-deals" type="text/x-handlebars-template">
     {{business.name}}
     {{business.rating}}
@@ -149,7 +162,7 @@
     {{business.short_description}}
     {{deal.name}}
     <img src="{{deal.deal_image}}"/>
-    <a href="/customer_deal/{{customer_deal.id}}/edit">Accept Deal!</a>
+    <a href="/customer_deals/{{customer_deal.id}}/edit">Accept Deal!</a>
 </script>
 
 <div class="customer-deal-modal">

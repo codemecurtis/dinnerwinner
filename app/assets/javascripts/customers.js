@@ -33,7 +33,9 @@ $(document).on('page:change', function(){
         context.deal = response.pending_deal
         context.customer_deal = response.customer_deal
         $('.customer-deal-modal').append(template(context))
-        $('.customer-deal-modal').modal();
+        $('.customer-deal-modal').modal({
+          overlayClose: true
+        });
         console.log("success");
       })
       .fail(function() {
