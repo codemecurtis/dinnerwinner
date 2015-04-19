@@ -4,8 +4,7 @@ class CustomerDealsController < ApplicationController
   end
 
   def create
-    @new_customer_deal = CustomerDeal.create(customer_id: current_customer.id, party_size: params[:party_size], reservation_time: params[:reservation_time])
-    # params[:neighborhoods]
+    @new_customer_deal = CustomerDeal.create(customer_id: current_customer.id, party_size: params[:party_size], reservation_time: params[:reservation_time], neighborhoods: params[:neighborhoods])
     render json: {customer: @new_customer_deal}, status: :created
   end
 

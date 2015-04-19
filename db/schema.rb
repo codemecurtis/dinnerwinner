@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20150418005211) do
     t.integer  "deal_id"
     t.integer  "party_size"
     t.string   "reservation_time"
+    t.string   "neighborhoods"
     t.boolean  "mass_deal",        default: false
     t.boolean  "accepted",         default: false
     t.datetime "created_at",                       null: false

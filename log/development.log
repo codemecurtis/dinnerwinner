@@ -5565,3 +5565,1058 @@ Processing by CustomerDealsController#create as JSON
   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "customer_deals" ("customer_id", "party_size", "reservation_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["customer_id", 1], ["party_size", 4], ["reservation_time", "6:00 PM"], ["created_at", "2015-04-19 04:03:43.625454"], ["updated_at", "2015-04-19 04:03:43.625454"]]
   [1m[35m (1.3ms)[0m  COMMIT
 Completed 201 Created in 38ms (Views: 0.5ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/customers/1" for ::1 at 2015-04-18 21:47:36 -0700
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered customers/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 456ms (Views: 436.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 21:47:37 -0700
+
+
+Started GET "/assets/businesses.self-8df3f823cde8cee8d829fc89c23c29906e616286addfc6fd9f71838e240a57bd.css?body=1" for ::1 at 2015-04-18 21:47:37 -0700
+
+
+Started GET "/assets/basic.self-5770f352651f27efc833042df612c5c68a27c43553c4355cf75066ab1ecd0ea5.css?body=1" for ::1 at 2015-04-18 21:47:37 -0700
+
+
+Started GET "/assets/app.self-2bc3b64f608a496a132b38efdc726b1a8e094b70c1ca2bec4120626fe48d1081.css?body=1" for ::1 at 2015-04-18 21:47:37 -0700
+
+
+Started GET "/assets/responsive.gs.12col.self-382cc78ae9d3462a6d3cb106ba6cb237c9271f17c573e4a7018397596f5ceed8.css?body=1" for ::1 at 2015-04-18 21:47:37 -0700
+
+
+Started GET "/assets/customer_deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 21:47:37 -0700
+
+
+Started GET "/assets/customers.self-7333cfecdd0b21afcf95498fd0bde7d10d88a9d243bccc1801467db39a83061a.css?body=1" for ::1 at 2015-04-18 21:47:37 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 21:47:37 -0700
+
+
+Started GET "/assets/header.self-b3da4eeaa6e1702e4fdbbcbf18a0f6ca44ce735d155ed4fc3055aaba86d73d6c.css?body=1" for ::1 at 2015-04-18 21:47:37 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 21:47:37 -0700
+
+
+Started GET "/assets/application.self-8d5e05b593a446686cd927189956d138234fd2483b4e6070ad57c127106d0f78.css?body=1" for ::1 at 2015-04-18 21:47:37 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 21:47:37 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 21:47:37 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 21:47:37 -0700
+
+
+Started GET "/assets/jquery.simplemodal.self-7a05bf700607597ec3cea81a39d4062b6f4b91a6f4b5433f6d30c95ec415f9fd.js?body=1" for ::1 at 2015-04-18 21:47:37 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 21:47:37 -0700
+
+
+Started GET "/assets/businesses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 21:47:37 -0700
+
+
+Started GET "/assets/customer_deals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-04-18 21:47:37 -0700
+
+
+Started GET "/assets/customers.self-2e9f68d9a79a7219c39783ac0368551b9c8162bca4e11b16c1bfb4df5269ad95.js?body=1" for ::1 at 2015-04-18 21:47:37 -0700
+
+
+Started GET "/assets/deals.self-8f1607318c95a3e4a1cce524ebd05b3f479ea3ee2ff1269e5beeaeddadc067ce.js?body=1" for ::1 at 2015-04-18 21:47:37 -0700
+
+
+Started GET "/assets/welcome.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for ::1 at 2015-04-18 21:47:37 -0700
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-04-18 21:47:37 -0700
+
+
+Started GET "/customers/1deals" for ::1 at 2015-04-18 21:47:37 -0700
+Processing by CustomersController#show as JSON
+  Parameters: {"id"=>"1deals"}
+  [1m[35mCustomer Load (1.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered customers/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 223ms (Views: 217.4ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/customer_deals" for ::1 at 2015-04-18 21:47:42 -0700
+Processing by CustomerDealsController#create as JSON
+  Parameters: {"party_size"=>"6", "neighborhoods"=>"Bernal Heights", "reservation_time"=>"6:00 AM"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "customer_deals" ("customer_id", "party_size", "reservation_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["customer_id", 1], ["party_size", 6], ["reservation_time", "6:00 AM"], ["created_at", "2015-04-19 04:47:42.436314"], ["updated_at", "2015-04-19 04:47:42.436314"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+Completed 201 Created in 19ms (Views: 0.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/customers/1" for ::1 at 2015-04-18 21:48:10 -0700
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered customers/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 205ms (Views: 185.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 21:48:11 -0700
+
+
+Started GET "/assets/responsive.gs.12col.self-382cc78ae9d3462a6d3cb106ba6cb237c9271f17c573e4a7018397596f5ceed8.css?body=1" for ::1 at 2015-04-18 21:48:11 -0700
+
+
+Started GET "/assets/app.self-2bc3b64f608a496a132b38efdc726b1a8e094b70c1ca2bec4120626fe48d1081.css?body=1" for ::1 at 2015-04-18 21:48:11 -0700
+
+
+Started GET "/assets/basic.self-5770f352651f27efc833042df612c5c68a27c43553c4355cf75066ab1ecd0ea5.css?body=1" for ::1 at 2015-04-18 21:48:11 -0700
+
+
+Started GET "/assets/businesses.self-8df3f823cde8cee8d829fc89c23c29906e616286addfc6fd9f71838e240a57bd.css?body=1" for ::1 at 2015-04-18 21:48:11 -0700
+
+
+Started GET "/assets/customer_deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 21:48:11 -0700
+
+
+Started GET "/assets/customers.self-7333cfecdd0b21afcf95498fd0bde7d10d88a9d243bccc1801467db39a83061a.css?body=1" for ::1 at 2015-04-18 21:48:11 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 21:48:11 -0700
+
+
+Started GET "/assets/header.self-b3da4eeaa6e1702e4fdbbcbf18a0f6ca44ce735d155ed4fc3055aaba86d73d6c.css?body=1" for ::1 at 2015-04-18 21:48:11 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 21:48:11 -0700
+
+
+Started GET "/assets/application.self-8d5e05b593a446686cd927189956d138234fd2483b4e6070ad57c127106d0f78.css?body=1" for ::1 at 2015-04-18 21:48:11 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 21:48:11 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 21:48:11 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 21:48:11 -0700
+
+
+Started GET "/assets/jquery.simplemodal.self-7a05bf700607597ec3cea81a39d4062b6f4b91a6f4b5433f6d30c95ec415f9fd.js?body=1" for ::1 at 2015-04-18 21:48:11 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 21:48:11 -0700
+
+
+Started GET "/assets/businesses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 21:48:11 -0700
+
+
+Started GET "/assets/customer_deals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-04-18 21:48:11 -0700
+
+
+Started GET "/assets/customers.self-2e9f68d9a79a7219c39783ac0368551b9c8162bca4e11b16c1bfb4df5269ad95.js?body=1" for ::1 at 2015-04-18 21:48:11 -0700
+
+
+Started GET "/assets/deals.self-8f1607318c95a3e4a1cce524ebd05b3f479ea3ee2ff1269e5beeaeddadc067ce.js?body=1" for ::1 at 2015-04-18 21:48:11 -0700
+
+
+Started GET "/assets/welcome.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for ::1 at 2015-04-18 21:48:11 -0700
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-04-18 21:48:11 -0700
+
+
+Started GET "/customers/1deals" for ::1 at 2015-04-18 21:48:11 -0700
+Processing by CustomersController#show as JSON
+  Parameters: {"id"=>"1deals"}
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered customers/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 128ms (Views: 125.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/customer_deals" for ::1 at 2015-04-18 21:48:16 -0700
+Processing by CustomerDealsController#create as JSON
+  Parameters: {"party_size"=>"5", "neighborhoods"=>"Chinatown", "reservation_time"=>"10:30 AM"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 1.4ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'neighborhoods' for CustomerDeal.):
+  app/controllers/customer_deals_controller.rb:7:in `create'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (30.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (23.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (55.2ms)
+
+
+Started GET "/customers/1" for ::1 at 2015-04-18 21:48:43 -0700
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered customers/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 467ms (Views: 464.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/customers.self-4d036bc318eb8940f60d7d518e699ccb6796e5bad3e980a6028f32dbe47b8c88.js?body=1" for ::1 at 2015-04-18 21:48:43 -0700
+
+
+Started GET "/assets/basic.self-5770f352651f27efc833042df612c5c68a27c43553c4355cf75066ab1ecd0ea5.css?body=1" for ::1 at 2015-04-18 21:48:43 -0700
+
+
+Started GET "/assets/responsive.gs.12col.self-382cc78ae9d3462a6d3cb106ba6cb237c9271f17c573e4a7018397596f5ceed8.css?body=1" for ::1 at 2015-04-18 21:48:43 -0700
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 21:48:43 -0700
+
+
+Started GET "/assets/app.self-2bc3b64f608a496a132b38efdc726b1a8e094b70c1ca2bec4120626fe48d1081.css?body=1" for ::1 at 2015-04-18 21:48:43 -0700
+
+
+Started GET "/assets/businesses.self-8df3f823cde8cee8d829fc89c23c29906e616286addfc6fd9f71838e240a57bd.css?body=1" for ::1 at 2015-04-18 21:48:43 -0700
+
+
+Started GET "/assets/customer_deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 21:48:43 -0700
+
+
+Started GET "/assets/customers.self-7333cfecdd0b21afcf95498fd0bde7d10d88a9d243bccc1801467db39a83061a.css?body=1" for ::1 at 2015-04-18 21:48:43 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 21:48:43 -0700
+
+
+Started GET "/assets/header.self-b3da4eeaa6e1702e4fdbbcbf18a0f6ca44ce735d155ed4fc3055aaba86d73d6c.css?body=1" for ::1 at 2015-04-18 21:48:43 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 21:48:43 -0700
+
+
+Started GET "/assets/application.self-8d5e05b593a446686cd927189956d138234fd2483b4e6070ad57c127106d0f78.css?body=1" for ::1 at 2015-04-18 21:48:43 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 21:48:43 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 21:48:43 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 21:48:43 -0700
+
+
+Started GET "/assets/jquery.simplemodal.self-7a05bf700607597ec3cea81a39d4062b6f4b91a6f4b5433f6d30c95ec415f9fd.js?body=1" for ::1 at 2015-04-18 21:48:43 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 21:48:44 -0700
+
+
+Started GET "/assets/businesses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 21:48:44 -0700
+
+
+Started GET "/assets/customer_deals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-04-18 21:48:44 -0700
+
+
+Started GET "/assets/deals.self-8f1607318c95a3e4a1cce524ebd05b3f479ea3ee2ff1269e5beeaeddadc067ce.js?body=1" for ::1 at 2015-04-18 21:48:44 -0700
+
+
+Started GET "/assets/welcome.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for ::1 at 2015-04-18 21:48:44 -0700
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-04-18 21:48:44 -0700
+
+
+Started GET "/customers/1deals" for ::1 at 2015-04-18 21:48:44 -0700
+Processing by CustomersController#show as JSON
+  Parameters: {"id"=>"1deals"}
+  [1m[36mCustomer Load (0.4ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered customers/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 143ms (Views: 138.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers/1" for ::1 at 2015-04-18 21:49:00 -0700
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered customers/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 503ms (Views: 500.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 21:49:00 -0700
+
+
+Started GET "/assets/app.self-2bc3b64f608a496a132b38efdc726b1a8e094b70c1ca2bec4120626fe48d1081.css?body=1" for ::1 at 2015-04-18 21:49:00 -0700
+
+
+Started GET "/assets/customers.self-3275928acca095917fd914eb8a8ff68de75fc69a0be04c26e1e61ba7850f246c.js?body=1" for ::1 at 2015-04-18 21:49:00 -0700
+
+
+Started GET "/assets/responsive.gs.12col.self-382cc78ae9d3462a6d3cb106ba6cb237c9271f17c573e4a7018397596f5ceed8.css?body=1" for ::1 at 2015-04-18 21:49:00 -0700
+
+
+Started GET "/assets/businesses.self-8df3f823cde8cee8d829fc89c23c29906e616286addfc6fd9f71838e240a57bd.css?body=1" for ::1 at 2015-04-18 21:49:00 -0700
+
+
+Started GET "/assets/basic.self-5770f352651f27efc833042df612c5c68a27c43553c4355cf75066ab1ecd0ea5.css?body=1" for ::1 at 2015-04-18 21:49:00 -0700
+
+
+Started GET "/assets/customer_deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 21:49:00 -0700
+
+
+Started GET "/assets/customers.self-7333cfecdd0b21afcf95498fd0bde7d10d88a9d243bccc1801467db39a83061a.css?body=1" for ::1 at 2015-04-18 21:49:00 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 21:49:00 -0700
+
+
+Started GET "/assets/header.self-b3da4eeaa6e1702e4fdbbcbf18a0f6ca44ce735d155ed4fc3055aaba86d73d6c.css?body=1" for ::1 at 2015-04-18 21:49:00 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 21:49:01 -0700
+
+
+Started GET "/assets/application.self-8d5e05b593a446686cd927189956d138234fd2483b4e6070ad57c127106d0f78.css?body=1" for ::1 at 2015-04-18 21:49:01 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 21:49:01 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 21:49:01 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 21:49:01 -0700
+
+
+Started GET "/assets/jquery.simplemodal.self-7a05bf700607597ec3cea81a39d4062b6f4b91a6f4b5433f6d30c95ec415f9fd.js?body=1" for ::1 at 2015-04-18 21:49:01 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 21:49:01 -0700
+
+
+Started GET "/assets/businesses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 21:49:01 -0700
+
+
+Started GET "/assets/customer_deals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-04-18 21:49:01 -0700
+
+
+Started GET "/assets/deals.self-8f1607318c95a3e4a1cce524ebd05b3f479ea3ee2ff1269e5beeaeddadc067ce.js?body=1" for ::1 at 2015-04-18 21:49:01 -0700
+
+
+Started GET "/assets/welcome.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for ::1 at 2015-04-18 21:49:01 -0700
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-04-18 21:49:01 -0700
+
+
+Started GET "/customers/1deals" for ::1 at 2015-04-18 21:49:01 -0700
+Processing by CustomersController#show as JSON
+  Parameters: {"id"=>"1deals"}
+  [1m[36mCustomer Load (0.5ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered customers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 251ms (Views: 242.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers/1" for ::1 at 2015-04-18 21:49:32 -0700
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered customers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 91ms (Views: 88.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 21:49:33 -0700
+
+
+Started GET "/assets/basic.self-5770f352651f27efc833042df612c5c68a27c43553c4355cf75066ab1ecd0ea5.css?body=1" for ::1 at 2015-04-18 21:49:33 -0700
+
+
+Started GET "/assets/responsive.gs.12col.self-382cc78ae9d3462a6d3cb106ba6cb237c9271f17c573e4a7018397596f5ceed8.css?body=1" for ::1 at 2015-04-18 21:49:33 -0700
+
+
+Started GET "/assets/customers.self-7333cfecdd0b21afcf95498fd0bde7d10d88a9d243bccc1801467db39a83061a.css?body=1" for ::1 at 2015-04-18 21:49:33 -0700
+
+
+Started GET "/assets/app.self-2bc3b64f608a496a132b38efdc726b1a8e094b70c1ca2bec4120626fe48d1081.css?body=1" for ::1 at 2015-04-18 21:49:33 -0700
+
+
+Started GET "/assets/businesses.self-8df3f823cde8cee8d829fc89c23c29906e616286addfc6fd9f71838e240a57bd.css?body=1" for ::1 at 2015-04-18 21:49:33 -0700
+
+
+Started GET "/assets/customer_deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 21:49:33 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 21:49:33 -0700
+
+
+Started GET "/assets/header.self-b3da4eeaa6e1702e4fdbbcbf18a0f6ca44ce735d155ed4fc3055aaba86d73d6c.css?body=1" for ::1 at 2015-04-18 21:49:33 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 21:49:33 -0700
+
+
+Started GET "/assets/application.self-8d5e05b593a446686cd927189956d138234fd2483b4e6070ad57c127106d0f78.css?body=1" for ::1 at 2015-04-18 21:49:33 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 21:49:33 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 21:49:33 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 21:49:33 -0700
+
+
+Started GET "/assets/jquery.simplemodal.self-7a05bf700607597ec3cea81a39d4062b6f4b91a6f4b5433f6d30c95ec415f9fd.js?body=1" for ::1 at 2015-04-18 21:49:33 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 21:49:33 -0700
+
+
+Started GET "/assets/businesses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 21:49:33 -0700
+
+
+Started GET "/assets/customer_deals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-04-18 21:49:33 -0700
+
+
+Started GET "/assets/customers.self-2e9f68d9a79a7219c39783ac0368551b9c8162bca4e11b16c1bfb4df5269ad95.js?body=1" for ::1 at 2015-04-18 21:49:33 -0700
+
+
+Started GET "/assets/deals.self-8f1607318c95a3e4a1cce524ebd05b3f479ea3ee2ff1269e5beeaeddadc067ce.js?body=1" for ::1 at 2015-04-18 21:49:33 -0700
+
+
+Started GET "/assets/welcome.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for ::1 at 2015-04-18 21:49:33 -0700
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-04-18 21:49:33 -0700
+
+
+Started GET "/customers/1deals" for ::1 at 2015-04-18 21:49:33 -0700
+Processing by CustomersController#show as JSON
+  Parameters: {"id"=>"1deals"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered customers/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 231ms (Views: 228.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/1" for ::1 at 2015-04-18 21:50:06 -0700
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered customers/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 93ms (Views: 90.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 21:50:06 -0700
+
+
+Started GET "/assets/basic.self-5770f352651f27efc833042df612c5c68a27c43553c4355cf75066ab1ecd0ea5.css?body=1" for ::1 at 2015-04-18 21:50:06 -0700
+
+
+Started GET "/assets/responsive.gs.12col.self-382cc78ae9d3462a6d3cb106ba6cb237c9271f17c573e4a7018397596f5ceed8.css?body=1" for ::1 at 2015-04-18 21:50:06 -0700
+
+
+Started GET "/assets/businesses.self-8df3f823cde8cee8d829fc89c23c29906e616286addfc6fd9f71838e240a57bd.css?body=1" for ::1 at 2015-04-18 21:50:06 -0700
+
+
+Started GET "/assets/app.self-2bc3b64f608a496a132b38efdc726b1a8e094b70c1ca2bec4120626fe48d1081.css?body=1" for ::1 at 2015-04-18 21:50:06 -0700
+
+
+Started GET "/assets/customers.self-7333cfecdd0b21afcf95498fd0bde7d10d88a9d243bccc1801467db39a83061a.css?body=1" for ::1 at 2015-04-18 21:50:06 -0700
+
+
+Started GET "/assets/customer_deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 21:50:06 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 21:50:06 -0700
+
+
+Started GET "/assets/header.self-b3da4eeaa6e1702e4fdbbcbf18a0f6ca44ce735d155ed4fc3055aaba86d73d6c.css?body=1" for ::1 at 2015-04-18 21:50:06 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 21:50:06 -0700
+
+
+Started GET "/assets/application.self-8d5e05b593a446686cd927189956d138234fd2483b4e6070ad57c127106d0f78.css?body=1" for ::1 at 2015-04-18 21:50:07 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 21:50:07 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 21:50:07 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 21:50:07 -0700
+
+
+Started GET "/assets/jquery.simplemodal.self-7a05bf700607597ec3cea81a39d4062b6f4b91a6f4b5433f6d30c95ec415f9fd.js?body=1" for ::1 at 2015-04-18 21:50:07 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 21:50:07 -0700
+
+
+Started GET "/assets/businesses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 21:50:07 -0700
+
+
+Started GET "/assets/customer_deals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-04-18 21:50:07 -0700
+
+
+Started GET "/assets/customers.self-2e9f68d9a79a7219c39783ac0368551b9c8162bca4e11b16c1bfb4df5269ad95.js?body=1" for ::1 at 2015-04-18 21:50:07 -0700
+
+
+Started GET "/assets/deals.self-8f1607318c95a3e4a1cce524ebd05b3f479ea3ee2ff1269e5beeaeddadc067ce.js?body=1" for ::1 at 2015-04-18 21:50:07 -0700
+
+
+Started GET "/assets/welcome.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for ::1 at 2015-04-18 21:50:07 -0700
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-04-18 21:50:07 -0700
+
+
+Started GET "/customers/1deals" for ::1 at 2015-04-18 21:50:07 -0700
+Processing by CustomersController#show as JSON
+  Parameters: {"id"=>"1deals"}
+  [1m[36mCustomer Load (0.4ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered customers/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 134ms (Views: 130.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/customer_deals" for ::1 at 2015-04-18 21:50:13 -0700
+Processing by CustomerDealsController#create as JSON
+  Parameters: {"party_size"=>"4", "neighborhoods"=>"Cole Valley", "reservation_time"=>"6:15 AM"}
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'neighborhoods' for CustomerDeal.):
+  app/controllers/customer_deals_controller.rb:7:in `create'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (21.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (20.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (42.1ms)
+
+
+Started GET "/customers/1" for ::1 at 2015-04-18 21:52:01 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCustomer Load (0.8ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered customers/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 828ms (Views: 769.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/responsive.gs.12col.self-382cc78ae9d3462a6d3cb106ba6cb237c9271f17c573e4a7018397596f5ceed8.css?body=1" for ::1 at 2015-04-18 21:52:02 -0700
+
+
+Started GET "/assets/app.self-2bc3b64f608a496a132b38efdc726b1a8e094b70c1ca2bec4120626fe48d1081.css?body=1" for ::1 at 2015-04-18 21:52:02 -0700
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 21:52:02 -0700
+
+
+Started GET "/assets/basic.self-5770f352651f27efc833042df612c5c68a27c43553c4355cf75066ab1ecd0ea5.css?body=1" for ::1 at 2015-04-18 21:52:02 -0700
+
+
+Started GET "/assets/businesses.self-8df3f823cde8cee8d829fc89c23c29906e616286addfc6fd9f71838e240a57bd.css?body=1" for ::1 at 2015-04-18 21:52:02 -0700
+
+
+Started GET "/assets/customer_deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 21:52:02 -0700
+
+
+Started GET "/assets/customers.self-7333cfecdd0b21afcf95498fd0bde7d10d88a9d243bccc1801467db39a83061a.css?body=1" for ::1 at 2015-04-18 21:52:02 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 21:52:02 -0700
+
+
+Started GET "/assets/header.self-b3da4eeaa6e1702e4fdbbcbf18a0f6ca44ce735d155ed4fc3055aaba86d73d6c.css?body=1" for ::1 at 2015-04-18 21:52:02 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 21:52:02 -0700
+
+
+Started GET "/assets/application.self-8d5e05b593a446686cd927189956d138234fd2483b4e6070ad57c127106d0f78.css?body=1" for ::1 at 2015-04-18 21:52:02 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 21:52:02 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 21:52:02 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 21:52:02 -0700
+
+
+Started GET "/assets/jquery.simplemodal.self-7a05bf700607597ec3cea81a39d4062b6f4b91a6f4b5433f6d30c95ec415f9fd.js?body=1" for ::1 at 2015-04-18 21:52:02 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 21:52:02 -0700
+
+
+Started GET "/assets/businesses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 21:52:02 -0700
+
+
+Started GET "/assets/customer_deals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-04-18 21:52:02 -0700
+
+
+Started GET "/assets/customers.self-2e9f68d9a79a7219c39783ac0368551b9c8162bca4e11b16c1bfb4df5269ad95.js?body=1" for ::1 at 2015-04-18 21:52:02 -0700
+
+
+Started GET "/assets/deals.self-8f1607318c95a3e4a1cce524ebd05b3f479ea3ee2ff1269e5beeaeddadc067ce.js?body=1" for ::1 at 2015-04-18 21:52:02 -0700
+
+
+Started GET "/assets/welcome.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for ::1 at 2015-04-18 21:52:02 -0700
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-04-18 21:52:02 -0700
+
+
+Started GET "/customers/1deals" for ::1 at 2015-04-18 21:52:02 -0700
+Processing by CustomersController#show as JSON
+  Parameters: {"id"=>"1deals"}
+  [1m[36mCustomer Load (0.7ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered customers/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 213ms (Views: 205.4ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/customers/sign_out" for ::1 at 2015-04-18 21:52:05 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WHC+EXGeOs+9iD0DfSmFHFEINl6Ri/vSJDJXpkbPZokqvB/GNn3f9oSSdpB3zd83JYjW3oIu6cxzjzxNY575Zw=="}
+  [1m[35mBusiness Load (1.6ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."id" = $1  ORDER BY "businesses"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCustomer Load (0.4ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 464ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/" for ::1 at 2015-04-18 21:52:06 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 95ms (Views: 93.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/deals" for ::1 at 2015-04-18 21:52:06 -0700
+
+ActionController::RoutingError (No route matches [GET] "/deals"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (9.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (23.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (53.7ms)
+
+
+Started GET "/customers/sign_in" for ::1 at 2015-04-18 21:52:09 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (39.7ms)
+Completed 200 OK in 273ms (Views: 209.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/sign_up" for ::1 at 2015-04-18 21:52:16 -0700
+Processing by RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (63.6ms)
+Completed 200 OK in 149ms (Views: 147.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers" for ::1 at 2015-04-18 21:52:28 -0700
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vJp3R2El4QeUHHHeZrQSD5zwVXVx7B40Snot3NfZHbopZWwy1zW5/zRDXvWisrpdJIttDBzO08Oz7NuSA2H0+w==", "customer"=>{"first_name"=>"steph", "last_name"=>"lopez", "phone_number"=>"1111111111", "email"=>"stef@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mCustomer Exists (1.3ms)[0m  [1mSELECT  1 AS one FROM "customers" WHERE "customers"."email" = 'stef@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "customers" ("first_name", "last_name", "phone_number", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["first_name", "steph"], ["last_name", "lopez"], ["phone_number", "1111111111"], ["email", "stef@gmail.com"], ["encrypted_password", "$2a$10$w.BYeH64w6XvKbUElCWtjuT8P.t9XUcXUC5DdPC/a31ym2ZwYWgyi"], ["created_at", "2015-04-19 04:52:29.106315"], ["updated_at", "2015-04-19 04:52:29.106315"]]
+  [1m[36m (15.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "customers" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "customers"."id" = $7[0m  [["last_sign_in_at", "2015-04-19 04:52:29.126618"], ["current_sign_in_at", "2015-04-19 04:52:29.126618"], ["last_sign_in_ip", "::1/128"], ["current_sign_in_ip", "::1/128"], ["sign_in_count", 1], ["updated_at", "2015-04-19 04:52:29.128416"], ["id", 51]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/customers/51
+Completed 302 Found in 157ms (ActiveRecord: 19.0ms)
+
+
+Started GET "/customers/51" for ::1 at 2015-04-18 21:52:29 -0700
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 51]]
+  Rendered customers/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 178ms (Views: 175.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/51deals" for ::1 at 2015-04-18 21:52:29 -0700
+Processing by CustomersController#show as JSON
+  Parameters: {"id"=>"51deals"}
+  [1m[35mCustomer Load (0.4ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1  [["id", 51]]
+  Rendered customers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 158ms (Views: 153.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/customer_deals" for ::1 at 2015-04-18 21:52:31 -0700
+Processing by CustomerDealsController#create as JSON
+  Parameters: {"party_size"=>"1", "neighborhoods"=>"Alamo Square", "reservation_time"=>"5:00 AM"}
+  [1m[36mCustomer Load (0.4ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 51]]
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 2.1ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'neighborhoods' for CustomerDeal.):
+  app/controllers/customer_deals_controller.rb:7:in `create'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (25.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (19.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (40.6ms)
+
+
+Started GET "/customers/51" for ::1 at 2015-04-18 21:53:43 -0700
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1  [["id", 51]]
+  Rendered customers/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 108ms (Views: 86.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 21:53:43 -0700
+
+
+Started GET "/assets/responsive.gs.12col.self-382cc78ae9d3462a6d3cb106ba6cb237c9271f17c573e4a7018397596f5ceed8.css?body=1" for ::1 at 2015-04-18 21:53:43 -0700
+
+
+Started GET "/assets/basic.self-5770f352651f27efc833042df612c5c68a27c43553c4355cf75066ab1ecd0ea5.css?body=1" for ::1 at 2015-04-18 21:53:43 -0700
+
+
+Started GET "/assets/app.self-2bc3b64f608a496a132b38efdc726b1a8e094b70c1ca2bec4120626fe48d1081.css?body=1" for ::1 at 2015-04-18 21:53:43 -0700
+
+
+Started GET "/assets/customers.self-7333cfecdd0b21afcf95498fd0bde7d10d88a9d243bccc1801467db39a83061a.css?body=1" for ::1 at 2015-04-18 21:53:43 -0700
+
+
+Started GET "/assets/businesses.self-8df3f823cde8cee8d829fc89c23c29906e616286addfc6fd9f71838e240a57bd.css?body=1" for ::1 at 2015-04-18 21:53:43 -0700
+
+
+Started GET "/assets/customer_deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 21:53:43 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 21:53:43 -0700
+
+
+Started GET "/assets/header.self-b3da4eeaa6e1702e4fdbbcbf18a0f6ca44ce735d155ed4fc3055aaba86d73d6c.css?body=1" for ::1 at 2015-04-18 21:53:43 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 21:53:43 -0700
+
+
+Started GET "/assets/application.self-8d5e05b593a446686cd927189956d138234fd2483b4e6070ad57c127106d0f78.css?body=1" for ::1 at 2015-04-18 21:53:43 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 21:53:43 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 21:53:43 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 21:53:43 -0700
+
+
+Started GET "/assets/jquery.simplemodal.self-7a05bf700607597ec3cea81a39d4062b6f4b91a6f4b5433f6d30c95ec415f9fd.js?body=1" for ::1 at 2015-04-18 21:53:43 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 21:53:43 -0700
+
+
+Started GET "/assets/businesses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 21:53:43 -0700
+
+
+Started GET "/assets/customer_deals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-04-18 21:53:43 -0700
+
+
+Started GET "/assets/customers.self-2e9f68d9a79a7219c39783ac0368551b9c8162bca4e11b16c1bfb4df5269ad95.js?body=1" for ::1 at 2015-04-18 21:53:43 -0700
+
+
+Started GET "/assets/deals.self-8f1607318c95a3e4a1cce524ebd05b3f479ea3ee2ff1269e5beeaeddadc067ce.js?body=1" for ::1 at 2015-04-18 21:53:43 -0700
+
+
+Started GET "/assets/welcome.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for ::1 at 2015-04-18 21:53:43 -0700
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-04-18 21:53:43 -0700
+
+
+Started GET "/customers/51deals" for ::1 at 2015-04-18 21:53:43 -0700
+Processing by CustomersController#show as JSON
+  Parameters: {"id"=>"51deals"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 51]]
+  Rendered customers/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 133ms (Views: 130.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/customer_deals" for ::1 at 2015-04-18 21:53:45 -0700
+Processing by CustomerDealsController#create as JSON
+  Parameters: {"party_size"=>"1", "neighborhoods"=>"Alamo Square", "reservation_time"=>"5:00 AM"}
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1  [["id", 51]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "customer_deals" ("customer_id", "party_size", "reservation_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["customer_id", 51], ["party_size", 1], ["reservation_time", "5:00 AM"], ["created_at", "2015-04-19 04:53:45.152780"], ["updated_at", "2015-04-19 04:53:45.152780"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+Completed 201 Created in 20ms (Views: 0.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/customers/51" for ::1 at 2015-04-18 21:55:40 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[35mCustomer Load (0.7ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1  [["id", 51]]
+Redirected to http://localhost:3000/customers/sign_in
+Filter chain halted as :authenticate_customer rendered or redirected
+Completed 302 Found in 54ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/" for ::1 at 2015-04-18 21:55:40 -0700
+Processing by HomeController#index as HTML
+  [1m[36mCustomer Load (0.5ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 51]]
+  Rendered home/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 755ms (Views: 753.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/deals" for ::1 at 2015-04-18 21:55:41 -0700
+
+ActionController::RoutingError (No route matches [GET] "/deals"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (25.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (25.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (60.9ms)
+
+
+Started GET "/customers/sign_in" for ::1 at 2015-04-18 21:55:43 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (457.9ms)
+Completed 200 OK in 632ms (Views: 537.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/sign_up" for ::1 at 2015-04-18 21:55:45 -0700
+Processing by RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 185ms (Views: 182.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers" for ::1 at 2015-04-18 21:56:00 -0700
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C4a5cutvRdWlO5y8fSwfu9/0QXHPUrpaDEUfigJbeqCeeaIHXX8dLQVks5e5KrfpZ495CKJwd6310+nE1uOT4Q==", "customer"=>{"first_name"=>"steph", "last_name"=>"lopez", "phone_number"=>"1111111111", "email"=>"stef@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mCustomer Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "customers" WHERE "customers"."email" = 'stef@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "customers" ("first_name", "last_name", "phone_number", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["first_name", "steph"], ["last_name", "lopez"], ["phone_number", "1111111111"], ["email", "stef@gmail.com"], ["encrypted_password", "$2a$10$0el1xx8S25FzFrGuGskOt./mQf1N0FGYatweKIIiyhcEcDA1FoPyi"], ["created_at", "2015-04-19 04:56:00.351380"], ["updated_at", "2015-04-19 04:56:00.351380"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "customers" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "customers"."id" = $7[0m  [["last_sign_in_at", "2015-04-19 04:56:00.355443"], ["current_sign_in_at", "2015-04-19 04:56:00.355443"], ["last_sign_in_ip", "::1/128"], ["current_sign_in_ip", "::1/128"], ["sign_in_count", 1], ["updated_at", "2015-04-19 04:56:00.356636"], ["id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/customers/1
+Completed 302 Found in 119ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/customers/1" for ::1 at 2015-04-18 21:56:00 -0700
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.6ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered customers/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 91ms (Views: 88.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/customers/1deals" for ::1 at 2015-04-18 21:56:00 -0700
+Processing by CustomersController#show as JSON
+  Parameters: {"id"=>"1deals"}
+  [1m[35mCustomer Load (1.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered customers/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 273ms (Views: 267.4ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/customer_deals" for ::1 at 2015-04-18 21:56:03 -0700
+Processing by CustomerDealsController#create as JSON
+  Parameters: {"party_size"=>"1", "neighborhoods"=>"Alamo Square", "reservation_time"=>"5:00 AM"}
+  [1m[36mCustomer Load (0.5ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "customer_deals" ("customer_id", "party_size", "reservation_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["customer_id", 1], ["party_size", 1], ["reservation_time", "5:00 AM"], ["created_at", "2015-04-19 04:56:03.188091"], ["updated_at", "2015-04-19 04:56:03.188091"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+Completed 201 Created in 24ms (Views: 0.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/customers/1" for ::1 at 2015-04-18 21:56:12 -0700
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.4ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered customers/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 201ms (Views: 183.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/font-awesome.min.self-6bb04114c00dc0f2115b700bce976c1d368c4c641247d3f2bd520b3067efef45.css?body=1" for ::1 at 2015-04-18 21:56:12 -0700
+
+
+Started GET "/assets/responsive.gs.12col.self-382cc78ae9d3462a6d3cb106ba6cb237c9271f17c573e4a7018397596f5ceed8.css?body=1" for ::1 at 2015-04-18 21:56:12 -0700
+
+
+Started GET "/assets/businesses.self-8df3f823cde8cee8d829fc89c23c29906e616286addfc6fd9f71838e240a57bd.css?body=1" for ::1 at 2015-04-18 21:56:12 -0700
+
+
+Started GET "/assets/basic.self-5770f352651f27efc833042df612c5c68a27c43553c4355cf75066ab1ecd0ea5.css?body=1" for ::1 at 2015-04-18 21:56:12 -0700
+
+
+Started GET "/assets/app.self-2bc3b64f608a496a132b38efdc726b1a8e094b70c1ca2bec4120626fe48d1081.css?body=1" for ::1 at 2015-04-18 21:56:12 -0700
+
+
+Started GET "/assets/customer_deals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 21:56:12 -0700
+
+
+Started GET "/assets/customers.self-7333cfecdd0b21afcf95498fd0bde7d10d88a9d243bccc1801467db39a83061a.css?body=1" for ::1 at 2015-04-18 21:56:12 -0700
+
+
+Started GET "/assets/deals.self-067fda9461e7147c643f9829812e2a8a4e2ec2be15f4931ab2bbd1bc78ffab01.css?body=1" for ::1 at 2015-04-18 21:56:12 -0700
+
+
+Started GET "/assets/header.self-b3da4eeaa6e1702e4fdbbcbf18a0f6ca44ce735d155ed4fc3055aaba86d73d6c.css?body=1" for ::1 at 2015-04-18 21:56:12 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-04-18 21:56:12 -0700
+
+
+Started GET "/assets/application.self-8d5e05b593a446686cd927189956d138234fd2483b4e6070ad57c127106d0f78.css?body=1" for ::1 at 2015-04-18 21:56:12 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-04-18 21:56:12 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-04-18 21:56:12 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-04-18 21:56:12 -0700
+
+
+Started GET "/assets/jquery.simplemodal.self-7a05bf700607597ec3cea81a39d4062b6f4b91a6f4b5433f6d30c95ec415f9fd.js?body=1" for ::1 at 2015-04-18 21:56:12 -0700
+
+
+Started GET "/assets/handlebars.self-57fef24df71388a1e3c2d68fd4a5faa2ba41bc8177615bcf911dc3c3f010a6f0.js?body=1" for ::1 at 2015-04-18 21:56:13 -0700
+
+
+Started GET "/assets/businesses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-04-18 21:56:13 -0700
+
+
+Started GET "/assets/customer_deals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-04-18 21:56:13 -0700
+
+
+Started GET "/assets/customers.self-2e9f68d9a79a7219c39783ac0368551b9c8162bca4e11b16c1bfb4df5269ad95.js?body=1" for ::1 at 2015-04-18 21:56:13 -0700
+
+
+Started GET "/assets/deals.self-8f1607318c95a3e4a1cce524ebd05b3f479ea3ee2ff1269e5beeaeddadc067ce.js?body=1" for ::1 at 2015-04-18 21:56:13 -0700
+
+
+Started GET "/assets/welcome.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for ::1 at 2015-04-18 21:56:13 -0700
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-04-18 21:56:13 -0700
+
+
+Started GET "/customers/1deals" for ::1 at 2015-04-18 21:56:13 -0700
+Processing by CustomersController#show as JSON
+  Parameters: {"id"=>"1deals"}
+  [1m[35mCustomer Load (0.4ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered customers/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 130ms (Views: 121.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/customer_deals" for ::1 at 2015-04-18 21:56:13 -0700
+Processing by CustomerDealsController#create as JSON
+  Parameters: {"party_size"=>"1", "neighborhoods"=>"Alamo Square", "reservation_time"=>"5:00 AM"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "customer_deals" ("customer_id", "party_size", "reservation_time", "neighborhoods", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["customer_id", 1], ["party_size", 1], ["reservation_time", "5:00 AM"], ["neighborhoods", "Alamo Square"], ["created_at", "2015-04-19 04:56:13.902216"], ["updated_at", "2015-04-19 04:56:13.902216"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+Completed 201 Created in 21ms (Views: 0.7ms | ActiveRecord: 3.4ms)
