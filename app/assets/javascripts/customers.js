@@ -17,4 +17,26 @@ $(document).on('page:change', function(){
     });
   });
 
+  $('.pending-deals li').on('click', function(e) {
+      var id = $(this).attr('class')
+
+      $.ajax({
+        url: '/customer_deals/'+ id,
+        type: 'GET',
+        dataType: 'JSON',
+      })
+      .done(function(response) {
+        console.log(response)
+        console.log("success");
+      })
+      .fail(function() {
+        console.log("error");
+      })
+      .always(function() {
+        console.log("complete");
+      });
+
+
+  })
+
 });

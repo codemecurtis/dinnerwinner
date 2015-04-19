@@ -1,5 +1,12 @@
 class CustomerDealsController < ApplicationController
 
+  def show
+    @customer_deal = CustomerDeal.find(params[:id])
+    @business_id = @customer_deal.deal.business_id
+    @requested_business = Business.find(@business_id)
+    render json: @requested_business
+  end
+
   def new
   end
 
@@ -9,5 +16,4 @@ class CustomerDealsController < ApplicationController
   end
 
 end
-# business.neighborhoods
-# [alamo square, haight]
+

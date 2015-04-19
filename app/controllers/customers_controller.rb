@@ -17,7 +17,7 @@ class CustomersController < ApplicationController
         @accepted_deals << deal
       end
     end
-    p @accepted_deals
+
     @neighborhoods = [
       "Alamo Square",
       "Anza Vista",

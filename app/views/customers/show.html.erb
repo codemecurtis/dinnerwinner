@@ -8,7 +8,7 @@
       </a>
       <ul class="pending-deals">
         <% @pending_deals.each do |customer_deal| %>
-        <li><%= customer_deal.deal.name %></li>
+        <li class="<%= customer_deal.deal.id %>"><%= customer_deal.deal.name %></li>
         <% end %>
       </ul>
     </li>
@@ -17,6 +17,13 @@
         <i class="fa fa-cog">
         </i>
       </a>
+    </li>
+    <li>
+      <form action="/customers/sign_out" method="post"/>
+      <input type="hidden" name="_method" value="delete">
+      <input name="authenticity_token" type="hidden" value="token_value">
+      <input type="submit" value="Logout">
+    </form>
     </li>
   </ul>
 </header>
@@ -133,12 +140,10 @@
       <option value="11:45 PM">11:45 PM</option>
     </select>
   <%= submit_tag("Request a Deal!", class: "create-customer-deal") %>
+</div>
 
+<div class="customer-deal-modal">
 
 </div>
 
-<form action="/customers/sign_out" method="post"/>
-  <input type="hidden" name="_method" value="delete">
-  <input name="authenticity_token" type="hidden" value="token_value">
-  <input type="submit" value="Logout">
-</form>
+
