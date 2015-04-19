@@ -2,8 +2,22 @@
   <h1>Dinner Winner</h1>
   <ul class="right customer-links">
     <li><p>Welcome <%= current_customer.first_name %>!</p></li>
-    <li><a href="#">My Deals<span>(<%= @pending_deals.count %>)</span></a></li>
-    <li><a href="#"><i class="fa fa-cog"></i></a></li>
+    <li>
+      <a href="#">Pending Deals
+        <span>(<%= @pending_deals.count %>)</span>
+      </a>
+      <ul class="pending-deals">
+        <% @pending_deals.each do |customer_deal| %>
+        <li><%= customer_deal.deal.name %></li>
+        <% end %>
+      </ul>
+    </li>
+    <li>
+      <a href="#">
+        <i class="fa fa-cog">
+        </i>
+      </a>
+    </li>
   </ul>
 </header>
 
