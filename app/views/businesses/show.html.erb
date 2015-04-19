@@ -3,7 +3,7 @@
     <div class="business-info">
       <div class="accepted-deals right">
         <h3>
-          <% if @business.deals.count > 1 %>
+          <% if @business.deals.count > 1%>
             <%= @business.deals.count %> Deals<br>
             Accepted
           <% else %>
@@ -21,11 +21,15 @@
     <section class="mass-deals">
       <h3 class="deals-subtitle">Current Mass Deals Offered</h3>
       <ul class="mass-deals-list">
-        <% @business.deals.each do |deal| %>
-            <li class="deal deal-<%= deal.id %>">
-              <img src="<%= deal.deal_image %>">
-              <h3> <%= deal.name %> </h3>
-              <p><%= deal.short_description %></p>
+        <li class="deal new-deal">
+          <span><a href="/businesses/<%= current_business.id %>/mass_deal">+</a></span>
+        </li>
+        <% @mass_deal.each do |deal| %>
+          <% temp = Deal.find(deal.deal_id) %>
+            <li class="deal deal-<%= temp.id %>">
+              <img src="<%= temp.deal_image %>">
+              <h3> <%= temp.name %> </h3>
+              <p><%= temp.short_description %></p>
             </li>
             <!-- <h3>You don't have any mass deals offered</h3> -->
         <% end %>
@@ -35,13 +39,14 @@
     <section class="accepted-deals">
         <h3 class="deals-subtitle">Accepted Deals</h3>
       <ul class="accepted-deals-list">
-        <% @business.deals.each do |deal| %>
-            <li class="deal deal-<%= deal.id %>">
-              <img src="<%= deal.deal_image %>">
-              <h3> <%= deal.name %> </h3>
-              <p><%= deal.short_description %></p>
+        <% @accepted_deals.each do |deal| %>
+          <% temp = Deal.find(deal.deal_id) %>
+            <li class="deal deal-<%= temp.id %>">
+              <img src="<%= temp.deal_image %>">
+              <h3> <%= temp.name %> </h3>
+              <p><%= temp.short_description %></p>
             </li>
-            <!-- <h3>You have not accepted any deals</h3> -->
+            <!-- <h3>You don't have any mass deals offered</h3> -->
         <% end %>
       </ul>
     </section>
