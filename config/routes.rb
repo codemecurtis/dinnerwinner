@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :deals
   end
 
+  resources :customer_deals
+
   # devise_for :customers
 
   root 'home#index'

@@ -83,13 +83,6 @@ class CustomersController < ApplicationController
       "Westwood Park"
     ]
     @party_size = (1..10)
-    # Business.all.each do |b|
-    #   @neighborhoods << b.neighborhoods.gsub(/"|\[|\]| ,/, '')
-    #   if b.neighborhoods.split(",").length > 1
-    #     p b.neighborhoods.length
-    #   end
-    # end
-    # @uniq_neighborhoods = @neighborhoods.uniq
   end
 
 
