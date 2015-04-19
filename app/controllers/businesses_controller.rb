@@ -1,6 +1,7 @@
 class BusinessesController < ApplicationController
   include BusinessesHelper
   def index
+
   end
 
   def show
