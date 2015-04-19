@@ -1,19 +1,6 @@
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
-  def resource_name
-    :customer
-  end
-
-  def resource
-    @resource ||= Customer.new
-  end
-
-  def devise_mapping
-    @devise_mapping ||= Devise.mappings[:customer]
-  end
-
-
 
   protect_from_forgery with: :exception
 

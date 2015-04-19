@@ -27,7 +27,7 @@ Winner Winner, Chicken Dinner!
 	- Curtis Seaton
 
 ### Wireframes
-![DB Schema](imgs/schema.png)
+![DB Schema](imgs/dinnerwinner_schema.png)
 ![Homepage of Customer View and Business Link](mock-ups/customer_homepage.png)
 ![Customer login](mock-ups/user_index.png)
 ![Customer - My Deals page](mock-ups/deal.png)
