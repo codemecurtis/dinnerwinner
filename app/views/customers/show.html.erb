@@ -8,19 +8,19 @@
 <h3>Find a Deal</h3>
 <div class="request-bar">
   Neighborhood:
-  <select>
+  <select class="select-neighborhood">
     <% @neighborhoods.each do |n| %>
       <option class="<%= n %>"><%= n %></option>
     <% end %>
   </select>
   Party Size:
-    <select>
+    <select class="select-party-size">
       <% @party_size.each do |n| %>
         <option class="<%= n %>"><%= n %></option>
       <% end %>
     </select>
   Reservation Time:
-    <select>
+    <select class="select-time">
       <option value="5:00 AM">5:00 AM</option>
       <option value="5:15 AM">5:15 AM</option>
       <option value="5:30 AM">5:30 AM</option>
@@ -116,7 +116,8 @@
       <option value="11:30 PM">11:30 PM</option>
       <option value="11:45 PM">11:45 PM</option>
     </select>
-  <%= submit_tag(value = "Request a Deal!") %>
+  <%= submit_tag("Request a Deal!", class: "create-customer-deal") %>
+
 
 </div>
 

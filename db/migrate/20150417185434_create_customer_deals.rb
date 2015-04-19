@@ -3,7 +3,7 @@ class CreateCustomerDeals < ActiveRecord::Migration
     create_table :customer_deals do |t|
     	t.references :customer, :deal
       t.integer :party_size
-      t.datetime :reservation_time
+      t.string :reservation_time
       t.boolean :mass_deal, default: false
       t.boolean :accepted, default: false
 
