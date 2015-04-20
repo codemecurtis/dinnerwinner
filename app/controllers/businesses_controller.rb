@@ -36,18 +36,13 @@ class BusinessesController < ApplicationController
     @business = Business.find(params[:business_id])
     @requests=[]
     CustomerDeal.all.each do |deal|
-      # temp = Deal.find(deal.deal_id)
-      bneigh = JSON.parse(@business.neighborhoods).map { |e| e.downcase }
-      if deal.neighborhoods
-        dneigh = JSON.parse(deal.neighborhoods).map { |e| e.downcase }
-        if (bneigh.any? {|e| dneigh.include?(e)}) && (deal.deal_id==nil)
+      business_neighborhoods = JSON.parse(@business.neighborhoods).map { |e| e.downcase }
+        if(business_neighborhoods.any? { |e| e == deal.neighborhoods.downcase}) && (deal.deal_id==nil)
           name_customer = Customer.find(deal.customer_id).first_name
           time_customer = deal.reservation_time
           size_customer = deal.party_size
-          # thisdeal={name:name_customer, time:time_customer, size:size_customer}
           @requests << {id: deal.id,name:name_customer, time:time_customer, size:size_customer}
         end
-      end
     end
     # p @requests
     render :json => @requests

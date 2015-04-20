@@ -1,31 +1,6 @@
 <%= render template: "/partials/_header_business.html.erb" %>
 <div class="container">
-<<<<<<< HEAD
-  <center><h1>Dashboard for <%= current_business.name%></h1></center>
-    <!-- <div class="business-info"> -->
-      <div class="accepted-deals right" style="float:left">
-        <h3>
-          <% if @mass_deal.count > 1%>
-            <%= @mass_deal.count %> Deals Offered
-          <% else %>
-            <%= @mass_deal.count %> Deal Offered
-          <% end %>
-        </h3>
-      </div>
-      <div class="mass-deals right" style="float:right">
-        <h3>
-          <% if @accepted_deals.count > 1%>
-            <%= @accepted_deals.count %> Deals Accepted
-          <% else %>
-            <%= @accepted_deals.count %> Deal Accepted
-          <% end %>
-        </h3>
-      </div>
-      <div class="business-info">
-          <img class="business-logo" src="<%= @business.logo %>">
-          <p><%= @business.short_description %></p>
-      </div>
-=======
+
   <div class="business-info">
     <div class="mass-deals right">
       <h3>
@@ -49,7 +24,7 @@
     <div class="business-info">
       <img class="business-logo" src="<%= @business.logo %>">
       <p><%= @business.short_description %></p>
->>>>>>> 63840f8637e137706d5eea66b40b96d62268e4ed
+
     </div>
   </div> <!-- END BUSINESS INFO -->
 <hr>
