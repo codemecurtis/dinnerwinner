@@ -37,16 +37,18 @@ class BusinessesController < ApplicationController
     @requests=[]
     CustomerDeal.all.each do |deal|
       business_neighborhoods = JSON.parse(@business.neighborhoods).map { |e| e.downcase }
-        if(business_neighborhoods.any? { |e| e == deal.neighborhoods.downcase}) && (deal.deal_id==nil)
-          name_customer = Customer.find(deal.customer_id).first_name
-          time_customer = deal.reservation_time
-          size_customer = deal.party_size
-          @requests << {id: deal.id,name:name_customer, time:time_customer, size:size_customer}
+        # if(business_neighborhoods.any? { |e| e == deal.neighborhoods.downcase}) && (deal.deal_id==nil)
+        if deal.neighborhoods != nil
+          if(business_neighborhoods.include?(deal.neighborhoods.downcase)) && (deal.deal_id==nil)
+            name_customer = Customer.find(deal.customer_id).first_name
+            time_customer = deal.reservation_time
+            size_customer = deal.party_size
+            @requests << {id: deal.id,name:name_customer, time:time_customer, size:size_customer}
+          end
         end
-    end
+      end
     # p @requests
     render :json => @requests
-
   end
 
 

@@ -82,7 +82,7 @@
 
 <div class="create-modal" id="create-form-container">
 
-  <form action="/businesses/<%= current_business.id %>/create_mass_deal" method="post" id="create-form" class="create_mass_deal_form">
+  <form action="/businesses/<%= current_business.id %>/create_mass_deal" id="create-form" method="post" class="create_mass_deal_form">
     <% @my_deals_templates.each do |template| %>
       <input type="radio" name="template" value="<%= template.id %>"><%= template.name %><br>
     <% end %>
@@ -95,7 +95,18 @@
   <a href="#" class="simplemodal-close">cancel</a>
 </div>
 
+<script type="text/javascript">
 
+    $.ajax({
+    url: window.location+'/request_list',
+  }).done(function(data){
+    var context =  { requests: data};
+    var source = $('#requests-template').html();
+    var template = Handlebars.compile(source);
+    var html = template(context)
+    $('#requests-list').append(html)
+  })
+</script>
 
 
 
