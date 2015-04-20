@@ -29,7 +29,8 @@ params = {term: "food"}
 50.times do
   response = Yelp.client.search('san-francisco', params)
   response.businesses.each do |business|
-    b = Business.new(name: business.name, rating: business.rating, city: business.location.city, address: business.location.display_address, neighborhoods: business.location.neighborhoods, password: 'password', email:Faker::Internet.email, logo: business.image_url, phone_number: business.display_phone, short_description: business.snippet_text)
+  	formatted_neighborhood = JSON.Parse(business.location.neighborhoods)map {|hood| hood.downcase}
+    b = Business.new(name: business.name, rating: business.rating, city: business.location.city, address: business.location.display_address, neighborhoods: formatted_neighborhood, password: 'password', email:Faker::Internet.email, logo: business.image_url, phone_number: business.display_phone, short_description: business.snippet_text)
     b.save
   end
 end
