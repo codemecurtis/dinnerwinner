@@ -181,3 +181,18 @@
       })
 </script>
 
+<script type="text/javascript">
+  $.ajax({
+      url: window.location+'/deals',
+      method: 'GET',
+      dataType: 'JSON'
+    }).done(function(data){
+      var context = { deals: data };
+      var source = $('#deals-template').html();
+      var template = Handlebars.compile(source);
+      var html = template(context);
+      // debugger
+      $('#wrapper').append(html);
+    })
+</script>
+
