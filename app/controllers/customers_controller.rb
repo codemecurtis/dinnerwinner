@@ -1,9 +1,24 @@
 class CustomersController < ApplicationController
   before_action :authenticate_customer
+
   def index
   end
 
   def show
+    # customer_deals = current_customer.deals
+    # p @all_customer_deals = CustomerDeal.where(deal_id: , customer_id:, accepted: false)
+    @all_customer_deals = CustomerDeal.where(customer_id: current_customer.id)
+    @pending_deals = []
+    @accepted_deals = []
+    @all_customer_deals.each do |deal|
+      if deal.accepted == false && deal.deal_id != nil
+        @pending_deals << deal
+      elsif deal.deal_id != nil
+        @accepted_deals << deal
+      end
+    @mass_deals = CustomerDeal.where(mass_deal: true)
+    end
+
     @neighborhoods = [
       "Alamo Square",
       "Anza Vista",
@@ -85,18 +100,5 @@ class CustomersController < ApplicationController
     @party_size = (1..10)
   end
 
-
-
 end
 
-
-# class Yelp
-#   def initialize
-#     @hash = Yelp.client.business('yelp-san-francisco')
-#   end
-# end
-
-# results = Yelp.new
-# results.instance_variable_get(:@hash)
-# results.instance_variables
-#Will list what is inside

@@ -1,8 +1,31 @@
 <header>
   <h1>Dinner Winner</h1>
-  <p>Welcome <%= current_customer.first_name %>!</p>
-  <a href="#">My Deals</a>
-  <a href="#"><i class="fa fa-cog"></i></a>
+  <ul class="right customer-links">
+    <li><p>Welcome <%= current_customer.first_name %>!</p></li>
+    <li>
+      <a href="#">Pending Deals
+        <span>(<%= @pending_deals.count %>)</span>
+      </a>
+      <ul class="pending-deals">
+        <% @pending_deals.each do |customer_deal| %>
+        <li class="<%= customer_deal.id %>"><%= customer_deal.deal.name %></li>
+        <% end %>
+      </ul>
+    </li>
+    <li>
+      <a href="#">
+        <i class="fa fa-cog">
+        </i>
+      </a>
+    </li>
+    <li>
+      <form action="/customers/sign_out" method="post"/>
+      <input type="hidden" name="_method" value="delete">
+      <input name="authenticity_token" type="hidden" value="token_value">
+      <input type="submit" value="Logout">
+    </form>
+    </li>
+  </ul>
 </header>
 
 <h3>Find a Deal</h3>
@@ -117,12 +140,45 @@
       <option value="11:45 PM">11:45 PM</option>
     </select>
   <%= submit_tag("Request a Deal!", class: "create-customer-deal") %>
+</div>
 
+<div class="accepted-deals">
+  <% @accepted_deals.each do |accepted| %>
+  <div class="deal-tile" id="tile-<%= accepted.deal.id %>">
+    <img id="img<%= accepted.deal.id %>" src="<%= accepted.deal.deal_image %>">
+    <h3 id="h3<%= accepted.deal.id %>">
+    <%= accepted.deal.name %>
+    </h3>
+    <p><%= accepted.deal.created_at %></p>
+    <p id="p<%= accepted.deal.id %>"><%= accepted.deal.short_description %></p>
+    </div>
+  <% end %>
+</div>
+  <h3 class="subtitle">Mass Deals</h3>
+<div class="mass-deals">
+  <% @mass_deals.each do |mass| %>
+  <div class="deal-tile" id="tile-<%= mass.deal.id %>">
+    <img id="img<%= mass.deal.id %>" src="<%= mass.deal.deal_image %>">
+    <h3 id="h3<%= mass.deal.id %>">
+    <%= mass.deal.name %>
+    </h3>
+    <p><%= mass.deal.created_at %></p>
+    <p id="p<%= mass.deal.id %>"><%= mass.deal.short_description %></p>
+    </div>
+  <% end %>
+</div>
+
+<script id="pending-deals" type="text/x-handlebars-template">
+    {{business.name}}
+    {{business.rating}}
+    {{business.address}}
+    {{business.short_description}}
+    {{deal.name}}
+    <img src="{{deal.deal_image}}"/>
+    <a href="/customer_deals/{{customer_deal.id}}/edit">Accept Deal!</a>
+</script>
+
+<div class="customer-deal-modal">
 
 </div>
 
-<form action="/customers/sign_out" method="post"/>
-  <input type="hidden" name="_method" value="delete">
-  <input name="authenticity_token" type="hidden" value="token_value">
-  <input type="submit" value="Logout">
-</form>
