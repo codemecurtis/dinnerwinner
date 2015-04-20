@@ -12,7 +12,7 @@ $(document).on('page:change', function(){
     // console.log(context)
   })
 
-$('body').on('click','.create_mass_deal', function(e){
+$('body').on('click','.create-mass-deal', function(e){
 e.preventDefault();
 $('#create-form-container').modal({overlayClose: true});
         $.ajax({
