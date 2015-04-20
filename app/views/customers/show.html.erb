@@ -154,6 +154,19 @@
     </div>
   <% end %>
 </div>
+  <h3 class="subtitle">Mass Deals</h3>
+<div class="mass-deals">
+  <% @mass_deals.each do |mass| %>
+  <div class="deal-tile" id="tile-<%= mass.deal.id %>">
+    <img id="img<%= mass.deal.id %>" src="<%= mass.deal.deal_image %>">
+    <h3 id="h3<%= mass.deal.id %>">
+    <%= mass.deal.name %>
+    </h3>
+    <p><%= mass.deal.created_at %></p>
+    <p id="p<%= mass.deal.id %>"><%= mass.deal.short_description %></p>
+    </div>
+  <% end %>
+</div>
 
 <script id="pending-deals" type="text/x-handlebars-template">
     {{business.name}}

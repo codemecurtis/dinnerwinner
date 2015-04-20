@@ -16,6 +16,7 @@ class CustomersController < ApplicationController
       elsif deal.deal_id != nil
         @accepted_deals << deal
       end
+    @mass_deals = CustomerDeal.where(mass_deal: true)
     end
 
     @neighborhoods = [
