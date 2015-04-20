@@ -1,23 +1,23 @@
-<div class="welcome span_12_of_12">
-  <header class="welcome-element">
-    <div class="header-container span_5_of_12 ">
+<div class="home">
+  <header class="home-element">
+    <div class="header-container">
       <h1>Dinner Winner</h1>
 
       <% if customer_signed_in? %>
 
       <% else %>
-        <button class="customer-signup-link welcome-buttons span_4_of_12">
+        <button class="customer-signup-link home-buttons">
           <a href="/customers/sign_up">Sign up</a>
         </button>
-        <button class="customer-login-link welcome-buttons span_4_of_12">
+        <button class="customer-login-link home-buttons">
           <a href="/customers/sign_in">Login</a>
         </button>
       <% end %>
     </div>
   </header>
 
-  <section class="about span_12_of_12 welcome-element">
-    <div class="about-container span_9_of_12">
+  <section class="about home-element">
+    <div class="about-container">
       <h2>How it works</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -28,16 +28,14 @@
     </div>
   </section>
 
-  <section class="feedback welcome-element">
-    <div class="span_6_of_12">
-      <input class="span_8_of_12" type="text" placeholder="title"><br><br>
-      <textarea class="span_8_of_12" placeholder="your feedback"></textarea><br><br>
-      <input class="welcome-buttons span_4_of_12" type="submit">
-    </div>
+  <section class="feedback home-element">
+      <input type="text" placeholder="title"><br>
+      <textarea placeholder="your feedback"></textarea><br>
+      <input class="home-buttons" type="submit">
   </section>
 
-  <footer class="welcome-element span_12_of_12">
-    <div class="auto span_9_of_12">
+  <footer class="home-element">
+    <div class="auto">
       <ul class="social left">
         <li><i class="fa fa-twitter"></i></li>
         <li><i class="fa fa-pinterest-p"></i></li>

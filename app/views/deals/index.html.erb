@@ -1,58 +1,54 @@
-<h1>Index page for deals</h1>
+<%= render template: "/partials/_header_business.html.erb" %>
+<div id="wrapper" class="container">
 
+  <div class="deal-tile empty">
+    <a class="create-button" href="#">
+      <i class="fa fa-plus"></i>
+    </a>
+  </div>
 
-<div id="wrapper">
-
-
-</div>
-
-
-
-<div class="deal-tile empty">
-  <a class="create-button" href="#"><i class="fa fa-plus"></a></i>
-</div>
-
-
-
-<div class="create_modal" id="create_form_container">
-  <form class="create_form" action="#">
-    <input type="text" name="title"><br>
-    <input type="text" name="image" value="http://www.biz-logo.com/examples/063.gif"><br>
-    <textarea class="textarea" name="content"></textarea><br>
-    <input type="submit" value="enter">
-  </form>
-  <a href="#" class="cancel-button">cancel</a>
-</div>
-
-
-<script id="deals-template" type="text/x-handlebars-template">
-  {{#each deals}}
-
-    <div class="deal-tile" id="tile-{{id}}">
-    <a href="{{id}}" class="delete-button"><i class="fa fa-trash"></i></a>
-    <a href="{{id}}" class="edit-button"><i class="fa fa-pencil-square-o" ></i></a><br>
-    <img id="img{{id}}" src="{{deal_image}}">
-    <h3 id="h3{{id}}">
-    {{name}}
-    </h3>
-    <p>{{created_at}}</p>
-    <p id="p{{id}}">{{short_description}}</p>
-    </div>
-
-    <div class="edit_modal" id="edit{{id}}">
-    <form id="edit_form" action="{{id}}">
-    <input class="editform" type="text" name="title" value="{{name}}"><br>
-    <input class="editform" type="text" name="image" value="{{deal_image}}"><br>
-    <textarea class="textarea" name="edit_content">{{short_description}}</textarea><br>
-    <input type="submit">
+  <div class="create-modal" id="create-form-container">
+    <form class="create-form" action="#">
+      <input type="text" name="title"><br>
+      <input type="text" name="image" value="http://www.biz-logo.com/examples/063.gif"><br>
+      <textarea class="textarea" name="content"></textarea><br>
+      <input type="submit" value="enter">
     </form>
+    <a href="#" class="cancel-button">cancel</a>
+  </div>
 
-    <a href="edit{{id}}" class="cancel-button">cancel</a>
-    </div>
 
-  {{/each}}
-</script>
+  <script id="deals-template" type="text/x-handlebars-template">
+    {{#each deals}}
 
+      <div class="deal-tile" id="tile-{{id}}">
+        <a href="{{id}}" class="delete-button">
+          <i class="fa fa-trash"></i>
+        </a>
+        <a href="{{id}}" class="edit-button">
+          <i class="fa fa-pencil-square-o" ></i>
+        </a>
+      <br>
+        <img id="img-{{id}}" src="{{deal_image}}">
+        <h3 id="h3-{{id}}">{{name}}</h3>
+        <p>{{created_at}}</p>
+        <p id="{{id}}">{{short_description}}</p>
+      </div>
+
+      <div class="edit-modal" id="edit-{{id}}">
+        <form id="edit-form" action="{{id}}">
+          <input class="edit-form" type="text" name="title" value="{{name}}"><br>
+          <input class="edit-form" type="text" name="image" value="{{deal_image}}"><br>
+          <textarea class="textarea" name="edit_content">{{short_description}}</textarea><br>
+          <input type="submit">
+      </form>
+
+      <a href="edit-{{id}}" class="cancel-button">cancel</a>
+      </div>
+
+    {{/each}}
+  </script>
+</div>
 
 
 

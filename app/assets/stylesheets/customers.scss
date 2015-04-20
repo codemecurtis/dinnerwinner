@@ -6,8 +6,9 @@
   display:none
 }
 
-.customer-links li {
+.customer-links > li {
   display: inline-block;
+  margin: 20px 5px;
 }
 
 ul li ul {

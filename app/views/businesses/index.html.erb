@@ -1,20 +1,4 @@
-<header>
-  <div class="container">
-    <h1>Dinner Winner for Your Business</h1>
-
-    <% if business_signed_in? %>
-
-    <% else %>
-      <button class="customer-signup-link">
-        <a href="/businesses/sign_up">Sign up</a>
-      </button>
-      <button class="customer-login-link">
-        <a href="/businesses/sign_in">Login</a>
-      </button>
-    <% end %>
-  </div>
-</header>
-
+<%= render template: "/partials/_header_business.html.erb" %>
 <section class="about">
   <div class="container">
     <h2>How it works</h2>
@@ -44,4 +28,5 @@
     </ul>
   </div>
 </footer>
-
+<%= render template: '/devise/registrations/new.html.erb' %>
+<%= render template: '/devise/sessions/new.html.erb' %>
