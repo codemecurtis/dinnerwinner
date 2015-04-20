@@ -7,7 +7,7 @@ class BusinessesController < ApplicationController
 
   def show
     viewed_business
-    business_deals = Deal.where(business_id: params[:id])
+    p business_deals = Deal.where(business_id: params[:id])
     @mass_deal = []
     business_deals.each do |deal|
       CustomerDeal.where(deal_id: deal.id).each do |deals|
@@ -15,6 +15,8 @@ class BusinessesController < ApplicationController
           @mass_deal << deals
         end
       end
+      p "*"* 50
+      p @mass_deal
     end
 
     @my_deals_templates = Deal.where(business_id:params[:id])
@@ -36,13 +38,15 @@ class BusinessesController < ApplicationController
     CustomerDeal.all.each do |deal|
       # temp = Deal.find(deal.deal_id)
       bneigh = JSON.parse(@business.neighborhoods).map { |e| e.downcase }
-      dneigh = JSON.parse(deal.neighborhoods).map { |e| e.downcase }
-      if (bneigh.any? {|e| dneigh.include?(e)}) && (deal.deal_id==nil)
-        name_customer = Customer.find(deal.customer_id).first_name
-        time_customer = deal.reservation_time
-        size_customer = deal.party_size
-        # thisdeal={name:name_customer, time:time_customer, size:size_customer}
-        @requests << {id: deal.id,name:name_customer, time:time_customer, size:size_customer}
+      if deal.neighborhoods
+        dneigh = JSON.parse(deal.neighborhoods).map { |e| e.downcase }
+        if (bneigh.any? {|e| dneigh.include?(e)}) && (deal.deal_id==nil)
+          name_customer = Customer.find(deal.customer_id).first_name
+          time_customer = deal.reservation_time
+          size_customer = deal.party_size
+          # thisdeal={name:name_customer, time:time_customer, size:size_customer}
+          @requests << {id: deal.id,name:name_customer, time:time_customer, size:size_customer}
+        end
       end
     end
     p @requests
@@ -56,7 +60,7 @@ class BusinessesController < ApplicationController
   end
 
   def create_mass_deal
-    CustomerDeal.create(deal_id:params[:deal], party_size: params[:party_size], mass_deal: true)
+    CustomerDeal.create(deal_id:params[:template], party_size: params[:party_size], mass_deal: true)
     redirect_to action: 'show', id: current_business.id
   end
 

@@ -10,9 +10,22 @@ $(document).on('page:change', function(){
     $('#requests-list').append(html)
     // debugger
     // console.log(context)
-  }).fail(function(response){
-    alert(response)
-  });
+  })
+
+$('body').on('click','.create_mass_deal', function(e){
+e.preventDefault();
+$('#create-form-container').modal({overlayClose: true});
+        $.ajax({
+          url: $(this).attr('href'),
+      }).done(function(data){
+
+        // $.modal.close();
+        //put the stuff in the modal
+
+      })
+
+
+})
 
   $("#requests-list").on('click','.make_an_offer_link', function(event){
     event.preventDefault();
@@ -37,12 +50,11 @@ $(document).on('page:change', function(){
         // $('#wrapper-for').modal('hide');
         // $('#wrapper-for').popover('show')
 
-      }).fail(function(response){
-        alert(response)
+      })
       });
 
   });
-})
+// })
 
 
 

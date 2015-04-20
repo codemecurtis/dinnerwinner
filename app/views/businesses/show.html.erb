@@ -37,7 +37,7 @@
     <ul class="mass-deals-list">
       <li class="deal new-deal">
         <span>
-          <a href="/businesses/<%= current_business.id %>/mass_deal">+</a>
+          <a class="create_mass_deal" href="/businesses/<%= current_business.id %>/mass_deal">+</a>
         </span>
       </li>
       <% @mass_deal.each do |deal| %>
@@ -78,13 +78,18 @@
 </div>
 
 <div class="create-modal" id="create-form-container">
-  <form id="create-form">
-    <input type="text" name="title"><br>
-    <input type="text" name="image" value="http://www.biz-logo.com/examples/063.gif"><br>
-    <textarea class="textarea" name="content"></textarea><br>
-    <input type="submit">
+
+  <form action="/businesses/<%= current_business.id %>/create_mass_deal" method="post" id="create-form">
+    <% @my_deals_templates.each do |template| %>
+      <input type="radio" name="template" value="<%= template.id %>"><%= template.name %><br>
+    <% end %>
+    <hr>
+      <input type="text" name="title"><br>
+      <input type="text" name="image" value="http://www.biz-logo.com/examples/063.gif"><br>
+      <textarea class="textarea" name="content"></textarea><br>
+      <button type="submit">create</button>
   </form>
-  <a href="#" class="cancel-button">cancel</a>
+  <a href="#" class="simplemodal-close">cancel</a>
 </div>
 
 
