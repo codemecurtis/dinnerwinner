@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).on('page:change', function(){
 
   //UPDATE
   //this is to get the edit modal to appear
