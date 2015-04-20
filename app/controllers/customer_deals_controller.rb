@@ -35,7 +35,7 @@ class CustomerDealsController < ApplicationController
     deal=CustomerDeal.find(params[:id])
     id = deal.id
     deal.destroy
-    render :json => {id: id}
+    render :json => {id: params[:id]}
   end
 
 end

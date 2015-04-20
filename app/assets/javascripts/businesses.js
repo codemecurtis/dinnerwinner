@@ -55,7 +55,7 @@ $(document).on('page:change', function(){
       url:$(this).attr("href"),
       type:'DELETE'
     }).done(function(data){
-      console.log(data)
+      $('#mass'+ data.id).remove();
     })
   })
 
