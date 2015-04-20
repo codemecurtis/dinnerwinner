@@ -20,6 +20,17 @@
       <p><%= deal.created_at.strftime('%A, %d %b %Y %l:%M %p') %></p>
       <p id="<%= deal.id %>"><%= deal.short_description %></p>
     </div>
+
+    <div class="edit-modal" id="edit-<%= deal.id %>">
+      <form id="edit-form" action="<%= deal.id %>">
+        <input class="edit-form" type="text" name="title" value="<%= deal.name %>"><br>
+        <input class="edit-form" type="text" name="image" value="<%= deal.deal_image %>"><br>
+        <textarea class="textarea" name="edit_content"><%= deal.short_description %></textarea><br>
+        <input type="submit">
+      </form>
+      <a href="edit-<%= deal.id %>" class="cancel-button">cancel</a>
+    </div>
+    
   <% end %>
 </div>
 
@@ -33,6 +44,8 @@
     </form>
     <a href="#" class="cancel-button">cancel</a>
   </div>
+
+
 
 
 <script id="deals-template" type="text/x-handlebars-template">

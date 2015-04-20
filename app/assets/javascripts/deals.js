@@ -4,7 +4,7 @@ $(document).on('page:change', function(){
   //this is to get the edit modal to appear
   $('#wrapper').on('click', '.edit-button', function(e){
     e.preventDefault();
-    $("#edit"+ $(this).attr("href")).modal({
+    $("#edit-"+ $(this).attr("href")).modal({
       overlayClose: true
     })
   })
@@ -51,6 +51,7 @@ $(document).on('page:change', function(){
       overlayClose: true
     })
   })
+
   // and disappear
   $('body').on("click", ".cancel-button", function(e){
     e.preventDefault();
@@ -59,7 +60,7 @@ $(document).on('page:change', function(){
   })
 
    //sending create data to the DB
-   $('body').on("submit",'.create-form', function(e){
+  $('body').on("submit",'.create-form', function(e){
     e.preventDefault();
     $.ajax({
       url: window.location,
@@ -67,13 +68,13 @@ $(document).on('page:change', function(){
       dataType: 'JSON',
       type: 'POST',
     }).done(function(data){
-      $('.create-form-container').modal({
+
+    $('.create-form-container').modal({
         overlayClose: true
-      });
-      $('#create-form').trigger('reset')
+    });
+      
+    $('#create-form').trigger('reset')
       $.modal.close();
-      console.log(data)
-      console.log("created data base entry")
       var context = { deals: data };
       var source = $('#deals-template').html();
       var template = Handlebars.compile(source);
@@ -82,4 +83,4 @@ $(document).on('page:change', function(){
     })
   })
 
-})
+ })
