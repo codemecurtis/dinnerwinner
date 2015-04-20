@@ -1,20 +1,7 @@
- // $.ajax({
- //      url: window.location+'/deals',
- //      method: 'GET',
- //      dataType: 'JSON'
- //    }).done(function(data){
- //      var context = { deals: data };
- //      var source = $('#deals-template').html();
- //      var template = Handlebars.compile(source);
- //      var html = template(context);
- //      $('#wrapper').append(html);
- //    })
-
-// $(document).ready(function() {
-  $(document).on("page:change",function(){
+$(document).on("page:change",function(){
   //READ
   //lists all of the deals in the current business
-  // $(window).load(function(e){
+
     $.ajax({
       url: window.location+'/deals',
       method: 'GET',
@@ -26,12 +13,14 @@
       var html = template(context);
       $('#wrapper').append(html);
     })
-  // });
+
 //UPDATE
   //this is to get the edit modal to appear
   $('#wrapper').on('click', '.edit-button', function(e){
     e.preventDefault();
-    document.getElementById("edit"+$(this).attr("href")).style.display = "block";
+    $("#edit"+ $(this).attr("href")).modal({
+      overlayClose: true
+    })
   })
 
   // and disappear

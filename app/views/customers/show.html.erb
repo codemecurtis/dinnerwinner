@@ -169,11 +169,11 @@
 </div>
 
 <script id="pending-deals" type="text/x-handlebars-template">
-    {{business.name}}
-    {{business.rating}}
-    {{business.address}}
-    {{business.short_description}}
-    {{deal.name}}
+    <h4 class="business-name">{{business.name}}</h4>
+    <p>{{business.rating}}</p>
+    <p>{{business.address}}</p>
+    <p>{{business.short_description}}</p>
+    <p>{{deal.name}}</p>
     <img src="{{deal.deal_image}}"/>
     <a href="/customer_deals/{{customer_deal.id}}/edit">Accept Deal!</a>
 </script>

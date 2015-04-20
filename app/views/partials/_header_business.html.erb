@@ -5,14 +5,14 @@
     </div>
     <ul class="right right-links">
       <li><a href="#">Create New Deal</a></li>
-      <li><a id="deals-link" class="my-deals-link" href="<%= current_customer.id %>/deals">My Deals</a></li>
+      <li><a id="deals-link" class="my-deals-link" href="<%= current_business.id %>/deals">My Deals</a></li>
       <li>
-        <a href="/customers/<%= current_customer.id %>/edit">
+        <a href="/businesses/<%= current_business.id %>/edit">
           <i class="fa fa-cog"></i>
         </a>
       </li>
       <li>
-        <form class="sign-out-form" action="/customers/sign_out" method="post"/>
+        <form class="sign-out-form" action="/businesses/sign_out" method="post"/>
           <input type="hidden" name="_method" value="delete">
           <input name="authenticity_token" type="hidden" value="token_value">
           <input type="submit" value="Logout">
