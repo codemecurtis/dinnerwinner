@@ -66,7 +66,6 @@ class BusinessesController < ApplicationController
   end
 
   def remove_mass_deal
-
   end
 
 

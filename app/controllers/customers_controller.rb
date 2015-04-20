@@ -103,5 +103,16 @@ class CustomersController < ApplicationController
     @customer = current_customer
   end
 
+  def update
+    current_customer.update_attributes(update_customer_params)
+    redirect_to current_customer
+  end
+
+  private
+
+  def update_customer_params
+    params[:customer].permit(:first_name, :last_name, :email, :phone_number)
+  end
+
 end
 
