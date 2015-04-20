@@ -1,4 +1,20 @@
-<%= render template: "/partials/_header_business.html.erb" %>
+<header class="home-element">
+  <div class="header-container">
+    <h1>Dinner Winner</h1>
+
+    <% if business_signed_in? %>
+
+    <% else %>
+      <button class="business-signup-link home-buttons">
+        <a href="/businesses/sign_up">Sign up</a>
+      </button>
+      <button class="business-login-link home-buttons">
+        <a href="/businesses/sign_in">Login</a>
+      </button>
+    <% end %>
+  </div>
+</header>
+
 <section class="about">
   <div class="container">
     <h2>How it works</h2>

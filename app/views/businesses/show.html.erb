@@ -163,7 +163,7 @@
 
 <script type="text/javascript">
   $.ajax({
-    url: window.location+'/request_list',
+    url: window.location + '/request_list',
   }).done(function(data){
     var context =  { requests: data};
     var source = $('#requests-template').html();
@@ -183,7 +183,7 @@
 
 <script type="text/javascript">
   $.ajax({
-      url: window.location+'/deals',
+      url: window.location + '/deals',
       method: 'GET',
       dataType: 'JSON'
     }).done(function(data){

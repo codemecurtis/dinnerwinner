@@ -1,4 +1,18 @@
-$(document).ready(function(){
+$(document).on('page:change', function(){
+
+    $('.business-signup-link').on('click', function(e){
+        e.preventDefault();
+        $('.signup-modal').modal({
+          overlayClose: true
+        })
+      })
+
+    $('.business-login-link').on('click', function(e){
+      e.preventDefault();
+      $('.login-modal').modal({
+        overlayClose: true
+      })
+    })
 
   $("#requests-list").on('click','.make_an_offer_link', function(event){
     event.preventDefault();
