@@ -42,10 +42,11 @@
       </li>
       <% @mass_deal.each do |deal| %>
         <% temp = Deal.find(deal.deal_id) %>
-        <li class="deal deal-<%= temp.id %>">
+        <li id="mass<%= temp.id %>" class="deal deal-<%= temp.id %>">
           <img src="<%= temp.deal_image %>">
           <h3> <%= temp.name %> </h3>
           <p><%= temp.short_description %></p>
+          <a class="cancel_mass_deal_link" href="/customer_deals/<%= temp.id %>">Cancel this offer</a>
         </li>
       <% end %>
     </ul>
@@ -79,7 +80,7 @@
 
 <div class="create-modal" id="create-form-container">
 
-  <form action="/businesses/<%= current_business.id %>/create_mass_deal" method="post" id="create-form">
+  <form action="/businesses/<%= current_business.id %>/create_mass_deal" method="post" id="create-form" class="create_mass_deal_form">
     <% @my_deals_templates.each do |template| %>
       <input type="radio" name="template" value="<%= template.id %>"><%= template.name %><br>
     <% end %>
