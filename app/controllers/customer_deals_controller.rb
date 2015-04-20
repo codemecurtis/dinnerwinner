@@ -31,5 +31,12 @@ class CustomerDealsController < ApplicationController
     render :json => customer_deal
   end
 
+  def destroy
+    deal=CustomerDeal.find(params[:id])
+    id = deal.id
+    deal.destroy
+    render :json => {id: id}
+  end
+
 end
 
