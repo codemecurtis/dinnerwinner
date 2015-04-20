@@ -1,4 +1,8 @@
+$(document).ready(function(){
+
 $(document).on('page:change', function(){
+
+// $(document).on('page:load', function(){
   $.ajax({
     url: window.location+'/request_list',
     // data:
@@ -11,7 +15,7 @@ $(document).on('page:change', function(){
     // debugger
     // console.log(context)
   })
-
+// })
 $('body').on('click','.create-mass-deal', function(e){
 e.preventDefault();
 $('#create-form-container').modal({overlayClose: true});
@@ -19,7 +23,7 @@ $('#create-form-container').modal({overlayClose: true});
           url: $(this).attr('href'),
       }).done(function(data){
 
-        // $.modal.close();
+        $.modal.close();
         //put the stuff in the modal
 
       })
@@ -66,5 +70,5 @@ $('#create-form-container').modal({overlayClose: true});
 
 
 
-// });
+});
 

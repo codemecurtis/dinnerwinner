@@ -1,3 +1,5 @@
+$(document).ready(function(){
+
 $(document).on("page:change",function(){
 
   //READ
@@ -12,6 +14,7 @@ $(document).on("page:change",function(){
       var source = $('#deals-template').html();
       var template = Handlebars.compile(source);
       var html = template(context);
+      // debugger
       $('#wrapper').append(html);
     })
 
@@ -62,14 +65,15 @@ $('#wrapper').on("click", ".delete-button", function(e){
 //getting the create modal to appear
 $('body').on('click', '.create-button', function(e){
   e.preventDefault();
-  $('create-form-container').modal({
+  $('#create-form-container').modal({
     overlayClose: true
   })
 })
 // and disappear
 $('body').on("click", ".cancel-button", function(e){
   e.preventDefault();
-  $('.create-form-container').close();
+  $.modal.close();
+  // $('.create-form-container').close();
 })
 
  //sending create data to the DB
@@ -85,6 +89,7 @@ $('body').on("click", ".cancel-button", function(e){
       overlayClose: true
     });
     $('#create-form').trigger('reset')
+     $.modal.close();
     console.log(data)
     console.log("created data base entry")
     var context = { deals: data };
@@ -93,6 +98,8 @@ $('body').on("click", ".cancel-button", function(e){
     var html = template(context);
     document.getElementById('wrapper').innerHTML=html
   })
+})
+
 })
 
 })
