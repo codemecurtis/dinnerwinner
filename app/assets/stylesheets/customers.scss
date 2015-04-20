@@ -11,6 +11,16 @@
   margin: 20px 5px;
 }
 
+.success {
+  position: absolute;
+  display: none;
+  background-color: green;
+  color: white;
+  min-height: 20px;
+  width: 100%;
+  text-align: center;
+}
+
 ul li ul {
   padding: 10px;
   position: absolute;
