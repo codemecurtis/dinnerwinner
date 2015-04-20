@@ -7,7 +7,7 @@ class BusinessesController < ApplicationController
 
   def show
     viewed_business
-    p business_deals = Deal.where(business_id: params[:id])
+    business_deals = Deal.where(business_id: params[:id])
     @mass_deal = []
     business_deals.each do |deal|
       CustomerDeal.where(deal_id: deal.id).each do |deals|
@@ -15,8 +15,6 @@ class BusinessesController < ApplicationController
           @mass_deal << deals
         end
       end
-      p "*"* 50
-      p @mass_deal
     end
 
     @my_deals_templates = Deal.where(business_id:params[:id])
@@ -36,22 +34,17 @@ class BusinessesController < ApplicationController
     @business = Business.find(params[:business_id])
     @requests=[]
     CustomerDeal.all.each do |deal|
-      # temp = Deal.find(deal.deal_id)
-      bneigh = JSON.parse(@business.neighborhoods).map { |e| e.downcase }
-      if deal.neighborhoods
-        dneigh = JSON.parse(deal.neighborhoods).map { |e| e.downcase }
-        if (bneigh.any? {|e| dneigh.include?(e)}) && (deal.deal_id==nil)
-          name_customer = Customer.find(deal.customer_id).first_name
-          time_customer = deal.reservation_time
-          size_customer = deal.party_size
-          # thisdeal={name:name_customer, time:time_customer, size:size_customer}
-          @requests << {id: deal.id,name:name_customer, time:time_customer, size:size_customer}
+      business_neighborhoods = JSON.parse(@business.neighborhoods).map { |e| e.downcase }
+        if deal.neighborhoods != nil
+          if(business_neighborhoods.include?(deal.neighborhoods.downcase)) && (deal.deal_id==nil)
+            name_customer = Customer.find(deal.customer_id).first_name
+            time_customer = deal.reservation_time
+            size_customer = deal.party_size
+            @requests << {id: deal.id,name:name_customer, time:time_customer, size:size_customer}
+          end
         end
       end
-    end
-    # p @requests
     render :json => @requests
-
   end
 
 
@@ -61,8 +54,6 @@ class BusinessesController < ApplicationController
 
   def create_mass_deal
     newdealmass = CustomerDeal.create(deal_id:params[:template], party_size: params[:party_size], mass_deal: true)
-    # redirect_to action: 'show', id: current_business.id
-
     output={deal_image:Deal.find(newdealmass.deal_id).deal_image, id:newdealmass.id, name:Deal.find(newdealmass.deal_id).name, short_description:Deal.find(newdealmass.deal_id).short_description}
     render :json => output
   end

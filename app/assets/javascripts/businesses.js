@@ -42,11 +42,10 @@ $(document).on('page:change', function(){
       type:'POST'
     }).done(function(data){
       console.log(data)
-      var html = "<li id=mass"+data.id+" class='deal deal-"+data.id+"'><img src='"+data.deal_image+"'><h3> "+data.name+" </h3><p>"+ data.short_description +"</p></li>"
+      var html = "<li id=mass"+data.id+" class='deal deal-"+data.id+"'><img src='"+data.deal_image+"'><h3> "+data.name+" </h3><p>"+ data.short_description +"</p><a class='cancel_mass_deal_link' href='/customer_deals/"+ data.id+"'>Cancel this offer</a></li>"
       $(".mass-deals-list").append(html)
       $.modal.close();
     })
-
   })
 
 
