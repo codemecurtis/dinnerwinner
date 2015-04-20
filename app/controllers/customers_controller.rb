@@ -6,8 +6,6 @@ class CustomersController < ApplicationController
   end
 
   def show
-    # customer_deals = current_customer.deals
-    # p @all_customer_deals = CustomerDeal.where(deal_id: , customer_id:, accepted: false)
     @all_customer_deals = CustomerDeal.where(customer_id: current_customer.id)
     @pending_deals = []
     @accepted_deals = []

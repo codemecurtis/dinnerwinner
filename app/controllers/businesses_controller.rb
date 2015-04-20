@@ -2,6 +2,13 @@ class BusinessesController < ApplicationController
   skip_before_action :verify_authenticity_token, only: :create_mass_deal
   include BusinessesHelper
 
+  before_action :setup_resources
+
+  def setup_resources
+    @resource = Business.new
+    @resource_name = :business
+  end
+
   def index
   end
 
