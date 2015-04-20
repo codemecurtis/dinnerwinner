@@ -1,4 +1,5 @@
 $(document).on("page:change",function(){
+
   //READ
   //lists all of the deals in the current business
 

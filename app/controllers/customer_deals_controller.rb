@@ -23,5 +23,13 @@ class CustomerDealsController < ApplicationController
     redirect_to customer_path
   end
 
+  def update
+    if params[:deal_template]!=nil
+      customer_deal = CustomerDeal.find(params[:id])
+      customer_deal.update_attributes(deal_id: params[:deal_template])
+    end
+    render :json => customer_deal
+  end
+
 end
 

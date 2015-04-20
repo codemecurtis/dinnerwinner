@@ -37,12 +37,12 @@ class BusinessesController < ApplicationController
       # temp = Deal.find(deal.deal_id)
       bneigh = JSON.parse(@business.neighborhoods).map { |e| e.downcase }
       dneigh = JSON.parse(deal.neighborhoods).map { |e| e.downcase }
-      if bneigh.any? {|e| dneigh.include?(e)}
+      if (bneigh.any? {|e| dneigh.include?(e)}) && (deal.deal_id==nil)
         name_customer = Customer.find(deal.customer_id).first_name
         time_customer = deal.reservation_time
         size_customer = deal.party_size
         # thisdeal={name:name_customer, time:time_customer, size:size_customer}
-        @requests << {name:name_customer, time:time_customer, size:size_customer}
+        @requests << {id: deal.id,name:name_customer, time:time_customer, size:size_customer}
       end
     end
     p @requests
