@@ -59,6 +59,11 @@ class BusinessesController < ApplicationController
     viewed_business
   end
 
+  def update
+    current_business.update_attributes(update_business_params)
+    redirect_to current_business
+  end
+
   def create_mass_deal
     newdealmass = CustomerDeal.create(deal_id:params[:deal_template], party_size: params[:party_size], mass_deal: true)
     output={deal_image:Deal.find(newdealmass.deal_id).deal_image, id:newdealmass.id, name:Deal.find(newdealmass.deal_id).name, short_description:Deal.find(newdealmass.deal_id).short_description}
@@ -72,5 +77,12 @@ class BusinessesController < ApplicationController
   def mass_deal
     @deals = Deal.where(business_id: params[:business_id])
   end
+
+  private
+
+  def update_business_params
+    params[:business].permit(:name, :email, :phone_number, :logo, :address, :short_description)
+  end
+
 
 end
