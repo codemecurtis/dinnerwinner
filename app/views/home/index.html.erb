@@ -1,47 +1,53 @@
-<header>
-  <div class="container">
-    <h1>Dinner Winner</h1>
+<div class="home">
+  <header class="home-element">
+    <div class="header-container">
+      <h1>Dinner Winner</h1>
 
-    <% if customer_signed_in? %>
+      <% if customer_signed_in? %>
 
-    <% else %>
-      <button class="customer-signup-link">
-        <a href="/customers/sign_up">Sign up</a>
-      </button>
-      <button class="customer-login-link">
-        <a href="/customers/sign_in">Login</a>
-      </button>
-    <% end %>
-  </div>
-</header>
+      <% else %>
+        <button class="customer-signup-link home-buttons">
+          <a href="/customers/sign_up">Sign up</a>
+        </button>
+        <button class="customer-login-link home-buttons">
+          <a href="/customers/sign_in">Login</a>
+        </button>
+      <% end %>
+    </div>
+  </header>
 
-<section class="about">
-  <div class="container">
-    <h2>How it works</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div>
-</section>
+  <section class="about home-element">
+    <div class="about-container">
+      <h2>How it works</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </section>
 
-<section class="feedback">
-  <div class="container">
-    <input type="text" placeholder="title">
-    <textarea placeholder="your feedback"></textarea>
-    <input type="submit">
-  </div>
-</section>
+  <section class="feedback home-element">
+      <input type="text" placeholder="title"><br>
+      <textarea placeholder="your feedback"></textarea><br>
+      <input class="home-buttons" type="submit">
+  </section>
 
-<footer>
-  <div class="container">
-    <ul class="social left">
-      <li>Twitter</li>
-      <li>Twitter</li>
-      <li>Twitter</li>
-    </ul>
-    <a class="right" href="/businesses">Business Login</a>
-  </div>
-</footer>
+  <footer class="home-element">
+    <div class="auto">
+      <ul class="social left">
+        <li><i class="fa fa-twitter"></i></li>
+        <li><i class="fa fa-pinterest-p"></i></li>
+        <li><i class="fa fa-google-plus"></i></li>
+      </ul>
+      <a class="right" href="/businesses">Business Login</a>
+    </div>
+  </footer>
+</div>
+
+<%= render template: '/devise/registrations/new.html.erb' %>
+<%= render template: '/devise/sessions/new.html.erb' %>
+
+
+

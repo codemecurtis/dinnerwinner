@@ -15,6 +15,11 @@
  *= require_tree .
  *= require_self
  */
+
+.make-an-offer-modal, .customer-signup-form, .customer-deal-modal, .edit-deal-modal, .create-modal, .edit-modal{
+  display: none;
+ }
+
 .container{
   max-width: 1240px;
 }
@@ -25,4 +30,8 @@
 
 .left {
   float: left;
+}
+
+.logo{
+  margin: 0;
 }

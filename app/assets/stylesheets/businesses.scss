@@ -2,38 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.edit_modal{
-  display: none;
-  position: fixed;
-  left: 40%;
-  top: 30%;
-  width: 400px;
-  height: 400px;
-  border: solid black;
-  border-radius: 10px;
-  background-color: grey;
-  padding: 3%;
-  z-index: 3;
+
+.offer-images{
+  width: 200px;
 }
 
 .cancel-button{
   float: right;
 }
 
-
-.create_modal{
-  display: none;
-  position: fixed;
-  left: 40%;
-  top: 30%;
-  width: 400px;
-  height: 400px;
-  border: solid black;
-  border-radius: 10px;
-  background-color: blue;
-  padding: 3%;
-  z-index: 3;
-}
 .deals-subtitle {
   text-align:center;
   font-weight: 500;

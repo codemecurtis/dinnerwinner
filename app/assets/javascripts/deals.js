@@ -1,9 +1,10 @@
-$(document).ready(function() {
+$(document).on("page:change",function(){
+
   //READ
   //lists all of the deals in the current business
-  $(window).load(function(e){
+
     $.ajax({
-      url: window.location+'deals',
+      url: window.location+'/deals',
       method: 'GET',
       dataType: 'JSON'
     }).done(function(data){
@@ -13,17 +14,20 @@ $(document).ready(function() {
       var html = template(context);
       $('#wrapper').append(html);
     })
-  });
+
 //UPDATE
   //this is to get the edit modal to appear
   $('#wrapper').on('click', '.edit-button', function(e){
     e.preventDefault();
-    document.getElementById("edit"+$(this).attr("href")).style.display = "block";
+    $("#edit"+ $(this).attr("href")).modal({
+      overlayClose: true
+    })
   })
+
   // and disappear
   $('#wrapper').on("click", ".cancel-button", function(e){
     e.preventDefault();
-    document.getElementById($(this).attr("href")).style.display = "none";
+    $($(this).attr("href")).close()
   })
 
   // //this is to submit stuff to the DB
@@ -35,10 +39,10 @@ $(document).ready(function() {
       data:$(this).serialize(),
       type: 'PATCH',
     }).done(function(data){
-      document.getElementById("edit"+that).style.display = "none";
-      document.getElementById('h3'+that).innerHTML = data.name;
-      document.getElementById('p'+that).innerHTML = data.short_description;
-      document.getElementById('img'+that).src = data.deal_image;
+      document.getElementById("edit-"+ that).style.display = "none";
+      document.getElementById('h3-'+ that).innerHTML = data.name;
+      document.getElementById(that).innerHTML = data.short_description;
+      document.getElementById('img-'+that).src = data.deal_image;
     })
   })
 
@@ -56,18 +60,20 @@ $('#wrapper').on("click", ".delete-button", function(e){
 
 //CREATE
 //getting the create modal to appear
-$(document).on('click', '.create-button', function(e){
+$('body').on('click', '.create-button', function(e){
   e.preventDefault();
-  document.getElementById('create_form_container').style.display = "block";
+  $('create-form-container').modal({
+    overlayClose: true
+  })
 })
 // and disappear
-$(document).on("click", ".cancel-button", function(e){
+$('body').on("click", ".cancel-button", function(e){
   e.preventDefault();
-  document.getElementById('create_form_container').style.display = "none";
+  $('.create-form-container').close();
 })
 
  //sending create data to the DB
- $(document).on("submit",'#create_form', function(e){
+ $('body').on("submit",'.create-form', function(e){
   e.preventDefault();
   $.ajax({
     url: window.location,
@@ -75,8 +81,10 @@ $(document).on("click", ".cancel-button", function(e){
     dataType: 'JSON',
     type: 'POST',
   }).done(function(data){
-    document.getElementById('create_form_container').style.display = "none";
-    $('#create_form').trigger('reset')
+    $('.create-form-container').modal({
+      overlayClose: true
+    });
+    $('#create-form').trigger('reset')
     console.log(data)
     console.log("created data base entry")
     var context = { deals: data };

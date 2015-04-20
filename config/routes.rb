@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
-  devise_for :businesses
+  devise_for :businesses, :controllers => {registrations: 'registrations'}
   devise_for :customers, :controllers => {registrations: 'registrations'}
   resources :customers
-
+  get 'businesses/:business_id/request_list' => 'businesses#request_list'
   resources :businesses do
       get 'mass_deal'
       post 'create_mass_deal'
       resources :deals
-
   end
 
+
+  resources :customer_deals
 
   # devise_for :customers
 
