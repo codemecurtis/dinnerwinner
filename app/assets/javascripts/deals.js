@@ -26,7 +26,7 @@ $(document).on("page:change",function(){
   // and disappear
   $('#wrapper').on("click", ".cancel-button", function(e){
     e.preventDefault();
-    document.getElementById($(this).attr("href")).style.display = "none";
+    $($(this).attr("href")).close()
   })
 
   // //this is to submit stuff to the DB
@@ -38,10 +38,10 @@ $(document).on("page:change",function(){
       data:$(this).serialize(),
       type: 'PATCH',
     }).done(function(data){
-      document.getElementById("edit"+that).style.display = "none";
-      document.getElementById('h3'+that).innerHTML = data.name;
-      document.getElementById('p'+that).innerHTML = data.short_description;
-      document.getElementById('img'+that).src = data.deal_image;
+      document.getElementById("edit-"+ that).style.display = "none";
+      document.getElementById('h3-'+ that).innerHTML = data.name;
+      document.getElementById(that).innerHTML = data.short_description;
+      document.getElementById('img-'+that).src = data.deal_image;
     })
   })
 
@@ -61,16 +61,18 @@ $('#wrapper').on("click", ".delete-button", function(e){
 //getting the create modal to appear
 $('body').on('click', '.create-button', function(e){
   e.preventDefault();
-  document.getElementById('create_form_container').style.display = "block";
+  $('create-form-container').modal({
+    overlayClose: true
+  })
 })
 // and disappear
 $('body').on("click", ".cancel-button", function(e){
   e.preventDefault();
-  document.getElementById('create_form_container').style.display = "none";
+  $('.create-form-container').close();
 })
 
  //sending create data to the DB
- $('body').on("submit",'.create_form', function(e){
+ $('body').on("submit",'.create-form', function(e){
   e.preventDefault();
   $.ajax({
     url: window.location,
@@ -78,8 +80,10 @@ $('body').on("click", ".cancel-button", function(e){
     dataType: 'JSON',
     type: 'POST',
   }).done(function(data){
-    document.getElementById('create_form_container').style.display = "none";
-    $('#create_form').trigger('reset')
+    $('.create-form-container').modal({
+      overlayClose: true
+    });
+    $('#create-form').trigger('reset')
     console.log(data)
     console.log("created data base entry")
     var context = { deals: data };
