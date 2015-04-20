@@ -1,70 +1,148 @@
 <%= render template: "partials/_header.html.erb" %>
 <div class="container">
-    <div class="business-info">
-      <div class="accepted-deals right">
-        <h3>
-          <% if @business.deals.count > 1%>
-            <%= @business.deals.count %> Deals<br>
-            Accepted
-          <% else %>
-            <%= @business.deals.count %> Deal<br>
-            Accepted
-          <% end %>
-        </h3>
-      </div>
-      <div class="business-info">
-          <img class="business-logo" src="<%= @business.logo %>">
-          <p><%= @business.short_description %></p>
-      </div>
-    </div>
-  <hr>
+  <div class="business-info">
+   <div class="accepted-deals right">
+    <h3>
+      <% if @mass_deal.count > 1%>
+      <%= @mass_deal.count %> Deals Offered
+      <% else %>
+      <%= @mass_deal.count %> Deal Offered
+      <% end %>
+    </h3>
+  </div><br>
+  <div class="mass-deals right">
+    <h3>
+      <% if @accepted_deals.count > 1%>
+      <%= @accepted_deals.count %> Deals Accepted
+      <% else %>
+      <%= @accepted_deals.count %> Deal Accepted
+      <% end %>
+    </h3>
+  </div>
+  <div class="business-info">
+    <img class="business-logo" src="<%= @business.logo %>">
+    <p><%= @business.short_description %></p>
+  </div>
+</div>
+<hr>
 <section class="requests">
-    <h3 class="deals-subtitle">Requests</h3>
-      <ul class="requests-list">
+  <h3 class="deals-subtitle">Requests</h3>
+  <ul id="requests-list">
 
-        <% @array_of_requests.each do |deal| %>
-          <% temp = Deal.find(deal.deal_id) %>
-            <li class="deal deal-<%= temp.id %>">
-              <img src="<%= temp.deal_image %>">
-              <h3> <%= temp.name %> </h3>
-              <p><%= temp.short_description %></p>
-            </li>
-            <!-- <h3>You don't have any mass deals offered</h3> -->
-        <% end %>
-      </ul>
+
+  </ul>
 </section>
 
-    <section class="mass-deals">
-      <h3 class="deals-subtitle">Current Mass Deals Offered</h3>
-      <ul class="mass-deals-list">
-        <li class="deal new-deal">
-          <span><a href="/businesses/<%= current_business.id %>/mass_deal">+</a></span>
-        </li>
-        <% @mass_deal.each do |deal| %>
-          <% temp = Deal.find(deal.deal_id) %>
-            <li class="deal deal-<%= temp.id %>">
-              <img src="<%= temp.deal_image %>">
-              <h3> <%= temp.name %> </h3>
-              <p><%= temp.short_description %></p>
-            </li>
-            <!-- <h3>You don't have any mass deals offered</h3> -->
-        <% end %>
-      </ul>
-    </section>
-  <hr>
-    <section class="accepted-deals">
-        <h3 class="deals-subtitle">Accepted Deals</h3>
-      <ul class="accepted-deals-list">
-        <% @accepted_deals.each do |deal| %>
-          <% temp = Deal.find(deal.deal_id) %>
-            <li class="deal deal-<%= temp.id %>">
-              <img src="<%= temp.deal_image %>">
-              <h3> <%= temp.name %> </h3>
-              <p><%= temp.short_description %></p>
-            </li>
-            <!-- <h3>You don't have any mass deals offered</h3> -->
-        <% end %>
-      </ul>
-    </section>
+<section class="mass-deals">
+  <h3 class="deals-subtitle">Current Mass Deals Offered</h3>
+  <ul class="mass-deals-list">
+    <li class="deal new-deal">
+      <span><a href="/businesses/<%= current_business.id %>/mass_deal">+</a></span>
+    </li>
+    <% @mass_deal.each do |deal| %>
+    <% temp = Deal.find(deal.deal_id) %>
+    <li class="deal deal-<%= temp.id %>">
+      <img src="<%= temp.deal_image %>">
+      <h3> <%= temp.name %> </h3>
+      <p><%= temp.short_description %></p>
+    </li>
+    <!-- <h3>You don't have any mass deals offered</h3> -->
+    <% end %>
+  </ul>
+</section>
+<hr>
+<section class="accepted-deals">
+  <h3 class="deals-subtitle">Accepted Deals</h3>
+  <ul class="accepted-deals-list">
+    <% @accepted_deals.each do |deal| %>
+    <% temp = Deal.find(deal.deal_id) %>
+    <li class="deal deal-<%= temp.id %>">
+      <img src="<%= temp.deal_image %>">
+      <h3> <%= temp.name %> </h3>
+      <p><%= temp.short_description %></p>
+    </li>
+    <!-- <h3>You don't have any mass deals offered</h3> -->
+    <% end %>
+  </ul>
+</section>
 </div>
+
+<div class="edit_deal_modal" id="edit_deal_modal">
+  <div id="wrapper-edit"></div>
+  <div class="deal-tile empty">
+    <a class="create-button" href="#"><i class="fa fa-plus"></a></i>
+  </div>
+</div>
+
+<div class="create_modal" id="create_form_container">
+  <form id="create_form">
+    <input type="text" name="title"><br>
+    <input type="text" name="image" value="http://www.biz-logo.com/examples/063.gif"><br>
+    <textarea class="textarea" name="content"></textarea><br>
+    <input type="submit">
+  </form>
+  <a href="#" class="cancel-button">cancel</a>
+</div>
+
+
+
+
+
+<script id="requests-template" type="text/x-handlebrs-template">
+{{#each requests}}
+<li id="list{{id}}" class="deal deal-{{id}}">
+<span>Customer name:<b> {{name}}</b></span>
+<span>Party of {{size}}</span>
+<span>Reservation time: {{time}} </span>
+<a class = "make_an_offer_link" href="{{id}}">Make an offer</a>
+</li>
+{{/each}}
+  <div id="wrapper{{id}}" class="make_an_offer_modal">
+  </div>
+</script>
+
+<script id="deals-template-offer" type="text/x-handlebars-template">
+{{#each deals}}
+<div class="deal-tile" id="tile-{{id}}">
+
+<img class="offer_images" id="img{{id}}" src="{{deal_image}}">
+<h3 id="h3{{id}}">
+{{name}}
+</h3>
+<p>{{created_at}}</p>
+<p id="p{{id}}">{{short_description}}</p>
+</div>
+</div>
+
+{{/each}}
+</script>
+
+<script id="deals-template" type="text/x-handlebars-template">
+  {{#each deals}}
+
+    <div class="deal-tile" id="tile-{{id}}">
+    <a href="{{id}}" class="delete-button"><i class="fa fa-trash"></i></a>
+    <a href="{{id}}" class="edit-button"><i class="fa fa-pencil-square-o" ></i></a><br>
+    <img id="img{{id}}" src="{{deal_image}}">
+    <h3 id="h3{{id}}">
+    {{name}}
+    </h3>
+    <p>{{created_at}}</p>
+    <p id="p{{id}}">{{short_description}}</p>
+    </div>
+
+    <div class="edit_modal" id="edit{{id}}">
+    <form id="edit_form" action="{{id}}">
+    <input class="editform" type="text" name="title" value="{{name}}"><br>
+    <input class="editform" type="text" name="image" value="{{deal_image}}"><br>
+    <textarea class="textarea" name="edit_content">{{short_description}}</textarea><br>
+    <input type="submit">
+    </form>
+
+    <a href="edit{{id}}" class="cancel-button">cancel</a>
+    </div>
+
+  {{/each}}
+</script>
+
 <%= render template: "partials/_business_footer.html.erb" %>
