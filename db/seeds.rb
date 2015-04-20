@@ -8,7 +8,7 @@
   	password: 'password', 
   	phone_number: Faker::PhoneNumber, 
   	email: Faker::Internet.email, 
-  	avatar: Avatar.image
+  	avatar: Faker::Avatar.image
   )
 end
 
@@ -17,12 +17,13 @@ params = {term: "food"}
 50.times do
   response = Yelp.client.search('san-francisco', params)
   response.businesses.each do |business|
-  	formatted_neighborhood = JSON.Parse(business.location.neighborhoods)map {|hood| hood.downcase}
+  	formatted_neighborhood = business.location.neighborhoods.first
+    formatted_address = business.location.display_address.join(",")
     b = Business.new(
 		    	name: business.name, 
 		    	rating: business.rating, 
 		    	city: business.location.city,
-		    	address: business.location.display_address, 
+		    	address: formatted_address, 
 		    	neighborhoods: formatted_neighborhood, 
 		    	password: 'password', 
 		    	email: Faker::Internet.email, 
