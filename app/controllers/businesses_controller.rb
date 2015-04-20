@@ -42,7 +42,7 @@ class BusinessesController < ApplicationController
         time_customer = deal.reservation_time
         size_customer = deal.party_size
         # thisdeal={name:name_customer, time:time_customer, size:size_customer}
-        @requests << {name:name_customer, time:time_customer, size:size_customer}
+        @requests << {id: deal.id,name:name_customer, time:time_customer, size:size_customer}
       end
     end
     p @requests

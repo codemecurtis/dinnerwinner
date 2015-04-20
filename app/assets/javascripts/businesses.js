@@ -8,6 +8,7 @@ $(document).on('page:change', function(){
     var template = Handlebars.compile(source);
     var html = template(context)
     $('#requests-list').append(html)
+    // debugger
     // console.log(context)
   }).fail(function(response){
     alert(response)
@@ -15,25 +16,27 @@ $(document).on('page:change', function(){
 
   $("#requests-list").on('click','.make_an_offer_link', function(event){
     event.preventDefault();
-      // debugger
-    // document.getElementById('wrapper'+$(this).attr('href')).style.display="block"
-    $('#wrapper'+$(this).attr('href')).modal();
-    $.ajax({
-      url: window.location+'/deals',
-      method: 'GET',
-      dataType: 'JSON'
-    }).done(function(data){
-      console.log("dsaf")
-      var context = { deals: data };
-      var source = $('#deals-template-offer').html();
-      var template = Handlebars.compile(source);
-      var html = template(context);
-      // console.log(html)
-      $('#wrapper').append(html);
-    }).fail(function(response){
-      alert(response)
-    }); //close ajax
-  }); //close request-lict on click
+    var customerDealID=$(this).attr('href')
+    console.log(customerDealID)
+    $('#wrapper-for').modal({overlayClose: true});
+      $("body").on('submit', '#make-offer', function(e){
+        e.preventDefault();
+        $.ajax({
+          url: '/customer_deals/'+customerDealID,
+          data: $('#make-offer').serialize(),
+          type: 'PATCH'
+      }).done(function(data){
+        console.log(data)
+        // $('#wrapper-for').modal('hide');
+      }).fail(function(response){
+        alert(response)
+      });
+
+  });
+})
+
+
+
 
 
 }); //close document

@@ -97,9 +97,21 @@
 <a class = "make_an_offer_link" href="{{id}}">Make an offer</a>
 </li>
 {{/each}}
-  <div id="wrapper{{id}}" class="make_an_offer_modal">
-  </div>
 </script>
+
+  <div id="wrapper-for" class="make_an_offer_modal">
+  <form id="make-offer">
+
+    <% @my_deals_templates.each do |deal| %>
+
+    <h3><%= deal.name %></h3>
+      <p><%= deal.short_description %></p>
+      <input type="radio" name="deal_template" value="<%= deal.id %>">
+    <% end %>
+<hr>
+    <input type="submit" value="Make offer">
+  </form>
+  </div>
 
 <script id="deals-template-offer" type="text/x-handlebars-template">
 {{#each deals}}

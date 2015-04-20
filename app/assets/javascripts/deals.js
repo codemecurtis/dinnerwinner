@@ -1,16 +1,4 @@
- // $.ajax({
- //      url: window.location+'/deals',
- //      method: 'GET',
- //      dataType: 'JSON'
- //    }).done(function(data){
- //      var context = { deals: data };
- //      var source = $('#deals-template').html();
- //      var template = Handlebars.compile(source);
- //      var html = template(context);
- //      $('#wrapper').append(html);
- //    })
 
-// $(document).ready(function() {
   $(document).on("page:change",function(){
   //READ
   //lists all of the deals in the current business
