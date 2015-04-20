@@ -99,5 +99,9 @@ class CustomersController < ApplicationController
     @party_size = (1..10)
   end
 
+  def edit
+    @customer = current_customer
+  end
+
 end
 
