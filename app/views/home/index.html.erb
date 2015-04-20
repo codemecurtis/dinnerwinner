@@ -41,7 +41,9 @@
 </div>
 
 <%= render template: '/devise/registrations/new.html.erb' %>
-<%= render template: '/devise/sessions/new.html.erb' %>
+<div class="login-modal">
+  <%= render partial: 'devise/sessions/login_form' %>
+</div>
 
 
 
