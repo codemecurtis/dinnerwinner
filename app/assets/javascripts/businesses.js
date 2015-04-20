@@ -17,8 +17,8 @@ $(document).on('page:change', function(){
   $("#requests-list").on('click','.make_an_offer_link', function(event){
     event.preventDefault();
     var customerDealID=$(this).attr('href')
-    console.log(customerDealID)
     $('#wrapper-for').modal({overlayClose: true});
+    console.log(customerDealID)
       $("body").on('submit', '#make-offer', function(e){
         e.preventDefault();
         $.ajax({
@@ -26,8 +26,17 @@ $(document).on('page:change', function(){
           data: $('#make-offer').serialize(),
           type: 'PATCH'
       }).done(function(data){
+        $.modal.close();
+        // $(this).modal('hide');
+        $('#requests-list').find($('#list'+data.id)).remove();
+        // $('#make-offer').find("input[type='submit']").attr("class","simplemodal-close")
         console.log(data)
+
+
+        // document.getElementById("wrapper-for").style.display="none"
         // $('#wrapper-for').modal('hide');
+        // $('#wrapper-for').popover('show')
+
       }).fail(function(response){
         alert(response)
       });
