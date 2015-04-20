@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :businesses do
       get 'mass_deal'
       post 'create_mass_deal'
+      delete 'remove_mass_deal'
       resources :deals
   end
 

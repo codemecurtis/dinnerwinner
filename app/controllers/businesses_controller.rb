@@ -49,7 +49,7 @@ class BusinessesController < ApplicationController
         end
       end
     end
-    p @requests
+    # p @requests
     render :json => @requests
 
   end
@@ -60,9 +60,17 @@ class BusinessesController < ApplicationController
   end
 
   def create_mass_deal
-    CustomerDeal.create(deal_id:params[:template], party_size: params[:party_size], mass_deal: true)
-    redirect_to action: 'show', id: current_business.id
+    newdealmass = CustomerDeal.create(deal_id:params[:template], party_size: params[:party_size], mass_deal: true)
+    # redirect_to action: 'show', id: current_business.id
+
+    output={deal_image:Deal.find(newdealmass.deal_id).deal_image, id:newdealmass.id, name:Deal.find(newdealmass.deal_id).name, short_description:Deal.find(newdealmass.deal_id).short_description}
+    render :json => output
   end
+
+  def remove_mass_deal
+
+  end
+
 
   def mass_deal
     @deals = Deal.where(business_id: params[:business_id])

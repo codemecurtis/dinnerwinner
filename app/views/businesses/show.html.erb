@@ -1,17 +1,17 @@
 <%= render template: "/partials/_header_business.html.erb" %>
 <div class="container">
   <div class="business-info">
-    <div class="accepted-deals right">
+    <div class="mass-deals right">
       <h3>
         <% if @mass_deal.count > 1%>
-        <%= @mass_deal.count %> Deals Offered
+        <%= @mass_deal.count %> Mass Deals Offered
         <% else %>
-        <%= @mass_deal.count %> Deal Offered
+        <%= @mass_deal.count %> Mass Deal Offered
         <% end %>
       </h3>
     </div>
   <br>
-    <div class="mass-deals right">
+    <div class="accepted-deals right">
       <h3>
         <% if @accepted_deals.count > 1%>
         <%= @accepted_deals.count %> Deals Accepted
@@ -37,15 +37,16 @@
     <ul class="mass-deals-list">
       <li class="deal new-deal">
         <span>
-          <a class="create_mass_deal" href="/businesses/<%= current_business.id %>/mass_deal">+</a>
+          <a class="create-mass-deal" href="/businesses/<%= current_business.id %>/mass_deal">+</a>
         </span>
       </li>
       <% @mass_deal.each do |deal| %>
         <% temp = Deal.find(deal.deal_id) %>
-        <li class="deal deal-<%= temp.id %>">
+        <li id="mass<%= temp.id %>" class="deal deal-<%= temp.id %>">
           <img src="<%= temp.deal_image %>">
           <h3> <%= temp.name %> </h3>
           <p><%= temp.short_description %></p>
+          <a class="cancel_mass_deal_link" href="/customer_deals/<%= temp.id %>">Cancel this offer</a>
         </li>
       <% end %>
     </ul>
@@ -79,7 +80,7 @@
 
 <div class="create-modal" id="create-form-container">
 
-  <form action="/businesses/<%= current_business.id %>/create_mass_deal" method="post" id="create-form">
+  <form action="/businesses/<%= current_business.id %>/create_mass_deal" method="post" id="create-form" class="create_mass_deal_form">
     <% @my_deals_templates.each do |template| %>
       <input type="radio" name="template" value="<%= template.id %>"><%= template.name %><br>
     <% end %>
