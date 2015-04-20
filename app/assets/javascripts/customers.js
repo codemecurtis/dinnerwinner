@@ -1,6 +1,4 @@
 $(document).on('page:change', function(){
-
-  // Customer creates request to restaurants
   $('.create-customer-deal').on('click', function(e){
     e.preventDefault();
 
@@ -44,8 +42,5 @@ $(document).on('page:change', function(){
       .always(function() {
         console.log("complete");
       });
-
-
   })
-
 });
