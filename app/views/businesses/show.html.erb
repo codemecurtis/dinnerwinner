@@ -160,3 +160,24 @@
   {{/each}}
 </script>
 <%= render template: "partials/_business_footer.html.erb" %>
+
+<script type="text/javascript">
+  $.ajax({
+    url: window.location+'/request_list',
+  }).done(function(data){
+    var context =  { requests: data};
+    var source = $('#requests-template').html();
+    var template = Handlebars.compile(source);
+    var html = template(context)
+    $('#requests-list').append(html)
+  })
+  $('body').on('click','.create-mass-deal', function(e){
+    e.preventDefault();
+    $('#create-form-container').modal({overlayClose: true});
+    $.ajax({
+      url: $(this).attr('href'),
+    }).done(function(data){
+        // $.modal.close();
+      })
+</script>
+
