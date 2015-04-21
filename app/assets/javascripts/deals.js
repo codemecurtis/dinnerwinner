@@ -1,25 +1,10 @@
-$(document).on("page:change",function(){
+$(document).on('page:change', function(){
 
-  //READ
-  //lists all of the deals in the current business
-
-    $.ajax({
-      url: window.location+'/deals',
-      method: 'GET',
-      dataType: 'JSON'
-    }).done(function(data){
-      var context = { deals: data };
-      var source = $('#deals-template').html();
-      var template = Handlebars.compile(source);
-      var html = template(context);
-      $('#wrapper').append(html);
-    })
-
-//UPDATE
+  //UPDATE
   //this is to get the edit modal to appear
   $('#wrapper').on('click', '.edit-button', function(e){
     e.preventDefault();
-    $("#edit"+ $(this).attr("href")).modal({
+    $("#edit-"+ $(this).attr("href")).modal({
       overlayClose: true
     })
   })
@@ -46,53 +31,56 @@ $(document).on("page:change",function(){
     })
   })
 
-//DESTROY
-// to delete fom a database
-$('#wrapper').on("click", ".delete-button", function(e){
-  e.preventDefault();
-  $.ajax({
-    url: window.location+'/'+ $(this).attr('href'),
-    type: 'DELETE',
-  }).done(function(data){
-    document.getElementById('tile-'+data).remove();
+  //DESTROY
+  // to delete fom a database
+  $('#wrapper').on("click", ".delete-button", function(e){
+    e.preventDefault();
+    $.ajax({
+      url: window.location+'/'+ $(this).attr('href'),
+      type: 'DELETE',
+    }).done(function(data){
+      document.getElementById('tile-'+data).remove();
+    })
   })
-})
 
-//CREATE
-//getting the create modal to appear
-$('body').on('click', '.create-button', function(e){
-  e.preventDefault();
-  $('create-form-container').modal({
-    overlayClose: true
-  })
-})
-// and disappear
-$('body').on("click", ".cancel-button", function(e){
-  e.preventDefault();
-  $('.create-form-container').close();
-})
-
- //sending create data to the DB
- $('body').on("submit",'.create-form', function(e){
-  e.preventDefault();
-  $.ajax({
-    url: window.location,
-    data:$(this).serialize(),
-    dataType: 'JSON',
-    type: 'POST',
-  }).done(function(data){
-    $('.create-form-container').modal({
+  //CREATE
+  //getting the create modal to appear
+  $('body').on('click', '.create-button', function(e){
+    e.preventDefault();
+    $('#create-form-container').modal({
       overlayClose: true
-    });
-    $('#create-form').trigger('reset')
-    console.log(data)
-    console.log("created data base entry")
-    var context = { deals: data };
-    var source = $('#deals-template').html();
-    var template = Handlebars.compile(source);
-    var html = template(context);
-    document.getElementById('wrapper').innerHTML=html
+    })
   })
-})
 
-})
+  // and disappear
+  $('body').on("click", ".cancel-button", function(e){
+    e.preventDefault();
+    $.modal.close();
+    // $('.create-form-container').close();
+  })
+
+   //sending create data to the DB
+  $('body').on("submit",'.create-form', function(e){
+    e.preventDefault();
+    $.ajax({
+      url: window.location,
+      data:$(this).serialize(),
+      dataType: 'JSON',
+      type: 'POST',
+    }).done(function(data){
+
+    $('.create-form-container').modal({
+        overlayClose: true
+    });
+      
+    $('#create-form').trigger('reset')
+      $.modal.close();
+      var context = { deals: data };
+      var source = $('#deals-template').html();
+      var template = Handlebars.compile(source);
+      var html = template(context);
+      document.getElementById('wrapper').innerHTML=html
+    })
+  })
+
+ })

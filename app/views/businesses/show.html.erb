@@ -1,31 +1,32 @@
 <%= render template: "/partials/_header_business.html.erb" %>
 <div class="container">
   <div class="business-info">
-    <div class="accepted-deals right">
+    <div class="mass-deals right">
       <h3>
         <% if @mass_deal.count > 1%>
-        <%= @mass_deal.count %> Deals Offered
+          <%= @mass_deal.count %> Mass Deals Offered
         <% else %>
-        <%= @mass_deal.count %> Deal Offered
+          <%= @mass_deal.count %> Mass Deal Offered
         <% end %>
       </h3>
     </div>
   <br>
-    <div class="mass-deals right">
+    <div class="accepted-deals right">
       <h3>
         <% if @accepted_deals.count > 1%>
-        <%= @accepted_deals.count %> Deals Accepted
+          <%= @accepted_deals.count %> Deals Accepted
         <% else %>
-        <%= @accepted_deals.count %> Deal Accepted
+          <%= @accepted_deals.count %> Deal Accepted
         <% end %>
       </h3>
     </div>
     <div class="business-info">
       <img class="business-logo" src="<%= @business.logo %>">
-      <p><%= @business.short_description %></p>
+      <p><%= @business.name %></p>
     </div>
-  </div> <!-- END BUSINESS INFO -->
-<hr>
+  </div> 
+  <!-- END BUSINESS INFO -->
+
   <section class="requests">
     <h3 class="deals-subtitle">Requests</h3>
     <ul id="requests-list">
@@ -37,20 +38,21 @@
     <ul class="mass-deals-list">
       <li class="deal new-deal">
         <span>
-          <a class="create_mass_deal" href="/businesses/<%= current_business.id %>/mass_deal">+</a>
+          <a class="create-mass-deal" href="/businesses/<%= current_business.id %>/mass_deal">+</a>
         </span>
       </li>
       <% @mass_deal.each do |deal| %>
-        <% temp = Deal.find(deal.deal_id) %>
-        <li class="deal deal-<%= temp.id %>">
-          <img src="<%= temp.deal_image %>">
-          <h3> <%= temp.name %> </h3>
-          <p><%= temp.short_description %></p>
+        <% deal_template = Deal.find(deal.deal_id) %>
+        <li id="mass<%= deal.id %>" class="deal deal-<%= deal_template.id %>">
+          <img src="<%= deal_template.deal_image %>">
+          <h3> <%= deal_template.name %> </h3>
+          <p><%= deal_template.short_description %></p>
+          <a class="cancel_mass_deal_link" href="/customer_deals/<%= deal.id %>">Cancel this offer</a>
         </li>
       <% end %>
     </ul>
   </section>
-<hr>
+
   <section class="accepted-deals">
     <h3 class="deals-subtitle">Accepted Deals</h3>
     <ul class="accepted-deals-list">
@@ -64,8 +66,10 @@
       <% end %>
     </ul>
   </section>
-</div> <!-- END CONTAINER -->
+</div> 
+<!-- END CONTAINER -->
 
+<%= render template: "partials/_business_footer.html.erb" %>
 
 <!-- MODALS -->
 <div class="edit-deal-modal" id="edit-deal-modal">
@@ -79,47 +83,36 @@
 
 <div class="create-modal" id="create-form-container">
 
-  <form action="/businesses/<%= current_business.id %>/create_mass_deal" method="post" id="create-form">
+  <form action="/businesses/<%= current_business.id %>/create_mass_deal" method="post" id="create-form" class="create_mass_deal_form">
     <% @my_deals_templates.each do |template| %>
-      <input type="radio" name="template" value="<%= template.id %>"><%= template.name %><br>
+      <input type="radio" name="deal_template" value="<%= template.id %>"><%= template.name %><br>
     <% end %>
-    <hr>
-      <input type="text" name="title"><br>
-      <input type="text" name="image" value="http://www.biz-logo.com/examples/063.gif"><br>
-      <textarea class="textarea" name="content"></textarea><br>
       <button type="submit">create</button>
   </form>
   <a href="#" class="simplemodal-close">cancel</a>
 </div>
 
-
-
-
-
-<script id="requests-template" type="text/x-handlebrs-template">
-{{#each requests}}
-<li id="list{{id}}" class="deal deal-{{id}}">
-<span>Customer name:<b> {{name}}</b></span>
-<span>Party of {{size}}</span>
-<span>Reservation time: {{time}} </span>
-<a class = "make_an_offer_link" href="{{id}}">Make an offer</a>
-</li>
-{{/each}}
-</script>
-
-  <div id="wrapper-for" class="make_an_offer_modal">
+<div id="wrapper-for" class="make_an_offer_modal">
   <form id="make-offer">
-
     <% @my_deals_templates.each do |deal| %>
-
-    <h3><%= deal.name %></h3>
+      <h3><%= deal.name %></h3>
       <p><%= deal.short_description %></p>
       <input type="radio" name="deal_template" value="<%= deal.id %>">
     <% end %>
-<hr>
     <input type="submit" value="Make offer">
   </form>
-  </div>
+</div>
+
+<script id="requests-template" type="text/x-handlebrs-template">
+  {{#each requests}}
+    <li id="list{{id}}" class="deal deal-{{id}}">
+      <span>Customer name:<b> {{name}}</b></span>
+      <span>Party of {{size}}</span>
+      <span>Reservation time: {{time}} </span>
+      <a class = "make_an_offer_link" href="{{id}}">Make an offer</a>
+    </li>
+  {{/each}}
+</script>
 
 <script id="deals-template-offer" type="text/x-handlebars-template">
   {{#each deals}}
@@ -134,6 +127,7 @@
 
 <script id="deals-template" type="text/x-handlebars-template">
   {{#each deals}}
+    
     <div class="deal-tile" id="tile-{{id}}">
       <a href="{{id}}" class="delete-button">
         <i class="fa fa-trash"></i>
@@ -156,6 +150,40 @@
       </form>
       <a href="edit-{{id}}" class="cancel-button">cancel</a>
     </div>
+    
   {{/each}}
 </script>
-<%= render template: "partials/_business_footer.html.erb" %>
+
+<script type="text/javascript">
+  $.ajax({
+      url: window.location + '/deals',
+      method: 'GET',
+      dataType: 'JSON'
+    }).done(function(data){
+      var context = { deals: data };
+      var source = $('#deals-template').html();
+      var template = Handlebars.compile(source);
+      var html = template(context);
+      $('#wrapper').append(html);
+    })
+</script>
+
+<script type="text/javascript">
+  $('body').on('click','.create-mass-deal', function(e){
+    e.preventDefault();
+    $('#create-form-container').modal({overlayClose: true});
+  })
+</script>
+
+<script type="text/javascript">
+    $.ajax({
+    url: window.location+'/request_list',
+  }).done(function(data){
+    var context =  { requests: data};
+    var source = $('#requests-template').html();
+    var template = Handlebars.compile(source);
+    var html = template(context)
+    $('#requests-list').append(html)
+  })
+</script>
+

@@ -1,12 +1,14 @@
 <header>
   <div class="container">
     <div class="logo col span_4">
-      <h1><a href="/">Dinner Winner</a></h1>
+      <h1><a href="/businesses/<%= current_business.id %>">Dinner Winner</a></h1>
     </div>
     <ul class="right right-links">
-      <li><a href="#">Create New Deal</a></li>
-      <li><a id="deals-link" class="my-deals-link" href="<%= current_business.id %>/deals">My Deals</a></li>
+      <li><a class="business-dash" href="/businesses/<%= current_business.id %>">Business Dashboard</a></li>
+      |
+      <li><a id="deals-link" class="my-deals-link" href="/businesses/<%= current_business.id %>/deals">My Deal Templates</a></li>
       <li>
+        |
         <a href="/businesses/<%= current_business.id %>/edit">
           <i class="fa fa-cog"></i>
         </a>
@@ -15,7 +17,7 @@
         <form class="sign-out-form" action="/businesses/sign_out" method="post"/>
           <input type="hidden" name="_method" value="delete">
           <input name="authenticity_token" type="hidden" value="token_value">
-          <input type="submit" value="Logout">
+          <button type="submit"><i class="fa fa-sign-out"></i></button>
         </form>
       </li>
     </ul>

@@ -6,8 +6,6 @@ class CustomersController < ApplicationController
   end
 
   def show
-    # customer_deals = current_customer.deals
-    # p @all_customer_deals = CustomerDeal.where(deal_id: , customer_id:, accepted: false)
     @all_customer_deals = CustomerDeal.where(customer_id: current_customer.id)
     @pending_deals = []
     @accepted_deals = []
@@ -99,6 +97,21 @@ class CustomersController < ApplicationController
       "Westwood Park"
     ]
     @party_size = (1..10)
+  end
+
+  def edit
+    @customer = current_customer
+  end
+
+  def update
+    current_customer.update_attributes(update_customer_params)
+    redirect_to current_customer
+  end
+
+  private
+
+  def update_customer_params
+    params[:customer].permit(:first_name, :last_name, :email, :phone_number)
   end
 
 end

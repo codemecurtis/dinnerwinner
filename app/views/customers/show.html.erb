@@ -1,3 +1,4 @@
+<div class="success">Request Sent!</div>
 <%= render template: "/partials/_header.html.erb" %>
 <div class="container">
   <h3>Find a Deal</h3>
@@ -115,28 +116,37 @@
   </div>
 
   <div class="accepted-deals">
-    <% @accepted_deals.each do |accepted| %>
-    <div class="deal-tile" id="tile-<%= accepted.deal.id %>">
-      <img id="img<%= accepted.deal.id %>" src="<%= accepted.deal.deal_image %>">
-      <h3 id="h3<%= accepted.deal.id %>">
-      <%= accepted.deal.name %>
-      </h3>
-      <p><%= accepted.deal.created_at %></p>
-      <p id="p<%= accepted.deal.id %>"><%= accepted.deal.short_description %></p>
-      </div>
+    <% if @accepted_deals.length > 0 %>
+      <% @accepted_deals.each do |accepted| %>
+      <div class="deal-tile" id="tile-<%= accepted.deal.id %>">
+        <img id="img<%= accepted.deal.id %>" src="<%= accepted.deal.deal_image %>">
+        <h3 id="h3<%= accepted.deal.id %>">
+        <%= accepted.deal.name %>
+        </h3>
+        <p><%= accepted.deal.created_at %></p>
+        <p id="p<%= accepted.deal.id %>"><%= accepted.deal.short_description %></p>
+        </div>
+      <% end %>
+    <% else %>
+      <h3>You haven't accepted any deals yet!</h3>
     <% end %>
   </div>
-    <h3 class="subtitle">Mass Deals</h3>
+
+  <h1 class="subtitle">Mass Deals</h1>
   <div class="mass-deals">
-    <% @mass_deals.each do |mass| %>
-    <div class="deal-tile" id="tile-<%= mass.deal.id %>">
-      <img id="img<%= mass.deal.id %>" src="<%= mass.deal.deal_image %>">
-      <h3 id="h3<%= mass.deal.id %>">
-      <%= mass.deal.name %>
-      </h3>
-      <p><%= mass.deal.created_at %></p>
-      <p id="p<%= mass.deal.id %>"><%= mass.deal.short_description %></p>
-      </div>
+    <% if @mass_deals.length > 0 %>
+      <% @mass_deals.each do |mass| %>
+        <div class="deal-tile" id="tile-<%= mass.deal.id %>">
+          <img id="img<%= mass.deal.id %>" src="<%= mass.deal.deal_image %>">
+          <h3 id="h3<%= mass.deal.id %>">
+          <%= mass.deal.name %>
+          </h3>
+          <p><%= mass.deal.created_at %></p>
+          <p id="p<%= mass.deal.id %>"><%= mass.deal.short_description %></p>
+        </div>
+    <% end %>
+    <% else %>
+      <h3>No Mass Deals Currently Offered</h3>
     <% end %>
   </div>
 
