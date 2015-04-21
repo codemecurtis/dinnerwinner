@@ -9,7 +9,10 @@ $(document).on('page:change', function(){
       data: {party_size: $('.select-party-size option:selected').text(), neighborhoods: $('.select-neighborhood option:selected').text(),
         reservation_time: $('.select-time option:selected').text()}
     }).done(function(response){
-      $('.success').show();
+      $('.success').fadeIn('200', function(){});
+      setTimeout(function(){
+        $('.success').fadeOut(2500);
+      })
     }).fail(function(response){
       alert(response);
     });
