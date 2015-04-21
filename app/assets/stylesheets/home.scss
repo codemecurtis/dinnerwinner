@@ -1,6 +1,46 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-.customer-login-modal {
+@import "app";
+
+.customer-login-modal{
   display: none;
+}
+
+
+.home header{
+  background: url('girl.jpg') no-repeat ;
+  background-size: cover;
+  min-height: 800px;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+.overlay{
+  background: rgba(0,0,0,0.6);
+  position: absolute;
+  z-index: 5;
+  min-height: 800px;
+  color: white;
+}
+.overlay h1{
+  font-family: $oswald;
+  font-size: 6em;
+
+}
+.header-container{
+  margin-left: 100px;
+  margin-top: 100px;
+}
+.home-buttons{
+  /*border: 1px solid red;*/
+  text-align: center;
+
+}
+.home-buttons button{
+  padding: .9em;
+  font-size: 1.2em;
+  font-family: $open_sans;
+  background: $blue_green;
+  margin-bottom: 10px;
+}
+.home-buttons button a{
+
 }
