@@ -38,79 +38,79 @@ end
 Business.all.each do |biz|
 
 Deal.create(
-  name:"Free dessert with a $30 purchase",
-  short_description:"Tonights deserts include: tiramisu, pound cake with a scoop of vanilla ice cream and warm fudge cake with chocolate ice cream.",
+  name:"Chef's Table Dining Experience",
+  short_description:"Experience a private dining experience at the chef's table. For parties of 3 or smaller.",
   deal_image:biz.logo,
   business_id:biz.id
   )
 
 Deal.create(
-  name:"Happy hour starts at 3:00 PM",
-  short_description:"Get in for our weekly early happy hour, kids under 10 drink free before 5pm",
+  name:"Happy Hour Mixology Class",
+  short_description:"Take off your heels or loosen your tie and learn to serve up fancy cocktails San Francisco style!",
   deal_image:biz.logo,
   business_id:biz.id
   )
 
 Deal.create(
-  name: "10% off any entree",
-  short_description:"10oz steak and 5oz lobster are among the entree offered tonight.",
+  name: "Complimentary cocktails during Happy Hour",
+  short_description:"Enjoy complimentary bite-size appetizers with drinks.",
   deal_image:biz.logo,
   business_id:biz.id
   )
 
 Deal.create(
-  name:"2 for 1 dining special",
-  short_description:"Limit 1 per reservation.",
+  name:"Treat Yo-self!",
+  short_description:"Our famous sundae free with entree purchase.",
   deal_image:biz.logo,
   business_id:biz.id
   )
 
 Deal.create(
-  name: "Buy one get one free drinks",
-  short_description:"Additional drink surcharges may apply",
+  name: "Six Course Tasting Menu",
+  short_description:"Experience six world cuisines in a thoughtfully designed tasting menu.",
   deal_image:biz.logo,
   business_id:biz.id
   )
 
 
 Deal.create(
-  name: "Buffet all day",
-  short_description:"Our famous all day buffet, two fully stocked hot-bars and one salad bar make this your best dining option tonight!",
+  name: "Sonoma Wine Pairings & Brunch ",
+  short_description:"A special event Sundays that incorporate this seasons favorite wine pairings with our classic brunch.",
   deal_image:biz.logo,
   business_id:biz.id
   )
 
 Deal.create(
-  name: "Ladies drink for free before 8:00 PM",
-  short_description:"Ladies, get here before 8:00 and drink for free.",
+  name: "Ladies Night!",
+  short_description:"Ladies, get here before 8 and your first drink is on us!",
   deal_image:biz.logo,
   business_id:biz.id
   )
 
 Deal.create(
-  name:"Taco Tuesday",
-  short_description:"Free taco for every purchase of a drink or appetizer.",
+  name:"Tacos & Tecates Tuesday",
+  short_description:"$1 Tecates with Tacos.",
   deal_image:biz.logo,
   business_id:biz.id
   )
 
 Deal.create(
-  name:"Free chips and salsa",
-  short_description:"Free chips and salsa for as long as you want to stay.",
+  name:"Free BBQ Oysters on the Patio",
+  short_description:"From 3-9 get oysters off the grill while they last!",
   deal_image:biz.logo,
   business_id:biz.id
   )
 
 Deal.create(
-  name:"$9.99 Lunch Special",
-  short_description:"Tiger shrimp, chili sauce. Soup (choice of one) - Sweet Corn / Hot & Sour (choice of vegetable or chicken) Rice (choice of none) - White Rice / Brown Rice ...",
+  name:"Sustainable Harvest",
+  short_description:"Enjoy a seasonal family-style dinner with commentary from local chef and sustainable farmer Alexis Hernandez.",
   deal_image:biz.logo,
   business_id:biz.id
   )
 
 Deal.create(
-  name:"Free bowl of soup with purchase of an entree",
-  short_description:"Get a free bowl of soup at #{biz.name} with the purchase of any entree, valid through 1/27/11!  To find an O’Charley’s in your area, go HERE.",
+  name:"Rawbar Two-tier Giveaway",
+  short_description:"First twenty guests will be treated to a 2-tier seafood presentation of Tomales Bay, Hog Island, and Point Reyes oysters.",
   deal_image:biz.logo,
   business_id:biz.id
   )
