@@ -1,6 +1,5 @@
 @import 'app';
 
-
 /**********************HEADER*********************/
 /****************  _header.html.erb  ****************/
 .customer{
@@ -26,6 +25,11 @@
 .logout-button{
   background: none;
 }
+.rotate:hover, .rotate:hover{
+  transition: 0.9s;
+  transform: rotateZ(360deg);
+  color: $blue_green;
+}
 
 /**********************CONTAINER*********************/
 .customer-container{
@@ -42,8 +46,25 @@
   padding: 2em;
   background: white;
 }
+.request-bar select{
+  padding: 10px;
+  border: none;
+  margin-top: 10px;
+}
+.request-bar option{
+}
+.create-customer-deal{
+  background: $blue_green;
+  border: none;
+  color: white;
+  padding: 15px;
+}
 
-
+/**************ACCEPTED DEALS*****************/
+/**************MASS DEALS*****************/
+.accepted-deals, .mass-deals{
+  margin: 5em 0;
+}
 
 
 
