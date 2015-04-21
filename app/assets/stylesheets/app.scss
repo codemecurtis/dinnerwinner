@@ -1,3 +1,4 @@
+/******************** MAIN COLORS AND FONTS  *****************/
 $grey: #292B2E;
 $blue_green: #2C998B;
 $white: #E8E8E8;
@@ -12,36 +13,36 @@ $oswald: 'Oswald', sans-serif;
 $open_sans: 'Open Sans', sans-serif;
 $open_sans_condensed: 'Open Sans Condensed', sans-serif;
 
+/******************** MAIN STYLING FOR ALL PAGES *****************/
 
+body{
+  color: $dark_blue;
+  background: $white;
+}
+.signup-modal, .login-modal{
+  display: none;
+}
+button{
+  border: none;
+}
 a{
   text-decoration: none;
   color: black;
 }
 
-@mixin header_style{
-
-}
 
 
-
-
-
-
-
+/******************** MAIN STYLING FOR ALL PAGES *****************/
 
 .make-an-offer-modal, .customer-signup-form, .customer-deal-modal, .edit-deal-modal, .create-modal, .edit-modal, .signup-modal, .login-modal {
   display: none;
  }
-
 .container{
   max-width: 1240px;
 }
-
 .right{
   float:right;
 }
-
-
 .logo{
   margin: 0;
 }

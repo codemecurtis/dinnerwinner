@@ -1,19 +1,5 @@
 @import "app";
 
-.customer-login-modal{
-  display: none;
-}
-body{
-  color: $dark_blue;
-  background: $white;
-}
-.signup-modal, .login-modal{
-  display: none;
-}
-button{
-  border: none;
-}
-
 /***************** HEADER **************************/
 .home header{
   background: url('girl.jpg') no-repeat ;
@@ -71,6 +57,7 @@ button{
   font-size: 2.5em;
 }
 /***************** FOOTER **************************/
+/************* _footer.html.erb ********************/
 
 footer{
   background: $grey;

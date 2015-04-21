@@ -3,6 +3,9 @@
 
 /**********************HEADER*********************/
 /****************  _header.html.erb  ****************/
+.customer{
+  margin-bottom: 2.5em;
+}
 .customer, .customer a{
   color: $dark_blue;
 }
@@ -24,7 +27,26 @@
   background: none;
 }
 
-/**********************HEADER*********************/
+/**********************CONTAINER*********************/
+.customer-container{
+  text-align: center;
+  font-family: $open_sans;
+}
+.customer-container h3.find-deal{
+  font-size: 2em;
+}
+
+        /********REQUEST BAR***********/
+.request-bar{
+  margin: 40px 0;
+  padding: 2em;
+  background: white;
+}
+
+
+
+
+
 .success {
   position: absolute;
   display: none;

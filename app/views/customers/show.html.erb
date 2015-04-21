@@ -1,25 +1,38 @@
 <div class="success">Request Sent!</div>
 <%= render template: "/partials/_header.html.erb" %>
-<div class="container">
-  <h3>Find a Deal</h3>
-  <div class="request-bar">
-    Neighborhood:
-    <select class="select-neighborhood">
-      <% @neighborhoods.each do |n| %>
-      <option class="<%= n %>"><%= n %></option>
-      <% end %>
-    </select>
-    Party Size:
-    <select class="select-party-size">
-      <% @party_size.each do |n| %>
-      <option class="<%= n %>"><%= n %></option>
-      <% end %>
-    </select>
-    Reservation Time:
-    <select class="select-time">
-      <%= reservation_time_options %>
-    </select>
-    <%= submit_tag("Request a Deal!", class: "create-customer-deal") %>
+<div class="customer-container">
+  <h3 class="find-deal">Find a Deal:</h3>
+  <div class="request-bar span_12_of_12">
+    <ul class="find-deal-labels span_12_of_12">
+      <li class="span_3_of_12">Neighborhood</li>
+      <li class="span_3_of_12">Party Size</li>
+      <li class="span_3_of_12">Reservation Time</li>
+      <li class="span_3_of_12">Submit</li>
+    </ul>
+    <ul class="find-deal-options span_12_of_12">
+      <li class="span_3_of_12">
+        <select class="select-neighborhood">
+          <% @neighborhoods.each do |n| %>
+          <option class="<%= n %>"><%= n %></option>
+          <% end %>
+        </select>
+      </li>
+      <li class="span_3_of_12">
+        <select class="select-party-size">
+          <% @party_size.each do |n| %>
+          <option class="<%= n %>"><%= n %></option>
+          <% end %>
+        </select>
+      </li>
+      <li class="span_3_of_12">
+        <select class="select-time">
+          <%= reservation_time_options %>
+        </select>
+      </li>
+      <li class="span_3_of_12">
+        <%= submit_tag("Request a Deal!", class: "create-customer-deal") %>
+      </li>
+    </ul>
   </div>
 
   <div class="accepted-deals">
