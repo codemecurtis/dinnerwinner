@@ -6,69 +6,70 @@
     Neighborhood:
     <select class="select-neighborhood">
       <% @neighborhoods.each do |n| %>
-        <option class="<%= n %>"><%= n %></option>
+      <option class="<%= n %>"><%= n %></option>
       <% end %>
     </select>
     Party Size:
-      <select class="select-party-size">
-        <% @party_size.each do |n| %>
-          <option class="<%= n %>"><%= n %></option>
-        <% end %>
-      </select>
+    <select class="select-party-size">
+      <% @party_size.each do |n| %>
+      <option class="<%= n %>"><%= n %></option>
+      <% end %>
+    </select>
     Reservation Time:
-      <select class="select-time">
-        <%= reservation_time_options %>
-      </select>
+    <select class="select-time">
+      <%= reservation_time_options %>
+    </select>
     <%= submit_tag("Request a Deal!", class: "create-customer-deal") %>
   </div>
 
   <div class="accepted-deals">
     <% if @accepted_deals.length > 0 %>
-      <% @accepted_deals.each do |accepted| %>
-      <div class="deal-tile" id="tile-<%= accepted.deal.id %>">
-        <img id="img<%= accepted.deal.id %>" src="<%= accepted.deal.deal_image %>">
-        <h3 id="h3<%= accepted.deal.id %>">
+    <% @accepted_deals.each do |accepted| %>
+    <div class="deal-tile" id="tile-<%= accepted.deal.id %>">
+      <img id="img<%= accepted.deal.id %>" src="<%= accepted.deal.deal_image %>">
+      <h3 id="h3<%= accepted.deal.id %>">
         <%= accepted.deal.name %>
-        </h3>
-        <p><%= accepted.deal.created_at %></p>
-        <p id="p<%= accepted.deal.id %>"><%= accepted.deal.short_description %></p>
-        </div>
-      <% end %>
+      </h3>
+      <p><%= accepted.deal.created_at %></p>
+      <p id="p<%= accepted.deal.id %>"><%= accepted.deal.short_description %></p>
+    </div>
+    <% end %>
     <% else %>
-      <h3>You haven't accepted any deals yet!</h3>
+    <h3>You haven't accepted any deals yet!</h3>
     <% end %>
   </div>
 
   <h1 class="subtitle">Mass Deals</h1>
   <div class="mass-deals">
     <% if @mass_deals.length > 0 %>
-      <% @mass_deals.each do |mass| %>
-        <div class="deal-tile" id="tile-<%= mass.deal.id %>">
-          <img id="img<%= mass.deal.id %>" src="<%= mass.deal.deal_image %>">
-          <h3 id="h3<%= mass.deal.id %>">
-          <%= mass.deal.name %>
-          </h3>
-          <p><%= mass.deal.created_at %></p>
-          <p id="p<%= mass.deal.id %>"><%= mass.deal.short_description %></p>
-        </div>
-      <% end %>
+    <% @mass_deals.each do |mass| %>
+    <div class="deal-tile" id="tile-<%= mass.deal.id %>">
+      <img id="img<%= mass.deal.id %>" src="<%= mass.deal.deal_image %>">
+      <h3 id="h3<%= mass.deal.id %>">
+        <%= mass.deal.name %>
+      </h3>
+      <p><%= mass.deal.created_at %></p>
+      <p id="p<%= mass.deal.id %>"><%= mass.deal.short_description %></p>
+    </div>
+    <% end %>
     <% else %>
-      <h3>No Mass Deals Currently Offered</h3>
+    <h3>No Mass Deals Currently Offered</h3>
     <% end %>
   </div>
 
   <script id="pending-deals" type="text/x-handlebars-template">
-      <h4 class="business-name">{{business.name}}</h4>
-      <p>{{business.rating}}</p>
-      <p>{{business.address}}</p>
-      <p>{{business.short_description}}</p>
-      <p>{{deal.name}}</p>
-      <img src="{{deal.deal_image}}"/>
-      <a href="/customer_deals/{{customer_deal.id}}/edit">Accept Deal!</a>
+  <h4 class="business-name">{{business.name}}</h4>
+  <p>{{business.rating}}</p>
+  <p>{{business.address}}</p>
+  <p>{{business.short_description}}</p>
+  <p>{{deal.name}}</p>
+  <img src="{{deal.deal_image}}"/>
+  <a href="/customer_deals/{{customer_deal.id}}/edit">Accept Deal!</a>
   </script>
 
   <div class="customer-deal-modal">
 
   </div>
 </div>
+<%= render template: "/partials/_footer.html.erb" %>
 
