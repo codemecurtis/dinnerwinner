@@ -87,7 +87,7 @@ class BusinessesController < ApplicationController
 
   def authenticate_current_business
     if current_business.id != params[:id].to_i
-      redirect_to '/'
+      redirect_to '/businesses'
     end
   end
 
