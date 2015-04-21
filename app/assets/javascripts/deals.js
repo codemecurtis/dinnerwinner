@@ -1,5 +1,15 @@
 $(document).on('page:change', function(){
-
+  $(document).on('click', function(event){
+    var target = $(event.target)
+    if (target.is('.check-deals-link, .pending-deals, .pending-deals *')) return;
+    // if (target.is('.check-deals-link')) return;
+    $('.pending-deals').hide('fast');
+  });
+  $('.check-deals-link').on('click', function(evt){
+    evt.preventDefault();
+    console.log('success')
+    $('.pending-deals').toggle('fast');
+  });
   //UPDATE
   //this is to get the edit modal to appear
   $('#wrapper').on('click', '.edit-button', function(e){
@@ -72,7 +82,7 @@ $(document).on('page:change', function(){
     $('.create-form-container').modal({
         overlayClose: true
     });
-      
+
     $('#create-form').trigger('reset')
       $.modal.close();
       var context = { deals: data };
