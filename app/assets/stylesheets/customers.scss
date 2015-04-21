@@ -26,7 +26,7 @@
   background: none;
 }
 .rotate:hover, .rotate:hover{
-  transition: 0.9s;
+  transition: 0.4s;
   transform: rotateZ(360deg);
   color: $blue_green;
 }
@@ -64,6 +64,9 @@
 /**************MASS DEALS*****************/
 .accepted-deals, .mass-deals{
   margin: 5em 0;
+}
+.mass-deals{
+  margin: auto
 }
 
 

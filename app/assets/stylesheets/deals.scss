@@ -11,9 +11,22 @@
 }
 
 .deal-tile {
-  border: 2px solid gray;
+  border: 2px solid white;
   display: inline-block;
-  min-height: 10em;
+  min-height: 14em;
+  margin: 10px 10px;
+  padding: 10px;
+  font-family: $open_sans_condensed;
+  box-shadow: 4px 4px 7px #888;
+}
+.deal-tile h3{
+  text-decoration: underline;
+  font-style: italic;
+  padding-bottom: 10px;
+  font-family: $open_sans;
+}
+.deal-image{
+  max-width: 11.5em;
 }
 
 .empty {
