@@ -13,5 +13,5 @@ $(document).on('page:change', function(){
       overlayClose: true
     })
   })
-  
+
 });
