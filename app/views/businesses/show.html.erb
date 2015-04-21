@@ -3,20 +3,20 @@
   <div class="business-info">
     <div class="mass-deals right">
       <h3>
-        <% if @mass_deal.count > 1%>
-          <%= @mass_deal.count %> Mass Deals Offered
-        <% else %>
+        <% if @mass_deal.count == 1%>
           <%= @mass_deal.count %> Mass Deal Offered
+        <% else %>
+          <%= @mass_deal.count %> Mass Deals Offered
         <% end %>
       </h3>
     </div>
   <br>
     <div class="accepted-deals right">
       <h3>
-        <% if @accepted_deals.count > 1%>
-          <%= @accepted_deals.count %> Deals Accepted
-        <% else %>
+        <% if @accepted_deals.count == 1%>
           <%= @accepted_deals.count %> Deal Accepted
+        <% else %>
+          <%= @accepted_deals.count %> Deals Accepted
         <% end %>
       </h3>
     </div>
