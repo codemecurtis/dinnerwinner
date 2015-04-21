@@ -7,7 +7,7 @@
     <li>
       <a class="check-deals-link" href="#">Pending Deals</a>
       <span>(<%= @pending_deals.count %>)</span>
-      <ul class="pending-deals span_2_of_12">
+      <ul class="pending-deals span_5_of_12">
         <% @pending_deals.each do |customer_deal| %>
         <li class="<%= customer_deal.id %> deal-line"><%= customer_deal.deal.name %></li><hr>
         <% end %>
