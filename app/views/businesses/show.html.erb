@@ -1,30 +1,36 @@
 <%= render template: "/partials/_header_business.html.erb" %>
-<div class="container">
-  <div class="business-info">
-    <div class="mass-deals right">
-      <h3>
-        <% if @mass_deal.count == 1%>
-          <%= @mass_deal.count %> Mass Deal Offered
-        <% else %>
-          <%= @mass_deal.count %> Mass Deals Offered
-        <% end %>
-      </h3>
+<div class="business-container">
+  <div class="business-description span_12_of_12">
+    <div class="business-info span_9_of_12">
+      <div class="business-offers-counter">
+        <div class="mass-deals-counter">
+          <p>
+            <% if @mass_deal.count == 1%>
+              <%= @mass_deal.count %> Mass Deal Offered
+            <% else %>
+              <%= @mass_deal.count %> Mass Deals Offered
+            <% end %>
+          </p>
+        </div><!--  close mass deals div -->
+        <div class="accepted-deals-counter">
+          <p>
+            <% if @accepted_deals.count == 1%>
+              <%= @accepted_deals.count %> Deal Accepted
+            <% else %>
+              <%= @accepted_deals.count %> Deals Accepted
+            <% end %>
+          </p>
+        </div>
+      </div><!--  close business-offers-counter div -->
+      <div class="business-logo">
+        <h3><%= @business.name %></h3><br>
+        <img class="business-logo" src="<%= @business.logo %>">
+      </div>
     </div>
-  <br>
-    <div class="accepted-deals right">
-      <h3>
-        <% if @accepted_deals.count == 1%>
-          <%= @accepted_deals.count %> Deal Accepted
-        <% else %>
-          <%= @accepted_deals.count %> Deals Accepted
-        <% end %>
-      </h3>
-    </div>
-    <div class="business-info">
-      <img class="business-logo" src="<%= @business.logo %>">
-      <p><%= @business.name %></p>
-    </div>
-  </div>
+
+
+
+  </div> <!-- close business info div -->
   <!-- END BUSINESS INFO -->
 
   <section class="requests">
