@@ -27,6 +27,8 @@ gem 'devise'
 
 gem 'handlebars_assets'
 
+gem 'heroku-deflater', :group => :production
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
