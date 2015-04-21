@@ -1,16 +1,30 @@
-// Place all the styles related to the customers controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'app';
 
-.customer-signup-form, customer-deal-modal{
-  display:none
+
+/**********************HEADER*********************/
+/****************  _header.html.erb  ****************/
+.customer, .customer a{
+  color: $dark_blue;
 }
-
-.customer-links > li {
+.customer h1{
+  font-family: $oswald;
+  padding: 15px 30px;
+  /*border: 1px solid $dark_blue;*/
+}
+.customer .logo, .customer .customer-links, li{
   display: inline-block;
-  margin: 20px 5px;
+}
+.customer-links{
+  padding: 45px;
+}
+.customer-links li{
+  margin-right: 15px;
+}
+.logout-button{
+  background: none;
 }
 
+/**********************HEADER*********************/
 .success {
   position: absolute;
   display: none;
@@ -21,35 +35,4 @@
   text-align: center;
 }
 
-ul li ul {
-  padding: 10px;
-  position: absolute;
-  top: 35px;
-  right: 0;
-  width: 150px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  display: none;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transiton: opacity 0.2s;
-  -moz-transition: opacity 0.2s;
-  -ms-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  -transition: opacity 0.2s;
-}
-ul li ul li {
-  background: #555;
-  display: block;
-  color: #fff;
-  padding: 10px;
-  width: 130px;
-  text-shadow: 0 -1px 0 #000;
-}
-ul li ul li:hover { background: #666; }
-ul li:hover ul {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-}
+

@@ -33,7 +33,6 @@ button{
 .overlay h1{
   font-family: $oswald;
   font-size: 6em;
-
 }
 .header-container{
   margin-left: 100px;
@@ -88,12 +87,13 @@ footer{
   border-radius: 50%;
   padding: 20px;
 }
-.right{
+.business-page-link{
   font-family: $open_sans;
   color: white;
   position: relative;
   bottom: 40px;
+  float: right;
 }
-.right:hover{
+.business-page-link:hover{
   text-decoration: underline;
 }
