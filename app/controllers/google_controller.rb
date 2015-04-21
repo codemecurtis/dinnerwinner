@@ -9,22 +9,13 @@ class GoogleController < ApplicationController
     # if the username exists in the database
     if Customer.exists?(first_name: auth_user_info['given_name'], last_name: auth_user_info['family_name'], email: auth_user_info['email'], google:true, uid:auth_user_info['sub'], provider:'google' )
       current_customer = Customer.find_by(email: auth_user_info['email'])
-      p "n"*80
     else
       current_customer = Customer.create(first_name: auth_user_info['given_name'], last_name: auth_user_info['family_name'], email: auth_user_info['email'], google:true, avatar: auth_user_info['picture'], uid:auth_user_info['sub'], provider:'google')
-      p "p"*80
     end
-    # sign_in(current_customer.email, customers)
-    customer_signed_in?
-      p 'c'*80
-      p current_customer
-      p auth_user_info
-      p 'g'*80
-      p customer_signed_in?
-      p current_customer.nil?
-      # redirect_to "/customers/#{current_customer.id}"
-      redirect_to current_customer
-    # redirect_to "/customers/1"
+
+
+    sign_in(current_customer)
+    redirect_to current_customer
   end
 
 GOOGLE_API_SCOPES = ['profile','email'].join(' ')
