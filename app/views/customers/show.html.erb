@@ -41,7 +41,7 @@
 
   <h1 class="subtitle">Mass Deals</h1>
   <div class="mass-deals">
-    <% if @mass_deals %>
+    <% if @mass_deals.length > 0 %>
       <% @mass_deals.each do |mass| %>
         <div class="deal-tile" id="tile-<%= mass.deal.id %>">
           <img id="img<%= mass.deal.id %>" src="<%= mass.deal.deal_image %>">
