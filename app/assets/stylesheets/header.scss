@@ -1,0 +1,39 @@
+@import 'app';
+/*************** HEADER ********************/
+
+.head{
+  margin-bottom: 2.5em;
+  border-bottom: 1px solid #C7C7C7;
+}
+.head, .head a{
+  color: $dark_blue;
+}
+.head h1{
+  font-family: $oswald;
+  padding: 15px 30px;
+}
+.head .logo, .head .head-links, li{
+  display: inline-block;
+}
+.head-links{
+  padding: 45px;
+}
+.head-links li{
+  margin-right: 15px;
+}
+.pending-deals:hover{
+  text-decoration: underline;
+}
+.logout-button{
+  background: none;
+}
+.rotate:hover, .rotate:hover{
+  transition: 0.4s;
+  transform: rotateZ(360deg);
+  color: $blue_green;
+}
+
+/*************** CUSTOMER HEADER ********************/
+
+
+/*************** BUSINESS HEADER ********************/
