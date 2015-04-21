@@ -13,6 +13,7 @@ class BusinessesController < ApplicationController
   end
 
   def show
+    authenticate_current_business
     viewed_business
     business_deals = Deal.where(business_id: params[:id])
     @mass_deal = []
@@ -82,6 +83,12 @@ class BusinessesController < ApplicationController
 
   def update_business_params
     params[:business].permit(:name, :email, :phone_number, :logo, :address, :short_description)
+  end
+
+  def authenticate_current_business
+    if current_business.id != params[:id].to_i
+      redirect_to '/'
+    end
   end
 
 
