@@ -7,5 +7,4 @@ class RegistrationsController < Devise::RegistrationsController
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:first_name, :last_name, :phone_number, :avatar, :logo, :location, :short_description, :rating, :email, :password, :password_confirmation) }
   end
 
-
 end

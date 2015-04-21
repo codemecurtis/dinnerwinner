@@ -7,9 +7,6 @@ input, button, textarea{
 a{
   text-decoration: none;
 }
-.customer-signup-modal{
-  display: none;
-}
 
 .home .header-container, .home .about-container, .home .auto{
   margin: auto;

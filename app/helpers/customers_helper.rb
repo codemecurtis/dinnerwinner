@@ -1,6 +1,6 @@
 module CustomersHelper
   def resource_name
-    :customer
+    @resource_name ||= :customer
   end
 
   def resource
@@ -8,6 +8,6 @@ module CustomersHelper
   end
 
   def devise_mapping
-    @devise_mapping ||= Devise.mappings[:customer]
+    @devise_mapping ||= Devise.mappings[resource_name]
   end
 end

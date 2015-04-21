@@ -28,12 +28,6 @@
     </div>
   </section>
 
-  <section class="feedback home-element">
-      <input type="text" placeholder="title"><br>
-      <textarea placeholder="your feedback"></textarea><br>
-      <input class="home-buttons" type="submit">
-  </section>
-
   <footer class="home-element">
     <div class="auto">
       <ul class="social left">
@@ -47,7 +41,9 @@
 </div>
 
 <%= render template: '/devise/registrations/new.html.erb' %>
-<%= render template: '/devise/sessions/new.html.erb' %>
+<div class="login-modal">
+  <%= render partial: 'devise/sessions/login_form' %>
+</div>
 
 
 

@@ -1,4 +1,20 @@
-<%= render template: "/partials/_header_business.html.erb" %>
+<header class="home-element">
+  <div class="container">
+    <h1>Dinner Winner</h1>
+
+    <% if business_signed_in? %>
+
+    <% else %>
+      <button class="business-signup-link home-buttons">
+        <a href="/businesses/sign_up">Sign up</a>
+      </button>
+      <button class="business-login-link home-buttons">
+        <a href="/businesses/sign_in">Login</a>
+      </button>
+    <% end %>
+  </div>
+</header>
+
 <section class="about">
   <div class="container">
     <h2>How it works</h2>
@@ -11,22 +27,18 @@
   </div>
 </section>
 
-<section class="feedback">
-  <div class="container">
-    <input type="text" placeholder="title">
-    <textarea placeholder="your feedback"></textarea>
-    <input type="submit">
-  </div>
-</section>
-
-<footer>
-  <div class="container">
+<footer class="home-element">
+  <div class="auto container">
     <ul class="social left">
-      <li>Twitter</li>
-      <li>Twitter</li>
-      <li>Twitter</li>
+      <li><i class="fa fa-twitter"></i></li>
+      <li><i class="fa fa-pinterest-p"></i></li>
+      <li><i class="fa fa-google-plus"></i></li>
     </ul>
   </div>
 </footer>
+
 <%= render template: '/devise/registrations/new.html.erb' %>
-<%= render template: '/devise/sessions/new.html.erb' %>
+
+<div class="login-modal">
+  <%= render partial: 'devise/sessions/login_form' %>
+</div>
