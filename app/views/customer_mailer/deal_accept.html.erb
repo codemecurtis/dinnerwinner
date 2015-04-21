@@ -1,0 +1,14 @@
+<h1>Hello, <span style="font-wieght: bold"><%= @customer.first_name %></span></h1>
+
+<p><%= @business.name %> has sent you a new offer. Dinner Winner takes pride in offering the best deal possible for both the business and the customer.</p>
+
+
+<p>Here is your new deal</p>
+<h2><%= @customer_deal.name %></h2>
+
+<p>If you'd like to accept this deal please go to your <a href="http://dinnerwinner.io/customers/<%= @customer.id %>">dashboard</a> to see your pending deals. If not please disregard this email and we will be glad to remove this deal for you the following day.</p>
+
+<h3>
+	Thank You,
+		Dinner Winner
+</h3>
