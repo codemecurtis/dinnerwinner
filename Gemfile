@@ -27,6 +27,8 @@ gem 'devise'
 
 gem 'handlebars_assets'
 
+gem 'whenever', :require => false
+
 gem 'heroku-deflater', :group => :production
 
 # Use ActiveModel has_secure_password
