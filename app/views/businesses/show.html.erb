@@ -85,7 +85,7 @@
 
 <div class="create-modal" id="create-form-container">
 
-  <form action="/businesses/<%= current_business.id %>/create_mass_deal" method="post" id="create-form" class="create_mass_deal_form">
+  <form action="/businesses/<%= current_business.id %>/create_mass_deal" id="create-form" class="create_mass_deal_form">
     <% @my_deals_templates.each do |template| %>
       <input type="radio" name="deal_template" value="<%= template.id %>"><%= template.name %><br>
     <% end %>

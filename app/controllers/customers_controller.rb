@@ -6,6 +6,8 @@ class CustomersController < ApplicationController
   end
 
   def show
+    @mass_deals = CustomerDeal.where(mass_deal: true)
+    authenticate_current_customer
     @all_customer_deals = CustomerDeal.where(customer_id: current_customer.id)
     @pending_deals = []
     @accepted_deals = []
@@ -15,7 +17,6 @@ class CustomersController < ApplicationController
       elsif deal.deal_id != nil
         @accepted_deals << deal
       end
-    @mass_deals = CustomerDeal.where(mass_deal: true)
     end
 
     @neighborhoods = [
@@ -112,6 +113,12 @@ class CustomersController < ApplicationController
 
   def update_customer_params
     params[:customer].permit(:first_name, :last_name, :email, :phone_number)
+  end
+
+  def authenticate_current_customer
+    if current_customer.id != params[:id].to_i
+      redirect_to '/'
+    end
   end
 
 end

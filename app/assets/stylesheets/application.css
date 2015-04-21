@@ -16,22 +16,4 @@
  *= require_self
  */
 
-.make-an-offer-modal, .customer-signup-form, .customer-deal-modal, .edit-deal-modal, .create-modal, .edit-modal, .signup-modal, .login-modal {
-  display: none;
- }
 
-.container{
-  max-width: 1240px;
-}
-
-.right{
-  float:right;
-}
-
-.left {
-  float: left;
-}
-
-.logo{
-  margin: 0;
-}

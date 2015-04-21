@@ -13,6 +13,7 @@ class BusinessesController < ApplicationController
   end
 
   def show
+    authenticate_current_business
     viewed_business
     business_deals = Deal.where(business_id: params[:id])
     @mass_deal = []
@@ -43,7 +44,7 @@ class BusinessesController < ApplicationController
     CustomerDeal.all.each do |deal|
       business_neighborhoods = JSON.parse(@business.neighborhoods).map { |e| e.downcase }
         if deal.neighborhoods != nil
-          if(business_neighborhoods.include?(deal.neighborhoods.downcase)) && (deal.deal_id==nil)
+          if((business_neighborhoods.include?(deal.neighborhoods.downcase)) && (deal.deal_id==nil))
             name_customer = Customer.find(deal.customer_id).first_name
             time_customer = deal.reservation_time
             size_customer = deal.party_size
@@ -82,6 +83,12 @@ class BusinessesController < ApplicationController
 
   def update_business_params
     params[:business].permit(:name, :email, :phone_number, :logo, :address, :short_description)
+  end
+
+  def authenticate_current_business
+    if current_business.id != params[:id].to_i
+      redirect_to '/businesses'
+    end
   end
 
 
