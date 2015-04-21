@@ -3,8 +3,17 @@
 .customer-login-modal{
   display: none;
 }
+body{
+  color: $dark_blue;
+}
+.signup-modal, .login-modal{
+  display: none;
+}
+button{
+  border: none;
+}
 
-
+/***************** HEADER **************************/
 .home header{
   background: url('girl.jpg') no-repeat ;
   background-size: cover;
@@ -30,7 +39,6 @@
   margin-top: 100px;
 }
 .home-buttons{
-  /*border: 1px solid red;*/
   text-align: center;
 
 }
@@ -41,6 +49,49 @@
   background: $blue_green;
   margin-bottom: 10px;
 }
-.home-buttons button a{
 
+/***************** ABOUT **************************/
+.home-element, .about{
+  margin-bottom: 6em;
+}
+.about{
+  text-align: center;
+}
+.about-container{
+  margin: auto;
+  text-align: left;
+  font-family: $open_sans;
+  font-size: 1.3em;
+  line-height: 1.4;
+  padding: 2em;
+}
+.about h2{
+  font-family: $open_sans;
+  font-size: 2.5em;
+}
+/***************** FOOTER **************************/
+
+footer{
+  background: $grey;
+  padding: 3em;
+  text-align: center;
+}
+.social li{
+  display: inline-block;
+}
+.social i{
+  margin-left: 10px;
+  color: $blue_green;
+  border: 1px solid $blue_green;
+  border-radius: 50%;
+  padding: 20px;
+}
+.right{
+  font-family: $open_sans;
+  color: white;
+  position: relative;
+  bottom: 40px;
+}
+.right:hover{
+  text-decoration: underline;
 }

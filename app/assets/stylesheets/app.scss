@@ -1,6 +1,5 @@
 $grey: #292B2E;
 $blue_green: #2C998B;
-$blue_green: #2C998B;
 $white: #E8E8E8;
 $dark_blue: #125373;
 $red: #BF0D0D;
@@ -38,61 +37,9 @@ a{
   float:right;
 }
 
-.left {
-  float: left;
-}
 
 .logo{
   margin: 0;
 }
 
 
-
-html{
-  width: 100%;
-}
-input, button, textarea{
-  border: none;
-}
-
-.home-element{
-  margin-bottom: 7em;
-}
-
-
-.home .about{
-  background: red;
-}
-.home .feedback{
-  background: yellow;
-  padding: 4em;
-}
-.home .feedback div{
-  margin: auto;
-  font-size: 1.3em;
-}
-.feedback input, .feedback textarea{
-  padding: 10px;
-}
-.feedback textarea{
-  min-height: 7em;
-}
-.home footer{
-  padding: 3em;
-  background: lightgrey
-}
-.social{
-  padding-left: 7em;
-}
-.social li{
-  display: inline-block;
-}
-.social li i{
-  background: blue;
-  color: white;
-  padding: 10px;
-}
-
-.signup-modal, .login-modal{
-  display: none;
-}
