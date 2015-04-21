@@ -3,7 +3,13 @@
       <h1><a href="/">Dinner Winner</a></h1>
     </div>
   <ul class="right customer-links">
-    <li><p>Welcome <%= current_customer.first_name %>!</p></li>
+    <li><p>Welcome <%= current_customer.first_name %>!</p>
+    <% if current_customer.google  %>
+          <img class="small-avatar" src="<%= current_customer.avatar%>">
+    <%else%>
+
+    <% end %>
+    </li>
     <li>
       <a href="#">Pending Deals
         <span>(<%= @pending_deals.count %>)</span>

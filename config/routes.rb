@@ -1,17 +1,23 @@
 Rails.application.routes.draw do
   devise_for :businesses, :controllers => {registrations: 'registrations'}
   devise_for :customers, :controllers => {registrations: 'registrations'}
+  get '/auth/callback' => 'google#google_login'
+# end
+
   resources :customers
   get 'businesses/:business_id/request_list' => 'businesses#request_list'
   resources :businesses do
-      get 'mass_deal'
-      post 'create_mass_deal'
-      delete 'remove_mass_deal'
-      resources :deals
+    get 'mass_deal'
+    post 'create_mass_deal'
+    delete 'remove_mass_deal'
+    resources :deals
   end
 
 
   resources :customer_deals
+
+
+
 
   # devise_for :customers
 
