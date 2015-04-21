@@ -28,6 +28,19 @@
 .deal-image{
   max-width: 11.5em;
 }
+.pending-deals{
+  background: $dark_blue_rgba;
+  color: white;
+  position: absolute;
+  top: 4.5em;
+  display: none;
+}
+hr{
+  margin: 0;
+}
+.deal-line{
+  padding: 10px;
+}
 
 .empty {
   border: 2px solid gray;
