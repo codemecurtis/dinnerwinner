@@ -2,38 +2,7 @@
 
 /**********************HEADER*********************/
 /****************  _header.html.erb  ****************/
-.customer{
-  margin-bottom: 2.5em;
-  border-bottom: 1px solid #C7C7C7;
-}
-.customer, .customer a{
-  color: $dark_blue;
-}
-.customer h1{
-  font-family: $oswald;
-  padding: 15px 30px;
-  /*border: 1px solid $dark_blue;*/
-}
-.customer .logo, .customer .customer-links, li{
-  display: inline-block;
-}
-.customer-links{
-  padding: 45px;
-}
-.customer-links li{
-  margin-right: 15px;
-}
-.pending-deals:hover{
-  text-decoration: underline;
-}
-.logout-button{
-  background: none;
-}
-.rotate:hover, .rotate:hover{
-  transition: 0.4s;
-  transform: rotateZ(360deg);
-  color: $blue_green;
-}
+/* check header.scss  for header styling */
 
 /**********************CONTAINER*********************/
 .customer-container{
