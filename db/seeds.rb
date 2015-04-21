@@ -1,7 +1,9 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 
-50.times do
+
+#Create some customers
+20.times do
   Customer.create(
   	first_name: Faker::Name.first_name,
   	last_name: Faker::Name.last_name,
@@ -14,139 +16,168 @@ end
 
 params = {term: "food"}
 
-50.times do
-  response = Yelp.client.search('san-francisco', params)
-  response.businesses.each do |business|
-  	formatted_neighborhood = business.location.neighborhoods
-    formatted_address = business.location.display_address.join(",")
-    b = Business.new(
-     name: business.name,
-     rating: business.rating,
-     city: business.location.city,
-     address: formatted_address,
-     neighborhoods: formatted_neighborhood,
-     password: 'password',
-     email: Faker::Internet.email,
-     logo: business.image_url,
-     phone_number: business.display_phone,
-     short_description: business.snippet_text
-     )
-    b.save
-  end
+response = Yelp.client.search('san-francisco', params)
+response.businesses.each do |business|
+	formatted_neighborhood = business.location.neighborhoods
+  formatted_address = business.location.display_address.join(",")
+  b = Business.new(
+   name: business.name,
+   rating: business.rating,
+   city: business.location.city,
+   address: formatted_address,
+   neighborhoods: formatted_neighborhood,
+   password: 'password',
+   email: Faker::Internet.email,
+   logo: business.image_url,
+   phone_number: business.display_phone,
+   short_description: business.snippet_text
+   )
+  b.save
 end
 
-Business.all.each do |biz|
+
+#Create mass deals that will render on customer dashboard
+Deal.create(
+  name: "Sonoma Wine Pairings & Brunch ",
+  short_description:"A special event Sundays that incorporate this seasons favorite wine pairings with our classic brunch.",
+  deal_image: 'http://s3-media2.fl.yelpassets.com/bphoto/RgSY7vrLUfwWRh0-KuUpKQ/l.jpg',
+  business_id: 15
+)
+CustomerDeal.create(deal_id: 1, mass_deal: true)
 
 Deal.create(
-  name:"Free dessert with a $30 purchase",
-  short_description:"Tonights deserts include: tiramisu, pound cake with a scoop of vanilla ice cream and warm fudge cake with chocolate ice cream.",
-  deal_image:biz.logo,
-  business_id:biz.id
-  )
+  name: "Sangria Saturday!",
+  short_description:"Ladies, your first sangria is on us!",
+  deal_image: 'http://s3-media2.fl.yelpassets.com/bphoto/_qTuOqLWPp_QhGtCWm-v1g/l.jpg',
+  business_id: 8
+)
+CustomerDeal.create(deal_id: 2, mass_deal: true)
 
 Deal.create(
-  name:"Happy hour starts at 3:00 PM",
-  short_description:"Get in for our weekly early happy hour, kids under 10 drink free before 5pm",
-  deal_image:biz.logo,
-  business_id:biz.id
-  )
+  name:"Tacos & Tecates Tuesday",
+  short_description:"$1 Tecates with Tacos.",
+  deal_image: 'http://s3-media4.fl.yelpassets.com/bphoto/JZ2ZH2sPSWpY6DlF3DrkRA/l.jpg',
+  business_id: 8
+)
+CustomerDeal.create(deal_id: 3, mass_deal: true)
 
 Deal.create(
-  name: "10% off any entree",
-  short_description:"10oz steak and 5oz lobster are among the entree offered tonight.",
-  deal_image:biz.logo,
-  business_id:biz.id
-  )
+  name:"Treat Yo-self!",
+  short_description:"Our famous dessert crepe 50% off!",
+  deal_image: 'http://s3-media4.fl.yelpassets.com/bphoto/WCMJTainPxrR-LiVplgKwA/l.jpg',
+  business_id: 11
+)
+CustomerDeal.create(deal_id: 4, mass_deal: true)
 
 Deal.create(
-  name:"2 for 1 dining special",
-  short_description:"Limit 1 per reservation.",
-  deal_image:biz.logo,
-  business_id:biz.id
-  )
+  name:"Chef's Table Dining Experience",
+  short_description:"Experience a private dining experience at the chef's table. For parties of 3 or smaller.",
+  deal_image: 'http://s3-media1.fl.yelpassets.com/bphoto/ywp5Nkr3UlIvfvvhHytfug/l.jpg',
+  business_id: 20
+)
+CustomerDeal.create(deal_id: 5, mass_deal: true)
 
 Deal.create(
-  name: "Buy one get one free drinks",
-  short_description:"Additional drink surcharges may apply",
-  deal_image:biz.logo,
-  business_id:biz.id
-  )
-
-
-Deal.create(
-  name: "Buffet all day",
-  short_description:"Our famous all day buffet, two fully stocked hot-bars and one salad bar make this your best dining option tonight!",
-  deal_image:biz.logo,
-  business_id:biz.id
-  )
+  name: "Six Course Tasting Menu",
+  short_description:"Experience six world cuisines in a thoughtfully designed tasting menu.",
+  deal_image: 'http://s3-media3.fl.yelpassets.com/bphoto/zRQX2YrSaLA3WLocvl8x8A/l.jpg',
+  business_id: 20
+)
+CustomerDeal.create(deal_id: 6, mass_deal: true)
 
 Deal.create(
-  name: "Ladies drink for free before 8:00 PM",
-  short_description:"Ladies, get here before 8:00 and drink for free.",
-  deal_image:biz.logo,
-  business_id:biz.id
-  )
+  name:"Sustainable Harvest",
+  short_description:"Enjoy a seasonal family-style dinner with commentary from local chef and sustainable farmer Alexis Hernandez.",
+  deal_image: 'http://s3-media3.fl.yelpassets.com/bphoto/JsQspaP11En_DPZsz-Q_mw/l.jpg',
+  business_id: 13
+)
+CustomerDeal.create(deal_id: 7, mass_deal: true)
 
 Deal.create(
-  name:"Taco Tuesday",
-  short_description:"Free taco for every purchase of a drink or appetizer.",
-  deal_image:biz.logo,
-  business_id:biz.id
-  )
+  name:"Fancy Beers with Fancy Burgers",
+  short_description:"From 3-9 get a complimentary pour of San Francisco's finest brews with your fancy free-range burger.",
+  deal_image: 'http://s3-media1.fl.yelpassets.com/bphoto/qbHVl-8hq-qgupntooahgw/l.jpg',
+  business_id: 15
+)
+CustomerDeal.create(deal_id: 8, mass_deal: true)
 
 Deal.create(
-  name:"Free chips and salsa",
-  short_description:"Free chips and salsa for as long as you want to stay.",
-  deal_image:biz.logo,
-  business_id:biz.id
-  )
+  name:"Rawbar Two-tier Giveaway",
+  short_description:"First twenty guests will be treated to a 2-tier seafood presentation of Tomales Bay, Hog Island, and Point Reyes oysters.",
+  deal_image: 'http://s3-media4.fl.yelpassets.com/bphoto/38wn7cmhSX7KnxVIzOB-yQ/l.jpg',
+  business_id:20
+)
+CustomerDeal.create(deal_id: 9, mass_deal: true)
 
 Deal.create(
-  name:"$9.99 Lunch Special",
-  short_description:"Tiger shrimp, chili sauce. Soup (choice of one) - Sweet Corn / Hot & Sour (choice of vegetable or chicken) Rice (choice of none) - White Rice / Brown Rice ...",
-  deal_image:biz.logo,
-  business_id:biz.id
-  )
+  name:"Sunrise Surprise",
+  short_description:"Start your morning with a complimentary scone when you buy a pound of coffee.",
+  deal_image: 'http://s3-media1.fl.yelpassets.com/bphoto/1E90p8sXdfIyAiTtSxTsaQ/l.jpg',
+  business_id: 18
+)
+CustomerDeal.create(deal_id: 10, mass_deal: true)
 
 Deal.create(
-  name:"Free bowl of soup with purchase of an entree",
-  short_description:"Get a free bowl of soup at #{biz.name} with the purchase of any entree, valid through 1/27/11!  To find an O’Charley’s in your area, go HERE.",
-  deal_image:biz.logo,
-  business_id:biz.id
-  )
+  name: "Bread Making Class with Master Chef",
+  short_description:"Learn to knead, roll, and bake artisinal bread.",
+  deal_image: 'http://s3-media1.fl.yelpassets.com/bphoto/ZE7f3O7MWlhztBZxoxwjNg/l.jpg',
+  business_id:18
+)
+CustomerDeal.create(deal_id: 11, mass_deal: true)
 
-end
 
+#Create 20 customer requests for deals
 20.times do
-  party_size = 1 + rand(10)
-  customer_id = 1 + rand(40)
-  deal_id = 1 + rand(5)
+  party_size = rand(10)
+  customer_id = rand(20)
+  reservation_time = [
+    "11:00 AM",
+    "1:00 PM",
+    "6:30 PM",
+    "7:15 PM",
+    "8:00 PM", 
+    "9:00 PM"
+  ]
+  neighborhoods = [
+      "Russian Hill",
+      "Union Square",
+      "Mission",
+      "SoMa",
+      "Inner Sunset",
+      "Castro",
+    ]
   CustomerDeal.create(
     customer_id: customer_id,
     deal_id: nil,
     party_size: party_size,
-    reservation_time: nil,
-    neighborhoods: nil,
+    reservation_time: reservation_time.sample,
+    neighborhoods: neighborhoods.sample,
     mass_deal: false,
     accepted: false
     )
 end
 
-10.times do
-  day_night = ["AM, PM"].sample
-  time = rand(1...12)
-  party_size = 1 + rand(10)
-  customer_id = 1 + rand(40)
-  deal_id = 1 + rand(8)
-  reservation_time =
+#Create four requests for our test restaurant "The House" with id: 20
+4.times do
+  party_size = rand(10)
+  customer_id = rand(20)
+  reservation_time = [
+    "11:00 AM",
+    "1:00 PM",
+    "6:30 PM",
+    "7:15 PM",
+    "8:00 PM", 
+    "9:00 PM"
+  ]
   CustomerDeal.create(
-    customer_id: nil,
-    deal_id: deal_id,
+    customer_id: customer_id,
+    deal_id: nil,
     party_size: party_size,
-    reservation_time: "#{time}:00#{day_night}",
-    neighborhoods: nil,
-    mass_deal: true,
+    reservation_time: reservation_time.sample,
+    neighborhoods: "North Beach/Telegraph Hill",
+    mass_deal: false,
     accepted: false
     )
 end
+
 
