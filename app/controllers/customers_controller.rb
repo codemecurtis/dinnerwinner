@@ -6,6 +6,7 @@ class CustomersController < ApplicationController
   end
 
   def show
+    authenticate_current_customer
     @all_customer_deals = CustomerDeal.where(customer_id: current_customer.id)
     @pending_deals = []
     @accepted_deals = []
@@ -112,6 +113,12 @@ class CustomersController < ApplicationController
 
   def update_customer_params
     params[:customer].permit(:first_name, :last_name, :email, :phone_number)
+  end
+
+  def authenticate_current_customer
+    if current_customer.id != params[:id].to_i
+      redirect_to '/'
+    end
   end
 
 end
