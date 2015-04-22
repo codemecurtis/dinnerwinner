@@ -37,8 +37,23 @@
 
   <div class="business-body">
     <section class="requests">
-      <h1 class="deals-subtitle">Requests</h1>
+      <!-- <h1 class="deals-subtitle">Requests</h1> -->
       <ul id="requests-list"></ul>
+    </section>
+
+    <section class="accepted-deals">
+      <h1 class="subtitle">Accepted Deals</h1>
+      <ul class="accepted-deals-list">
+        <% @accepted_deals.each do |deal| %>
+          <% temp = Deal.find(deal.deal_id) %>
+            <li class="deal deal-<%= temp.id %>">
+              <div class="image-overlay">
+                <h3> <%= temp.name %> </h3>
+              </div>
+              <img class="tile-image" src="<%= temp.deal_image %>">
+            </li>
+        <% end %>
+      </ul>
     </section>
 
     <section class="mass-deals">
@@ -66,19 +81,6 @@
       </ul>
     </section>
 
-    <section class="accepted-deals">
-      <h3 class="deals-subtitle">Accepted Deals</h3>
-      <ul class="accepted-deals-list">
-        <% @accepted_deals.each do |deal| %>
-          <% temp = Deal.find(deal.deal_id) %>
-            <li class="deal deal-<%= temp.id %>">
-              <img src="<%= temp.deal_image %>">
-              <h3> <%= temp.name %> </h3>
-              <p><%= temp.short_description %></p>
-            </li>
-        <% end %>
-      </ul>
-    </section>
   </div> <!-- close business body -->
 </div> <!-- close business container -->
 <!-- END CONTAINER -->
