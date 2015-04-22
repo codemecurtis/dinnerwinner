@@ -61,21 +61,8 @@ $(document).on('page:change', function(){
         $.modal.close();
         $('#requests-list').find($('#list'+data.id)).remove();
         console.log(data)
-
-    //     $.ajax({
-    //   url: '/customer_deals/notify',
-    //   type: "POST",
-    // }).done(function(){
-    //   console.log('TWILIO')
-    // }).fail(function(){
-    //   console.log('FAILLLLLLLLL')
-    // })
        })
     });
-
-
-
-
   });
 
 
@@ -102,6 +89,18 @@ $(document).on('page:change', function(){
       $('#mass'+ data.id).remove();
     })
   })
+
+  // Underline active link
+  var path = window.location.pathname;
+  path = path.replace(/\/$/, "");
+  path = decodeURIComponent(path);
+
+  $(".my-deals-link").each(function () {
+      var href = $(this).attr('href');
+      if (path === href) {
+          $(this).closest('li').toggleClass('active');
+      }
+  });
 
 });
 
