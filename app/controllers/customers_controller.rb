@@ -1,5 +1,5 @@
 class CustomersController < ApplicationController
-  before_action :authenticate_customer
+  before_action :authenticate_customer!
   include CustomersHelper
 
   def index

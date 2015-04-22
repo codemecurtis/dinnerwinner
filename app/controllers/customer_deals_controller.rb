@@ -19,8 +19,13 @@ class CustomerDealsController < ApplicationController
   def edit
     @customer_deal = CustomerDeal.find(params[:id])
     @customer_deal.accepted = true
-    @customer_deal.save
-    redirect_to customer_path
+    @customer = current_customer
+    @business_id = @customer_deal.deal.business_id
+    @business = Business.find(@business_id)
+    if @customer_deal.save
+      redirect_to customer_path
+      CustomerMailer.deal_accept(@customer_deal.deal, @customer, @business).deliver_later
+    end
   end
 
   def update
