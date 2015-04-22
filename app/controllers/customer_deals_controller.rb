@@ -29,11 +29,11 @@ class CustomerDealsController < ApplicationController
   end
 
   def update
-    # notify
     if params[:deal_template]!=nil
       customer_deal = CustomerDeal.find(params[:id])
       customer_deal.update_attributes(deal_id: params[:deal_template])
     end
+    notify
     render :json => customer_deal
   end
 
@@ -45,7 +45,7 @@ class CustomerDealsController < ApplicationController
 
     @message = @client.messages.create(:body => "SEA LIONS BEST OF THE BEST", :to => @customer.phone_number, :from => '+15109721904')
 
-    render plain: @message.status
+    # render plain: @message.status
   end
 
   def destroy
