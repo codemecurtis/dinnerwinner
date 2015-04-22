@@ -1,3 +1,5 @@
+<%= render partial: "partials/header_business.html.erb" %>
+
 <%= form_for @business do |f| %>
 
     <div class="field">
@@ -36,3 +38,5 @@
 <% end %>
 
 <%= link_to "Back", :back %>
+
+<%= render partial: "partials/business_footer.html.erb" %>
