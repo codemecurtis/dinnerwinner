@@ -109,6 +109,9 @@ class CustomersController < ApplicationController
     redirect_to current_customer
   end
 
+
+
+
   private
 
   def update_customer_params

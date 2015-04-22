@@ -1,4 +1,4 @@
-<div class="homeukkk">
+<div class="home business">
   <div class="overlay span_12_of_12">
 
     <div class="header-container span_7_of_12">
@@ -31,20 +31,12 @@
     </div>
   </section>
   <!-- Need to change to regular footer -->
-  <%= render template: "/partials/_footer.html.erb" %>
+
+<%= render partial: "partials/business_footer.html.erb" %>
+
+<div class="signup-modal">
+  <%= render template: '/devise/registrations/new.html.erb' %>
 </div>
-
-<!-- <footer class="home-element">
-  <div class="auto container">
-    <ul class="social left">
-      <li><i class="fa fa-twitter"></i></li>
-      <li><i class="fa fa-pinterest-p"></i></li>
-      <li><i class="fa fa-google-plus"></i></li>
-    </ul>
-  </div>
-</footer> -->
-
-<%= render template: '/devise/registrations/new.html.erb' %>
 
 <div class="login-modal">
   <%= render partial: 'devise/sessions/login_form' %>

@@ -10,6 +10,15 @@
   text-align: center;
 }
 
+.business header {
+  background: url('kitchen.jpg') no-repeat ;
+  background-size: 100%;
+  min-height: 800px;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
 .overlay {
   background: rgba(0,0,0,0.6);
   position: absolute;
