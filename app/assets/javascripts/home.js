@@ -45,5 +45,8 @@ $(document).on('page:change', function(){
       }
     });
   })
-
+  $('.google').click(function(){
+    $(this).slideUp( 1000 )
+  })
+  $('.notice').delay( 1000 ).slideUp( 1200 )
 });
