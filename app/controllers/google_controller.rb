@@ -12,8 +12,6 @@ class GoogleController < ApplicationController
     else
       current_customer = Customer.create(first_name: auth_user_info['given_name'], last_name: auth_user_info['family_name'], email: auth_user_info['email'], google:true, avatar: auth_user_info['picture'], uid:auth_user_info['sub'], provider:'google')
     end
-
-
     sign_in(current_customer)
     redirect_to current_customer
   end
