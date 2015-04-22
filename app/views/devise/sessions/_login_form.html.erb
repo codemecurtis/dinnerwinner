@@ -21,6 +21,7 @@
     <div class="actions">
       <%= f.submit "Log in", class: "submit span_3_of_12" %>
     </div>
+    <a href="<%= auth_authorize_link %>" ><img class="google span_5_of_12" src="https://developers.google.com/accounts/images/sign-in-with-google.png"></a>
   <% else %>
     <div class="field">
       <%= f.label :email %><br />
