@@ -1,24 +1,39 @@
 @import 'app';
 /*****************TOP*********************/
-.business-container{
+/*.business-container{
   font-family: $open_sans;
+}*/
+
+.business-container {
+  text-align: center;
+  margin-left: 5%;
+  padding-top: 1%;
+  vertical-align: center;
 }
-.business-description{
-  background: white;
-}
-.business-info{
-  margin: auto;
-  padding: 1em;
-  position: relative;
-}
-.business-logo, .business-offers-counter{
+
+.business-description {
   display: inline-block;
+  font-family: $oswald;
 }
-.business-offers-counter{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%)
+
+.business-info{
+  font-size: 1.3em;
+  line-height: 1.5em;
+  display: block;
+}
+.business-logo {
+  width: 140px;
+}
+
+.requests {
+  display: inline-block;
+  margin-left: 1%;
+}
+
+.business-stats {
+  display: inline-block;
+  font-size: 1.7em;
+  line-height: 1.5em;
 }
 
 /*****************BODY*********************/
