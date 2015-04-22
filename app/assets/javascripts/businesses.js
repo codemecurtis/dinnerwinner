@@ -12,6 +12,19 @@ $(document).on('page:change', function(){
       $('.login-modal').modal({
         overlayClose: true
       })
+    });
+
+
+
+
+    $.ajax({
+      url: window.location+'/request_list',
+    }).done(function(data){
+      var context =  { requests: data};
+      var source = $('#requests-template').html();
+      var template = Handlebars.compile(source);
+      var html = template(context)
+      $('#requests-list').append(html)
     })
 
   $("#requests-list").on('click','.make_an_offer_link', function(event){

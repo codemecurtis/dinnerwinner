@@ -9,7 +9,7 @@
   border: solid red 1px;
   text-align: horizontal;
 }
-
+/**************DEALS ON CUSTOMER SIDE********************/
 .deal-tile {
   border: 2px solid white;
   display: inline-block;
@@ -18,6 +18,7 @@
   padding: 10px;
   font-family: $open_sans_condensed;
   box-shadow: 4px 4px 7px #888;
+  vertical-align: top;
 }
 .deal-tile h3{
   text-decoration: underline;
@@ -32,7 +33,7 @@
   background: $dark_blue_rgba;
   color: white;
   position: absolute;
-  top: 4.5em;
+  top: 5em;
   display: none;
 }
 hr{
@@ -41,6 +42,31 @@ hr{
 .deal-line{
   padding: 10px;
 }
+/**************DEALS ON BUSINESS SIDE********************/
+.deal-request{
+  color: $light_green;
+  margin-bottom: 10px;
+}
+.deal span{
+  padding-right: 20px;
+}
+.make_an_offer_link{
+  color: $dark_blue;
+  padding: 5px;
+  margin-top: 20px;
+  margin: auto;
+  font-weight: bold;
+}
+.requests, .mass-deals{
+  margin-top: 6em;
+}
+
+
+
+
+
+
+
 
 .empty {
   border: 2px solid gray;
