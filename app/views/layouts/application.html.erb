@@ -9,9 +9,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
 </head>
   <body class="span_12">
-    <p class="notice"><%= notice %></p>
+    <div class="notice-container">
+      <p class="notice">
+        <span><%= notice %></span>
+      </p>
+    </div>
     <p class="alert"><%= alert %></p>
     <%= yield %>
 
   </body>
 </html>
+  
