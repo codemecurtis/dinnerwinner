@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   resources :customer_deals
 
-  post 'customer_deals/:id/notify' => 'customer_deals#notify'
+  post 'customer_deals/notify' => 'customer_deals#notify'
   # post 'customers/notify' => 'customers#notify'
   # post 'sendtext/message' => "sendtext#send_text_message"
 

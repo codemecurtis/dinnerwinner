@@ -29,19 +29,21 @@ class CustomerDealsController < ApplicationController
   end
 
   def update
+    # notify
     if params[:deal_template]!=nil
       customer_deal = CustomerDeal.find(params[:id])
       customer_deal.update_attributes(deal_id: params[:deal_template])
-      notify
     end
     render :json => customer_deal
   end
 
 
   def notify
+    @deal = CustomerDeal.find(params[:id])
+    @customer = Customer.find(@deal.customer_id)
     @client = Twilio::REST::Client.new ENV['account_sid'], ENV['auth_token']
 
-    @message = @client.messages.create(:body => "First test", :to => current_customer.phone_number, :from => '+15109721904')
+    @message = @client.messages.create(:body => "SEA LIONS BEST OF THE BEST", :to => @customer.phone_number, :from => '+15109721904')
 
     render plain: @message.status
   end
