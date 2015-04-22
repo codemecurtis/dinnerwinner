@@ -27,6 +27,8 @@ gem 'devise'
 gem 'omniauth'
 gem 'handlebars_assets'
 
+gem 'twilio-ruby', '~> 3.12'
+
 gem 'heroku-deflater', :group => :production
 
 
