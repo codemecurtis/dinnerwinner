@@ -57,24 +57,26 @@
     <% end %>
   </ul> <!-- close mass deals -->
 
-
-  <h1 class="subtitle">Accepted Deals</h1>
-  <div class="accepted-deals span_12_of_12">
-    <% if @accepted_deals.length > 0 %>
-      <% @accepted_deals.each do |accepted| %>
-        <div class="deal-tile span_3_of_12" id="tile-<%= accepted.deal.id %>">
-          <img id="img<%= accepted.deal.id %>" src="<%= accepted.deal.deal_image %>">
-          <h3 id="h3<%= accepted.deal.id %>">
-            <%= accepted.deal.name %>
-          </h3>
-          <p id="p<%= accepted.deal.id %>"><%= accepted.deal.short_description %></p>
-          <p><%= accepted.deal.created_at.strftime('%A %D') %></p>
-        </div>
+  <section class="accepted-deals">
+    <h1 class="subtitle">Accepted Deals</h1>
+    <div class="accepted-deals span_12_of_12">
+      <% if @accepted_deals.length > 0 %>
+        <% @accepted_deals.each do |accepted| %>
+          <div class="deal-tile span_3_of_12" id="tile-<%= accepted.deal.id %>">
+            <img id="img<%= accepted.deal.id %>" src="<%= accepted.deal.deal_image %>">
+            <h3 id="h3<%= accepted.deal.id %>">
+              <%= accepted.deal.name %>
+            </h3>
+            <p id="p<%= accepted.deal.id %>"><%= accepted.deal.short_description %></p>
+            <p><%= accepted.deal.created_at.strftime('%A %D') %></p>
+          </div>
+        <% end %>
+      <% else %>
+        <h3>You haven't accepted any deals yet!</h3>
       <% end %>
-    <% else %>
-      <h3>You haven't accepted any deals yet!</h3>
-    <% end %>
-  </div> <!-- close accepted deals -->
+    </div>
+  </section>
+  <!-- close accepted deals -->
 
   <script id="pending-deals" type="text/x-handlebars-template">
     <h4 class="business-name">{{business.name}}</h4>

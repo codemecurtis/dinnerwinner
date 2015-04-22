@@ -20,8 +20,9 @@ li {
 
 /********REQUEST BAR***********/
 .request-bar{
-  padding: 1em;
+  padding: 1.3em;
   background: white;
+  margin-bottom: 3%
 }
 .request-bar select{
   padding: 10px;
@@ -38,17 +39,23 @@ li {
 }
 
 /**************ACCEPTED DEALS*****************/
+
+.accepted-deals{
+  background-color: $blue_green;
+  color: white;
+  margin: 3% 0% 0% 0%;
+  padding: 2%;
+}
+
 /**************MASS DEALS*****************/
 h1.subtitle {
   font-family: $oswald;
   font-size: 3em;
 }
-.accepted-deals, .mass-deals{
+.mass-deals{
   margin: 5em 0;
 }
-.accept-mass-deal-link{
 
-}
 .mass-deals{
   margin: auto
 }
