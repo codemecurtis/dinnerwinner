@@ -14,6 +14,7 @@ class CustomersController < ApplicationController
     @all_customer_deals.each do |deal|
       if deal.accepted == false && deal.deal_id != nil
         @pending_deals << deal
+        @business_name = Business.where(id: deal.deal.business_id).first.name
       elsif deal.deal_id != nil
         @accepted_deals << deal
       end
