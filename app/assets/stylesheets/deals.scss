@@ -10,38 +10,79 @@
   text-align: horizontal;
 }
 /**************DEALS ON CUSTOMER SIDE********************/
-.deal-tile {
-  border: 2px solid white;
+/*.deal-tile {
+  border: 2px solid red;
   display: inline-block;
   min-height: 14em;
   margin: 10px 10px;
-  padding: 10px;
   font-family: $open_sans_condensed;
   box-shadow: 4px 4px 7px #888;
   vertical-align: top;
-}
-.deal-tile h3{
+}*/
+
+.deal-tile h3 {
   text-decoration: underline;
   font-style: italic;
   padding-bottom: 10px;
   font-family: $open_sans;
 }
-.deal-image{
+
+.image-overlay {
+  position: absolute;
+  margin-top: 230px;
+  background: rgba(0,0,0,0.6);
+  height: 70px;
+  color: white;
+  width: 330px;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 5px;
+  font-family: $open_sans;
+  font-size: 1.2em;
+}
+
+.image-overlay a{
+  color: $blue_green;
+  font-style: italic;
+  font-size: .8em;
+}
+
+.deal-image, {
   max-width: 11.5em;
 }
-.pending-deals{
+
+.todays-deals {
+  margin: auto;
+}
+
+.todays-deals li{
+  width: 330px;
+  display: inline-block;
+  margin: 10px;
+  vertical-align: top;
+}
+
+.tile-image {
+  width:330px;
+  height: 300px;
+}
+
+.pending-deals {
   background: $dark_blue_rgba;
   color: white;
   position: absolute;
   top: 5em;
   display: none;
 }
-hr{
+
+hr {
   margin: 0;
 }
-.deal-line{
+
+.deal-line {
   padding: 10px;
 }
+
 /**************DEALS ON BUSINESS SIDE********************/
 .deal-request{
   color: $light_green;
@@ -60,13 +101,6 @@ hr{
 .requests, .mass-deals{
   margin-top: 6em;
 }
-
-
-
-
-
-
-
 
 .empty {
   border: 2px solid gray;
