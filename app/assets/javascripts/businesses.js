@@ -74,8 +74,12 @@ $(document).on('page:change', function(){
       type:'POST'
     }).done(function(data){
       console.log(data)
-      var html = "<li id=mass"+data.id+" class='deal deal-"+data.id+"'><img src='"+data.deal_image+"'><h3> "+data.name+" </h3><p>"+ data.short_description +"</p><a class='cancel_mass_deal_link' href='/customer_deals/"+ data.id+"'>Cancel this offer</a></li>"
-      $(".mass-deals-list").append(html)
+      console.log("mass deal created!!!!!!!")
+
+      var html ="<li id='mass"+data.id+"'  class='deal'><div class='image-overlay'><h3>"+data.name+" </h3><a class='cancel_mass_deal_link' href='/customer_deals/"+ data.id+"'>Cancel this offer</a></div><div class='deal-tile span_3_of_12'><img class='tile-image' src='"+data.deal_image+"'></div>"
+
+      // $(".todays-deals").append(html)
+      $(".todays-deals").prepend(html)
       $.modal.close();
     })
   })
