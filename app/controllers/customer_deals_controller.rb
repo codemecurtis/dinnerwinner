@@ -43,8 +43,10 @@ class CustomerDealsController < ApplicationController
     @deal = Deal.find(@customer_deal.deal_id)
     @business = Business.find(@deal.business_id)
     @client = Twilio::REST::Client.new ENV['account_sid'], ENV['auth_token']
+    @phone = "+1"+"#{@customer.phone_number.gsub(/\D+/, '')}"
+    # @correct_phone
 
-    @message = @client.messages.create(:body => "Hello, #{@business.name} sent you a deal :) '#{@deal.name}!!!'", :to => @customer.phone_number, :from => '+15109721904')
+    @message = @client.messages.create(:body => "Hello, #{@business.name} sent you a deal :) '#{@deal.name}!!!'", :to => @phone, :from => '+15109721904')
 
     # render plain: @message.status
   end
