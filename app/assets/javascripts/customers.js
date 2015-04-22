@@ -30,6 +30,7 @@ $(document).on('page:change', function(){
       })
       .done(function(response) {
         console.log(response);
+        $('.customer-deal-modal').html("")
         context.business = response.requested_business
         context.deal = response.pending_deal
         context.customer_deal = response.customer_deal
@@ -46,4 +47,36 @@ $(document).on('page:change', function(){
         console.log("complete");
       });
   })
+//same ajax call for the pic tiles
+    $('.pending-deals li').on('click', function(e) {
+      var id = $(this).attr('class')
+      var source = $('#pending-deals').html();
+      var template = Handlebars.compile(source)
+      var context = {}
+      $.ajax({
+        url: '/customer_deals/'+ id,
+        type: 'GET',
+        dataType: 'JSON',
+      })
+      .done(function(response) {
+        console.log(response);
+        $('.customer-deal-modal').html("")
+        context.business = response.requested_business
+        context.deal = response.pending_deal
+        context.customer_deal = response.customer_deal
+        $('.customer-deal-modal').append(template(context))
+        $('.customer-deal-modal').modal({
+          overlayClose: true
+        });
+        console.log("success");
+      })
+      .fail(function() {
+        console.log("error");
+      })
+      .always(function() {
+        console.log("complete");
+      });
+  })
+
+
 });
