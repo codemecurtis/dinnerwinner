@@ -46,17 +46,26 @@ hr{
 .deal-request{
   color: $light_green;
   margin-bottom: 10px;
-  text-align: left;
 }
 .deal span{
-  padding-right: 30px;
+  padding-right: 20px;
 }
 .make_an_offer_link{
-  color: white;
+  color: $dark_blue;
   padding: 5px;
   margin-top: 20px;
   margin: auto;
+  font-weight: bold;
 }
+.requests, .mass-deals{
+  margin-top: 6em;
+}
+
+
+
+
+
+
 
 
 .empty {
