@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   devise_for :businesses, :controllers => {registrations: 'registrations'}
   devise_for :customers, :controllers => {registrations: 'registrations'}
   get '/auth/callback' => 'google#google_login'
-
   resources :customers
   get 'businesses/:business_id/request_list' => 'businesses#request_list'
   resources :businesses do

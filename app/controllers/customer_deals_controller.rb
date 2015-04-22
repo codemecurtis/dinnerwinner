@@ -8,6 +8,7 @@ class CustomerDealsController < ApplicationController
     render json: { requested_business: @requested_business, pending_deal: @pending_deal, customer_deal: @customer_deal }
   end
 
+
   def new
   end
 
