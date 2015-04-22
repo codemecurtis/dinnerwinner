@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   resources :customer_deals
 
   post 'notifications/notify' => 'notifications#notify'
+  # post 'customers/notify' => 'customers#notify'
+  # post 'sendtext/message' => "sendtext#send_text_message"
 
 
   root 'home#index'
