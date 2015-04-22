@@ -1,7 +1,7 @@
 <div class="success">Request Sent!</div>
 <%= render template: "/partials/_header.html.erb" %>
 <div class="customer-container">
-  <h3 class="find-deal">Find a Deal:</h3>
+  <!-- <h3 class="find-deal">Find a Deal:</h3> -->
   <div class="request-bar span_12_of_12">
     <ul class="find-deal-labels span_12_of_12">
       <li class="span_3_of_12">Neighborhood</li>
@@ -35,23 +35,28 @@
     </ul>
   </div> <!-- close request bar -->
 
-  <h1 class="subtitle">Mass Deals</h1>
-  <div class="mass-deals span_12_of_12">
+  <h1 class="subtitle">Today's Deals</h1>
+  <ul class="todays-deals span_8_of_12">
+
     <% if @mass_deals.length > 0 %>
       <% @mass_deals.each do |mass| %>
-        <div class="deal-tile span_3_of_12" id="tile-<%= mass.deal.id %>">
-          <img id="img<%= mass.deal.id %>" src="<%= mass.deal.deal_image %>">
+      <li>
+        <div class="image-overlay">
           <h3 id="h3<%= mass.deal.id %>">
             <%= mass.deal.name %>
           </h3>
-          <p id="p<%= mass.deal.id %>"><%= mass.deal.short_description %></p>
-          <p><%= mass.deal.created_at.strftime('%A %D') %></p>
+
+          <a class="accept-mass-deal-link" href="">Accept this offer</a>
         </div>
+        <div class="deal-tile span_3_of_12" id="tile-<%= mass.deal.id %>">
+          <a href=""><img class="tile-image" id="img<%= mass.deal.id %>" src="<%= mass.deal.deal_image %>"></a>
+        </div>
+      </li>
       <% end %>
     <% else %>
       <h3>No Mass Deals Currently Offered</h3>
     <% end %>
-  </div> <!-- close mass deals -->
+  </ul> <!-- close mass deals -->
 
 
   <h1 class="subtitle">Accepted Deals</h1>

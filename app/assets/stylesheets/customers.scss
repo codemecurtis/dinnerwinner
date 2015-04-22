@@ -15,7 +15,6 @@
 
         /********REQUEST BAR***********/
 .request-bar{
-  margin: 40px 0;
   padding: 2em;
   background: white;
 }
@@ -35,8 +34,15 @@
 
 /**************ACCEPTED DEALS*****************/
 /**************MASS DEALS*****************/
+h1.subtitle {
+  font-family: $oswald;
+  font-size: 3em;
+}
 .accepted-deals, .mass-deals{
   margin: 5em 0;
+}
+.accept-mass-deal-link{
+
 }
 .mass-deals{
   margin: auto
