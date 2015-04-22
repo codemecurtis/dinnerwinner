@@ -61,10 +61,23 @@ $(document).on('page:change', function(){
         $.modal.close();
         $('#requests-list').find($('#list'+data.id)).remove();
         console.log(data)
-      })
+
+    //     $.ajax({
+    //   url: '/customer_deals/notify',
+    //   type: "POST",
+    // }).done(function(){
+    //   console.log('TWILIO')
+    // }).fail(function(){
+    //   console.log('FAILLLLLLLLL')
+    // })
+       })
     });
 
+
+
+
   });
+
 
   $("body").on('submit','.create_mass_deal_form', function(e){
     e.preventDefault();
