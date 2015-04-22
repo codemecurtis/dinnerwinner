@@ -39,7 +39,7 @@
   </div> <!-- close request bar -->
 
   <h1 class="subtitle">Today's Deals</h1>
-  <ul class="todays-deals span_8_of_12">
+  <ul class="todays-deals span_9_of_12">
 
     <% if @mass_deals.length > 0 %>
       <% @mass_deals.each do |mass| %>
@@ -60,26 +60,31 @@
     <% end %>
   </ul> <!-- close mass deals -->
 
+  <div class="accepted-deals-wrapper">
   <h1 class="subtitle">Accepted Deals</h1>
-  <ul class="accepted-deals span_8_of_12">
-    <% if @accepted_deals.length > 0 %>
-      <% @accepted_deals.each do |accepted| %>
-        <li>
-          <img id="img<%= accepted.deal.id %>" src="<%= accepted.deal.deal_image %>">
-          <div>
-            <h3><%= @business_name %></h3>
-            <h3 id="h3<%= accepted.deal.id %>"><%= accepted.deal.name %></h3>
-            <p><%= accepted.deal.short_description %></p>
-            <p>Party of <%= accepted.party_size %></p>
-            <p><%= accepted.reservation_time %></p>
-          </div>
-        </li>
+    <ul class="accepted-deals span_8_of_12">
+      <% if @accepted_deals.length > 0 %>
+        <% @accepted_deals.each do |accepted| %>
+          <li class=" accepted-deal span_6_of_12">
+            <div class="accepted-deal-image span_4_of_12">
+              <img class="span_8_of_12" id="img<%= accepted.deal.id %>" src="<%= accepted.deal.deal_image %>">
+            </div>
+            <div class="span_6_of_12">
+              <p class="deal-business"><%= @business_name %></p>
+              <p class="deal-title" id="h3<%= accepted.deal.id %>"><%= accepted.deal.name %></p>
+              <p class="deal-description"><%= accepted.deal.short_description %></p>
+            </div>
+            <div class="small-print span_2_of_12">
+              <p class="deal-size">Party of <%= accepted.party_size %></p>
+              <p class="deal-time"><%= accepted.reservation_time %></p>
+            </div>
+          </li>
+        <% end %>
+      <% else %>
+        <h3>You haven't accepted any deals yet!</h3>
       <% end %>
-    <% else %>
-      <h3>You haven't accepted any deals yet!</h3>
-    <% end %>
-  </ul>
-
+    </ul>
+  </div>
   <!-- close accepted deals -->
 
   <script id="pending-deals" type="text/x-handlebars-template">

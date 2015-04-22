@@ -82,6 +82,68 @@ hr {
 .deal-line {
   padding: 10px;
 }
+.accepted-deals-wrapper {
+  background-color: $blue_green;
+  color: white;
+  width: 100%;
+}
+
+.accepted-deals{
+  margin: auto;
+  color: black;
+}
+.accepted-deals li{
+  display: inline-block;
+  background-color: white;
+  margin-bottom: 10px;
+  height: 120px;
+}
+.accepted-deals li img{
+  width: auto;
+  height:120px;
+}
+.accepted-deals li div{
+  display: inline-block;
+}
+.accepted-deal-image, .accepted-deal-info, .small-print{
+  display: inline-block;
+}
+.accepted-deal-info{
+  vertical-align: top;
+}
+
+.deal-business {
+  font-size: 1.3em;
+  font-family: $oswald;
+}
+.deal-title {
+  font-size: 1.1em;
+  margin-top: 17px;
+}
+.deal-description {
+  font-family: $open_sans_condensed;
+  vertical-align: top;
+}
+
+.small-print {
+  vertical-align: top;
+  text-align: right;
+  margin-top: 2%;
+  line-height: 1.1em;
+  color: grey;
+  font-family: $open_sans_condensed;
+}
+
+.deal-size {
+  margin-top: 2%;
+}
+
+.deal-time, .deal-size {
+  font-size: .7em;
+  font-style: italic;
+  vertical-align: bottom;
+}
+
 
 /**************DEALS ON BUSINESS SIDE********************/
 .deal-request{
