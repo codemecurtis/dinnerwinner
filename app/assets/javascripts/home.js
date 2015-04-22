@@ -7,14 +7,16 @@ $(document).on('page:change', function(){
       onOpen: function (dialog) {
         dialog.overlay.fadeIn('slow', function () {
           dialog.container.slideDown('slow', function () {
-            dialog.data.fadeIn('slow');
+            dialog.data.fadeIn('slow')
           });
         });
       },
       onClose: function (dialog) {
         dialog.container.slideUp('slow', function () {
           dialog.overlay.fadeOut('slow', function () {
-            dialog.data.fadeIn('slow');
+            dialog.data.fadeIn('slow', function(){
+              $.modal.close();
+            });
           });
         });
       }
@@ -35,7 +37,9 @@ $(document).on('page:change', function(){
       onClose: function (dialog) {
         dialog.container.slideUp('slow', function () {
           dialog.overlay.fadeOut('slow', function () {
-            dialog.data.fadeIn('slow');
+            dialog.data.fadeIn('slow', function(){
+              $.modal.close();
+            });
           });
         });
       }
