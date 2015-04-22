@@ -42,15 +42,20 @@
     </section>
 
     <section class="mass-deals">
-      <h1 class="deals-subtitle">Current Mass Deals Offered</h1>
-      <ul class="mass-deals-list">
+      <h1 class="subtitle">Mass Deals You're Offering</h1>
+      <ul class="todays-deals span_8_of_12">
         <% @mass_deal.each do |deal| %>
           <% deal_template = Deal.find(deal.deal_id) %>
           <li id="mass<%= deal.id %>" class="deal deal-<%= deal_template.id %>">
-            <img src="<%= deal_template.deal_image %>">
-            <h3> <%= deal_template.name %> </h3>
-            <p><%= deal_template.short_description %></p>
-            <a class="cancel_mass_deal_link" href="/customer_deals/<%= deal.id %>">Cancel this offer</a>
+            <div class="image-overlay">
+              <h3>
+                <%= deal_template.name %>
+              </h3>
+              <a class="cancel_mass_deal_link" href="/customer_deals/<%= deal.id %>">Cancel this offer</a>
+            </div>
+            <div class="deal-tile span_3_of_12">
+              <img class="tile-image" src="<%= deal_template.deal_image %>">
+            </div>
           </li>
         <% end %>
         <li class="deal new-deal">

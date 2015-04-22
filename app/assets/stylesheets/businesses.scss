@@ -40,33 +40,23 @@
   font-size: 45px;
 }
 
-.mass-deals-list .new-deal{
+.todays-deals .new-deal{
   width: 250px;
   height: 250px;
   background-color: lightgrey;
 }
-.mass-deals-list .new-deal span{
+.todays-deals .new-deal span{
   margin: 60px auto;
   display: block;
   text-align:center;
   font-size: 100px;
 }
-.mass-deals-list .new-deal span a{
+.todays-deals .new-deal span a{
   color: #FFFFFF;
   text-decoration: none;
 }
-.mass-deals-list .new-deal span a:hover{
+.todays-deals .new-deal span a:hover{
   text-shadow: 2px 6px 3px #000000;
-}
-.mass-deals-list li img, .accepted-deals-list li img {
-  width:250px;
-  height: 250px;
-}
-.mass-deals-list li, .accepted-deals-list li {
-  width:250px;
-  display: inline-block;
-  margin: 0 10px;
-  vertical-align: top;
 }
 
 .make_an_offer_modal{
