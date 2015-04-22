@@ -23,7 +23,7 @@ class CustomerDealsController < ApplicationController
     @business_id = @customer_deal.deal.business_id
     @business = Business.find(@business_id)
     if @customer_deal.save
-      redirect_to customer_path
+      redirect_to current_customer
       CustomerMailer.deal_accept(@customer_deal.deal, @customer, @business).deliver_later
     end
   end

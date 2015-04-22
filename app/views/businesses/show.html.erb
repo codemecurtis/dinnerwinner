@@ -78,7 +78,7 @@
 </div> <!-- close business container -->
 <!-- END CONTAINER -->
 
-<%= render template: "partials/_footer.html.erb" %>
+<%= render template: "partials/_business_footer.html.erb" %>
 
 <!-- MODALS -->
 <div class="edit-deal-modal" id="edit-deal-modal">
@@ -186,14 +186,14 @@
 </script>
 
 // <script type="text/javascript">
-//     $.ajax({
-//     url: window.location+'/request_list',
-//   }).done(function(data){
-//     var context =  { requests: data};
-//     var source = $('#requests-template').html();
-//     var template = Handlebars.compile(source);
-//     var html = template(context)
-//     $('#requests-list').append(html)
-//   })
-// </script>
+    $.ajax({
+    url: window.location+'/request_list',
+  }).done(function(data){
+    var context =  { requests: data};
+    var source = $('#requests-template').html();
+    var template = Handlebars.compile(source);
+    var html = template(context)
+    $('#requests-list').append(html)
+  })
+</script>
 
