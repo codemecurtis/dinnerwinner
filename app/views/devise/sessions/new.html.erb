@@ -1,1 +1,58 @@
-<%= render partial: 'devise/sessions/login_form' %>
+<%= render partial: "/partials/header_new.html.erb" %>
+<div class="container login">
+  <div class="edit-form span_2_of_12">
+    <h2 class="subtitle">Sign In</h2>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <% if resource.class == Customer %>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+
+        <% if devise_mapping.rememberable? -%>
+          <div class="field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+        <% end -%>
+
+        <div class="actions left">
+          <%= f.submit "Log in", class: "submit span_12_of_12" %>
+        </div>
+        <p class="or">- OR -</p>
+        <a href="<%= auth_authorize_link %>" ><img class="google span_12_of_12" src="https://developers.google.com/accounts/images/sign-in-with-google.png"></a>
+      <% else %>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true %>
+        </div>
+
+        <div class="field business">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+
+        <% if devise_mapping.rememberable? -%>
+          <div class="field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+        <% end -%>
+
+        <div class="actions">
+          <%= f.submit "Log in", class: "submit span_12_of_12" %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+<% if resource.class == Customer %>
+  <%= render partial: "/partials/footer.html.erb" %>
+<% else %>
+  <%= render partial: "/partials/business_footer.html.erb" %>
+<% end %>

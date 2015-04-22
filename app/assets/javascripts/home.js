@@ -49,4 +49,5 @@ $(document).on('page:change', function(){
     $(this).slideUp( 1000 )
   })
   $('.notice').delay( 1000 ).slideUp( 1200 )
+  $('.alert').delay( 1000 ).slideUp( 1200 )
 });
