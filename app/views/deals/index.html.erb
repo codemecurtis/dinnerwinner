@@ -1,26 +1,35 @@
 <%= render template: "/partials/_header_business.html.erb" %>
+<div id="wrapper" class="container span_8_of_12">
+  <h1 class="subtitle">Your Templates</h1>
+  <ul class="deal-templates">
+    <li class="deal new-deal">
+      <span>
+        <a class="create-button" href="">
+          +
+        </a>
+      </span>
+    </li>
+    <% @deals.each do |deal| %>
+      <li class="deal" id="tile-<%= deal.id %>">
+        <div class="edit-buttons">
+          <!-- <p class="template-notice">Template</p> -->
+          <a href="<%= deal.id %>" class="delete-button">
+            <i class="fa fa-trash"></i>
+          </a>
+          <a href="<%= deal.id %>" class="edit-button">
+            <i class="fa fa-pencil-square-o" ></i>
+          </a>
+        </div>
+        <img id="img-<%= deal.id %>" class="tile-image" src="<%= deal.deal_image %>">
+        <h3 id="h3-<%= deal.id %>"><%= deal.name %></h3>
+        <p><%= deal.created_at.strftime('%A, %d %b %Y %l:%M %p') %></p>
+        <p id="<%= deal.id %>"><%= deal.short_description %></p>
+      </li>
+  <% end %>
+  </ul>
 
-  <div class="deal-tile empty">
-    <a class="create-button" href="">
-      <i class="fa fa-plus"></i>
-    </a>
-  </div>
-<div id="wrapper" class="container">
+  <!-- MODALS -->
   <% @deals.each do |deal| %>
-  <div class="deal-tile" id="tile-<%= deal.id %>">
-      <a href="<%= deal.id %>" class="delete-button">
-        <i class="fa fa-trash"></i>
-      </a>
-      <a href="<%= deal.id %>" class="edit-button">
-        <i class="fa fa-pencil-square-o" ></i>
-      </a>
-     <br>
-      <img id="img-<%= deal.id %>" src="<%= deal.deal_image %>">
-      <h3 id="h3-<%= deal.id %>"><%= deal.name %></h3>
-      <p><%= deal.created_at.strftime('%A, %d %b %Y %l:%M %p') %></p>
-      <p id="<%= deal.id %>"><%= deal.short_description %></p>
-    </div>
-
     <div class="edit-modal" id="edit-<%= deal.id %>">
       <form id="edit-form" action="<%= deal.id %>">
         <input class="edit-form" type="text" name="title" value="<%= deal.name %>"><br>
@@ -30,8 +39,7 @@
       </form>
       <a href="edit-<%= deal.id %>" class="cancel-button">cancel</a>
     </div>
-    
-  <% end %>
+  <% end %>  
 </div>
 
 

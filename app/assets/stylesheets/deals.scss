@@ -55,11 +55,12 @@
   margin: auto;
 }
 
-.todays-deals li{
+.todays-deals li, .deal-templates li{
   width: 330px;
   display: inline-block;
   margin: 10px;
   vertical-align: top;
+  position: relative;
 }
 
 .tile-image {
@@ -109,4 +110,17 @@ hr {
 .empty {
   border: 2px solid gray;
   text-align: center;
+}
+.deal-templates .edit-buttons{
+  width: 100%;
+  position: absolute;
+}
+.deal-templates .edit-buttons a{
+  position: relative;
+  margin: 0.1em 0.1em;
+  float: right;
+  font-size: 20px;
+  background-color:rgba(255,255,255,0.8);
+  padding: 5px;
+  border-radius: 15px;
 }
