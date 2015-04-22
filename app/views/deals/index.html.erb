@@ -12,7 +12,6 @@
     <% @deals.each do |deal| %>
       <li class="deal" id="tile-<%= deal.id %>">
         <div class="edit-buttons">
-          <!-- <p class="template-notice">Template</p> -->
           <a href="<%= deal.id %>" class="delete-button">
             <i class="fa fa-trash"></i>
           </a>
@@ -20,10 +19,13 @@
             <i class="fa fa-pencil-square-o" ></i>
           </a>
         </div>
-        <img id="img-<%= deal.id %>" class="tile-image" src="<%= deal.deal_image %>">
-        <h3 id="h3-<%= deal.id %>"><%= deal.name %></h3>
-        <p><%= deal.created_at.strftime('%A, %d %b %Y %l:%M %p') %></p>
-        <p id="<%= deal.id %>"><%= deal.short_description %></p>
+        <div class="image-overlay">
+          <h3 id="h3-<%= deal.id %>" class="deal-title"><%= deal.name %></h3>
+          <p class="deal-reservation-time"><%= deal.created_at.strftime('%A, %d %b %Y %l:%M %p') %></p>
+        </div>
+        <div class="deal-tile span_3_of_12">
+          <img id="img-<%= deal.id %>" class="tile-image" src="<%= deal.deal_image %>">
+        </div>
       </li>
   <% end %>
   </ul>
