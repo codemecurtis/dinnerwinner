@@ -4,29 +4,30 @@
 .head{
   background: $grey;
   background: $grey;
-  margin-bottom: 6.5em;
   border-bottom: 1px solid #C7C7C7;
-  min-height: 9em;
+  min-height: 100px;
   color: $blue_green;
 }
 
 .head, .head a{
   color: $blue_green;
 }
-.head h1{
-  font-family: $oswald;
-  font-size: 3em;
-  position: absolute;
-  top: 4%;
-  left: 3%;
+
+.header-logo {
+  width: 120px;
 }
+
+.rooster {
+  padding: 20px 15px 10px 50px;
+  display: block;
+}
+
 .head .logo, .head .head-links, li{
   display: inline-block;
 }
 .head-links{
-  padding: 45px 45px 0 0;
   position: absolute;
-  top: 6%;
+  top: 65px ;
   right: 0;
 }
 .head-links li{
@@ -43,6 +44,7 @@
   transform: rotateZ(360deg);
   color: white;
 }
+
 
 /*************** CUSTOMER HEADER ********************/
 

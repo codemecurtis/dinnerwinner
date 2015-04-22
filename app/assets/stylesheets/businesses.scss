@@ -1,42 +1,45 @@
 @import 'app';
 /*****************TOP*********************/
-.business-container{
+/*.business-container{
   font-family: $open_sans;
+}*/
+
+.business-container {
+  text-align: center;
+  margin-left: 5%;
+  padding-top: 1%;
+  vertical-align: center;
 }
-.business-description{
-  background: white;
-}
-.business-info{
-  margin: auto;
-  padding: 1em;
-  position: relative;
-}
-.business-logo, .business-offers-counter{
+
+.business-description {
   display: inline-block;
+  font-family: $oswald;
 }
-.business-offers-counter{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%)
+
+.business-info{
+  font-size: 1.3em;
+  line-height: 1.5em;
+  display: block;
+}
+.business-logo {
+  width: 140px;
+}
+
+.requests {
+  display: inline-block;
+  margin-left: 1%;
+}
+
+.business-stats {
+  display: inline-block;
+  font-size: 1.7em;
+  line-height: 1.5em;
 }
 
 /*****************BODY*********************/
 .business-body{
   text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .offer-images{
   width: 200px;
@@ -52,36 +55,32 @@
   font-size: 45px;
 }
 
-
-.mass-deals-list .new-deal{
+.todays-deals .new-deal{
   width: 250px;
   height: 250px;
-  background-color: #333;
+  background-color: lightgrey;
 }
-.mass-deals-list .new-deal span{
+.todays-deals .new-deal span{
   margin: 60px auto;
   display: block;
   text-align:center;
   font-size: 100px;
 }
-.mass-deals-list .new-deal span a{
+.todays-deals .new-deal span a{
   color: #FFFFFF;
   text-decoration: none;
 }
-.mass-deals-list .new-deal span a:hover{
+.todays-deals .new-deal span a:hover{
   text-shadow: 2px 6px 3px #000000;
-}
-.mass-deals-list li img, .accepted-deals-list li img {
-  width:250px;
-  height: 250px;
-}
-.mass-deals-list li, .accepted-deals-list li {
-  width:250px;
-  display: inline-block;
-  margin: 0 10px;
-  vertical-align: top;
 }
 
 .make_an_offer_modal{
   display: none;
+}
+
+.deal.new-deal {
+  width:330px;
+  height: 300px;
+  text-align: center;
+  padding-top: 25px;
 }

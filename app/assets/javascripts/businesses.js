@@ -1,18 +1,50 @@
 $(document).on('page:change', function(){
 
-    $('.business-signup-link').on('click', function(e){
-        e.preventDefault();
-        $('.signup-modal').modal({
-          overlayClose: true
-        })
-      })
-
-    $('.business-login-link').on('click', function(e){
-      e.preventDefault();
-      $('.login-modal').modal({
-        overlayClose: true
-      })
+  $('.business-signup-link').on('click', function(e){
+    e.preventDefault();
+    $('.signup-modal').modal({
+      overlayClose: true,
+      onOpen: function (dialog) {
+        dialog.overlay.fadeIn('slow', function () {
+          dialog.container.slideDown('slow', function () {
+            dialog.data.fadeIn('slow');
+          });
+        });
+      },
+      onClose: function (dialog) {
+        dialog.container.slideUp('slow', function () {
+          dialog.overlay.fadeOut('slow', function () {
+            dialog.data.fadeIn('slow', function(){
+              $.modal.close();
+            });
+          });
+        });
+      }
     });
+  })
+
+  $('.business-login-link').on('click', function(e){
+    e.preventDefault();
+    $('.login-modal').modal({
+      overlayClose: true,
+      onOpen: function (dialog) {
+        dialog.overlay.fadeIn('slow', function () {
+          dialog.container.slideDown('slow', function () {
+            dialog.data.fadeIn('slow');
+          });
+        });
+      },
+      onClose: function (dialog) {
+        dialog.container.slideUp('slow', function () {
+          dialog.overlay.fadeOut('slow', function () {
+            dialog.data.fadeIn('slow', function(){
+              $.modal.close();
+            });
+          });
+        });
+      }
+    });
+  });
 
   $("#requests-list").on('click','.make_an_offer_link', function(event){
     event.preventDefault();
@@ -54,9 +86,8 @@ $(document).on('page:change', function(){
       data:$('#create-form').serialize(),
       type:'POST'
     }).done(function(data){
-      console.log(data)
-      var html = "<li id=mass"+data.id+" class='deal deal-"+data.id+"'><img src='"+data.deal_image+"'><h3> "+data.name+" </h3><p>"+ data.short_description +"</p><a class='cancel_mass_deal_link' href='/customer_deals/"+ data.id+"'>Cancel this offer</a></li>"
-      $(".mass-deals-list").append(html)
+      var html ="<li id='mass"+data.id+"'  class='deal'><div class='image-overlay'><h3>"+data.name+" </h3><a class='cancel_mass_deal_link' href='/customer_deals/"+ data.id+"'>Cancel this offer</a></div><div class='deal-tile span_3_of_12'><img class='tile-image' src='"+data.deal_image+"'></div>"
+      $(".todays-deals").prepend(html)
       $.modal.close();
     })
   })

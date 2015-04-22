@@ -19,7 +19,22 @@ $open_sans_condensed: 'Open Sans Condensed', sans-serif;
 body{
   color: $dark_blue;
   background: $white;
+  font-family: $open_sans;
 }
+.notice-container{
+  text-align: center;
+}
+.notice{
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  background-color: $light_green;
+  color: $white;
+}
+.notice span{
+  line-height: 2em;
+}
+
 .signup-modal, .login-modal{
   display: none;
 }

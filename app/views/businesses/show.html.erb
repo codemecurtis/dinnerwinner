@@ -1,82 +1,79 @@
 <%= render template: "/partials/_header_business.html.erb" %>
-<div class="business-container">
-  <div class="business-description span_12_of_12">
 
-    <div class="business-info span_9_of_12">
+<div class="business-container span_11_of_12">
+  <div class="business-description span_1_of_12">
+    <div class="business-info">
+      <%= @business.name %>
+    </div>
+    <div class="business-logo">
+      <img class="business-logo" src="<%= @business.logo %>">
+    </div>
+  </div>
+  <div class="requests span_7_of_12">
+    <ul id="requests-list"></ul>
+  </div>
+  <div class="business-stats span_3_of_12">
+    <div class="business-offers-counter">
+      <% if @accepted_deals.count == 1%>
+        <%= @accepted_deals.count %> Deal Accepted
+      <% else %>
+        <%= @accepted_deals.count %> Deals Accepted
+      <% end %>
+    </div>
+    <div class="mass-deals-counter">
+      <% if @mass_deal.count == 1%>
+        <%= @mass_deal.count %> Mass Deal Offered
+      <% else %>
+        <%= @mass_deal.count %> Mass Deals Offered
+      <% end %>
+    </div>
+  </div>
+</div>
 
-      <div class="business-offers-counter">
-        <div class="mass-deals-counter">
-          <h3>
-            <% if @mass_deal.count == 1%>
-              <%= @mass_deal.count %> Mass Deal Offered
-            <% else %>
-              <%= @mass_deal.count %> Mass Deals Offered
-            <% end %>
-          </h3>
-        </div><!--  close mass deals div -->
-        <div class="accepted-deals-counter">
-          <h3>
-            <% if @accepted_deals.count == 1%>
-              <%= @accepted_deals.count %> Deal Accepted
-            <% else %>
-              <%= @accepted_deals.count %> Deals Accepted
-            <% end %>
-          </h3>
-        </div><!--  close mass-deals counter div -->
-      </div> <!-- close business offers counter -->
+<div class="business-body">
 
-      <div class="business-logo">
-        <h3><%= @business.name %></h3><br>
-        <img class="business-logo" src="<%= @business.logo %>">
-      </div>
-    </div> <!-- close business info -->
-
-  </div> <!-- close business description div -->
-  <!-- END BUSINESS INFO -->
-
-
-  <div class="business-body">
-    <section class="requests">
-      <h1 class="deals-subtitle">Requests</h1>
-      <ul id="requests-list"></ul>
-    </section>
-
-    <section class="mass-deals">
-      <h1 class="deals-subtitle">Current Mass Deals Offered</h1>
-      <ul class="mass-deals-list">
-        <% @mass_deal.each do |deal| %>
-          <% deal_template = Deal.find(deal.deal_id) %>
-          <li id="mass<%= deal.id %>" class="deal deal-<%= deal_template.id %>">
-            <img src="<%= deal_template.deal_image %>">
-            <h3> <%= deal_template.name %> </h3>
-            <p><%= deal_template.short_description %></p>
-            <a class="cancel_mass_deal_link" href="/customer_deals/<%= deal.id %>">Cancel this offer</a>
-          </li>
-        <% end %>
-        <li class="deal new-deal">
-          <span>
-            <a class="create-mass-deal" href="/businesses/<%= current_business.id %>/mass_deal">+</a>
-          </span>
-        </li>
-      </ul>
-    </section>
-
-    <section class="accepted-deals">
-      <h3 class="deals-subtitle">Accepted Deals</h3>
-      <ul class="accepted-deals-list">
-        <% @accepted_deals.each do |deal| %>
-          <% temp = Deal.find(deal.deal_id) %>
-            <li class="deal deal-<%= temp.id %>">
-              <img src="<%= temp.deal_image %>">
+  <section class="accepted-deals">
+    <h1 class="subtitle">Accepted Deals</h1>
+    <ul class="accepted-deals-list">
+      <% @accepted_deals.each do |deal| %>
+        <% temp = Deal.find(deal.deal_id) %>
+          <li class="deal deal-<%= temp.id %>">
+            <div class="image-overlay">
               <h3> <%= temp.name %> </h3>
-              <p><%= temp.short_description %></p>
-            </li>
-        <% end %>
-      </ul>
-    </section>
-  </div> <!-- close business body -->
-</div> <!-- close business container -->
-<!-- END CONTAINER -->
+            </div>
+            <img class="tile-image" src="<%= temp.deal_image %>">
+          </li>
+      <% end %>
+    </ul>
+  </section>
+
+  <div class="mass-deals bar">
+    <h1 class="subtitle">Mass Deals You're Offering</h1>
+    <ul class="todays-deals span_8_of_12">
+      <% @mass_deal.each do |deal| %>
+        <% deal_template = Deal.find(deal.deal_id) %>
+        <li id="mass<%= deal.id %>" class="deal deal-<%= deal_template.id %>">
+          <div class="image-overlay">
+            <h3>
+              <%= deal_template.name %>
+            </h3>
+            <a class="cancel_mass_deal_link" href="/customer_deals/<%= deal.id %>">Cancel this offer</a>
+          </div>
+          <div class="deal-tile span_3_of_12">
+            <img class="tile-image" src="<%= deal_template.deal_image %>">
+          </div>
+        </li>
+      <% end %>
+      <li class="deal new-deal">
+        <span>
+          <a class="create-mass-deal" href="/businesses/<%= current_business.id %>/mass_deal">+</a>
+        </span>
+      </li>
+    </ul>
+  </div>
+
+</div>
+<!-- END BUSINESS CONTAINER -->
 
 <%= render template: "partials/_business_footer.html.erb" %>
 
