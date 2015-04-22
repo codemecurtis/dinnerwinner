@@ -1,3 +1,8 @@
+@import 'app';
+/*****************TOP*********************/
+.business-container{
+  font-family: $open_sans;
+}
 .business-description{
   background: white;
 }
@@ -16,7 +21,10 @@
   transform: translate(-50%, -50%)
 }
 
-
+/*****************BODY*********************/
+.business-body{
+  text-align: center;
+}
 
 
 .offer-images{

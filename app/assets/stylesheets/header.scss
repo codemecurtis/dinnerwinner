@@ -2,21 +2,32 @@
 /*************** HEADER ********************/
 
 .head{
-  margin-bottom: 2.5em;
+  background: $grey;
+  background: $grey;
+  margin-bottom: 6.5em;
   border-bottom: 1px solid #C7C7C7;
+  min-height: 9em;
+  color: $blue_green;
 }
+
 .head, .head a{
-  color: $dark_blue;
+  color: $blue_green;
 }
 .head h1{
   font-family: $oswald;
-  padding: 15px 30px;
+  font-size: 3em;
+  position: absolute;
+  top: 4%;
+  left: 3%;
 }
 .head .logo, .head .head-links, li{
   display: inline-block;
 }
 .head-links{
-  padding: 45px;
+  padding: 45px 45px 0 0;
+  position: absolute;
+  top: 6%;
+  right: 0;
 }
 .head-links li{
   margin-right: 15px;
@@ -27,10 +38,10 @@
 .logout-button{
   background: none;
 }
-.rotate:hover, .rotate:hover{
+r{
   transition: 0.4s;
   transform: rotateZ(360deg);
-  color: $blue_green;
+  color: white;
 }
 
 /*************** CUSTOMER HEADER ********************/
