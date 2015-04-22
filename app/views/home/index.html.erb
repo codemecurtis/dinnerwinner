@@ -42,7 +42,10 @@
   <%= render template: "/partials/_footer.html.erb" %>
 </div>
 
-<%= render template: '/devise/registrations/new.html.erb' %>
+<div class="signup-modal">
+  <%= render template: '/devise/registrations/new.html.erb' %>
+</div>
+
 <div class="login-modal">
   <%= render partial: 'devise/sessions/login_form' %>
 </div>
