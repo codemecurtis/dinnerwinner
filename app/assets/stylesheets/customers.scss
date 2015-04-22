@@ -13,9 +13,14 @@
   font-size: 2em;
 }
 
-        /********REQUEST BAR***********/
+li {
+  text-align: left;
+  /*margin-right: 70px;*/
+}
+
+/********REQUEST BAR***********/
 .request-bar{
-  padding: 2em;
+  padding: 1em;
   background: white;
 }
 .request-bar select{
@@ -53,7 +58,6 @@ h1.subtitle {
   display: none;
   background-color: $light_green;
   color: white;
-  /*min-height: 50px;*/
   width: 100%;
   text-align: center;
   line-height: 70px;
