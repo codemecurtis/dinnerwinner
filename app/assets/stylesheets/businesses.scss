@@ -3,10 +3,22 @@
 /*.business-container{
   font-family: $open_sans;
 }*/
+.business-description, .requests, .business-stats{
+  display: inline-block;
+  vertical-align: top;
+}
+.requests{
+  margin-top: 2.2em !important;
+}
+.business-stats{
+  margin-top: 1.1em !important;
+}
+
 
 .business-container {
   text-align: center;
   margin-left: 5%;
+  min-height: 200px;
   padding-top: 1%;
   vertical-align: center;
 }
@@ -22,17 +34,14 @@
   display: block;
 }
 .business-logo {
-  width: 140px;
+  width: 120px;
 }
 
 .small-request-bar {
   margin: auto;
 }
 
-.requests {
-  display: inline-block;
-  margin-left: 1%;
-}
+
 
 .business-stats {
   display: inline-block;
@@ -82,7 +91,20 @@
 .make_an_offer_modal{
   display: none;
 }
-
+.create_mass_deal_form{
+  color: #000000;
+  font-size: 1.5em;
+}
+.mass-deal-close{
+  position: relative;
+  top: 1em;
+}
+.create_mass_deal_form input{
+  margin: 20px 10px;
+}
+.create_mass_deal_form .deal-templates{
+  margin-bottom: 1em;
+}
 .deal.new-deal {
   width:330px;
   height: 300px;

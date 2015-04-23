@@ -1,18 +1,16 @@
 <%= render template: "/partials/_header_business.html.erb" %>
 
-<div class="business-container span_11_of_12">
-  <div class="business-description span_1_of_12">
+<div class="business-container row span_12">
+  <div class="business-description span_1 col">
     <div class="business-info">
       <%= @business.name %>
     </div>
-    <div class="business-logo">
-      <img class="business-logo" src="<%= @business.logo %>">
-    </div>
+    <img class="business-logo" src="<%= @business.logo %>">
   </div>
-  <div class="requests span_7_of_12">
+  <div class="requests span_7 col">
     <ul id="requests-list"></ul>
   </div>
-  <div class="business-stats span_3_of_12">
+  <div class="business-stats span_3 col">
     <div class="business-offers-counter">
       <% if @accepted_deals.count == 1%>
         <%= @accepted_deals.count %> Deal Accepted
@@ -35,14 +33,18 @@
   <section class="accepted-deals-wrapper">
     <h1 class="subtitle">Accepted Deals</h1>
     <ul class="accepted-deals-list">
-      <% @accepted_deals.each do |deal| %>
-        <% temp = Deal.find(deal.deal_id) %>
-          <li class="deal deal-<%= temp.id %>">
-            <div class="image-overlay">
-              <h3> <%= temp.name %> </h3>
-            </div>
-            <img class="tile-image" src="<%= temp.deal_image %>">
-          </li>
+      <% if @accepted_deals.length > 0 %>
+        <% @accepted_deals.each do |deal| %>
+          <% temp = Deal.find(deal.deal_id) %>
+            <li class="deal deal-<%= temp.id %>">
+              <div class="image-overlay">
+                <h3> <%= temp.name %> </h3>
+              </div>
+              <img class="tile-image" src="<%= temp.deal_image %>">
+            </li>
+        <% end %>
+        <% else %>
+          <h3>No customers have accepted your offer!</h3>
       <% end %>
     </ul>
   </section>
@@ -87,36 +89,39 @@
   </div>
 </div>
 
-<div class="create-modal" id="create-form-container">
-
-  <form action="/businesses/<%= current_business.id %>/create_mass_deal" id="create-form" class="create_mass_deal_form">
+<div class="create-modal span_12_of_12" id="create-form-container">
+  <h2 class="subtitle">Offer A New Mass Deal</h2>
+  <form action="/businesses/<%= current_business.id %>/create_mass_deal" id="create-form" class="create_mass_deal_form span_9_of_12">
     <% @my_deals_templates.each do |template| %>
-      <input type="radio" name="deal_template" value="<%= template.id %>"><%= template.name %><br>
+      <input type="radio" class="deal-templates" name="deal_template" value="<%= template.id %>"><%= template.name %><br>
+      <hr>
     <% end %>
       <button type="submit">create</button>
   </form>
-  <a href="#" class="simplemodal-close">cancel</a>
+      <a href="#" class="mass-deal-close simplemodal-close">cancel</a>
 </div>
 
-<div id="wrapper-for" class="make_an_offer_modal">
+<div id="wrapper-for" class="make_an_offer_modal span_9_of_12">
+  <h2 class="subtitle">Pick An Offer</h2>
   <form id="make-offer">
     <% @my_deals_templates.each do |deal| %>
-      <h3><%= deal.name %></h3>
-      <p><%= deal.short_description %></p>
-      <input type="radio" name="deal_template" value="<%= deal.id %>">
+      <h3 class="deal-title"><span><input type="radio" name="deal_template" value="<%= deal.id %>"></span><%= deal.name %></h3>
+      <p class="deal-description"><%= deal.short_description %></p>
+      <hr>
+      <!-- <input type="radio" name="deal_template" value="<%= deal.id %>"> -->
     <% end %>
-    <input type="submit" value="Make offer">
+    <input type="submit" class="offer-button" value="Make offer">
   </form>
 </div>
 
 <script id="requests-template" type="text/x-handlebrs-template">
   {{#each requests}}
     <li id="list{{id}}" class="deal deal-{{id}} deal-request span_9_of_12">
-      <span class="span_2_of_12"><i class="fa fa-bell"></i></span>
-      <span class="span_2_of_12">Customer name:<b> {{name}}</b></span>
-      <span class="span_2_of_12">Party of:<b> {{size}}</b></span>
-      <span class="span_2_of_12">Reservation time:<b> {{time}}</b></span>
-      <a class = "make_an_offer_link span_3_of_12" href="{{id}}">Make an offer</a>
+      <span class="span_1 col"><i class="fa fa-bell"></i></span>
+      <span class="span_2 col"><b>{{name}}</b></span>
+      <span class="span_2 col">Party of:<b> {{size}}</b></span>
+      <span class="span_4 col">Reservation time:<b> {{time}}</b></span>
+      <a class = "make_an_offer_link span_3" href="{{id}}">Make an offer</a>
     </li>
   {{/each}}
 </script>
