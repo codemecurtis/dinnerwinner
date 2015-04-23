@@ -188,11 +188,31 @@ hr {
   font-size: 0.8em;
   color: $blue-green;
 }
-.create-modal .subtitle, .edit-modal .subtitle{
+.create_mass_deal_form, .make_an_offer_modal{
+  margin: 0 auto;
+}
+.create-modal .subtitle, .edit-modal .subtitle, .make_an_offer_modal .subtitle{
   font-family: $oswald;
   font-size: 3em;
   margin-bottom: 1em;
 }
+.create_mass_deal_form button{
+  margin-top: 20px;
+  padding: 5px 10px;
+}
+.offer-button{
+  margin-top: 20px;
+}
+#make-offer{
+  font-size: 1.2em;
+}
 .edit-modal .edit-form{
   margin: 0;
+}
+.make_an_offer_modal .deal-title span input{
+  margin-right: 10px;
+  margin-top: -2px;
+}
+.make_an_offer_modal .deal-description{
+  margin: 10px 0 20px 0;
 }
