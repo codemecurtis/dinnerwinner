@@ -18,7 +18,26 @@ $(document).on('page:change', function(){
     });
   });
 
+  $('body').on('click', '.accept_pending_deal_dropdown_link', function(e){
+    e.preventDefault();
+// debugger
+    $.ajax({
+      url: $(this).attr('href'),
+      type: 'PATCH'
+      // dataType: "JSON"
+      // data: {current_pending_count: parseInt($('#pending_deal_count').text())}
+    }).done(function(data){
+      console.log(data);
+      // debugger
+      $('#drop_list_item'+data.cd.id).remove()
+      $('#pending_deal_count').text(data.pending_count)
+      $.modal.close();
+    })
+  })
+
+
   $('.pending-deals li').on('click', function(e) {
+    e.preventDefault()
       var id = $(this).attr('class')
       var source = $('#pending-deals').html();
       var template = Handlebars.compile(source)
@@ -48,8 +67,9 @@ $(document).on('page:change', function(){
       });
   })
 //same ajax call for the pic tiles
-    $('.pending-deals li').on('click', function(e) {
-      var id = $(this).attr('class')
+    $('body').on('click','.pic-link', function(e) {
+      e.preventDefault()
+      var id = $(this).attr('href') //this is the cutomer_deal
       var source = $('#pending-deals').html();
       var template = Handlebars.compile(source)
       var context = {}
@@ -77,6 +97,8 @@ $(document).on('page:change', function(){
         console.log("complete");
       });
   })
+
+    //ajax call to accept an offer
 
 
 });

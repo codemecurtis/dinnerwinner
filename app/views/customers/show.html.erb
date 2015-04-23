@@ -45,10 +45,10 @@
           <h3 id="h3<%= mass.deal.id %>">
             <%= mass.deal.name %>
           </h3>
-          <a class="accept-mass-deal-link" href="">Accept this offer</a>
+          <a class="accept-mass-deal-link" href="<%= mass.id %>">Accept this offer</a>
         </div>
         <div class="deal-tile span_3_of_12" id="tile-<%= mass.deal.id %>">
-          <a href=""><img class="tile-image" id="img<%= mass.deal.id %>" src="<%= mass.deal.deal_image %>"></a>
+          <a  class="pic-link" href="<%= mass.id %>" href="<%= mass.id %>"><img class="tile-image" id="img<%= mass.deal.id %>" src="<%= mass.deal.deal_image %>"></a>
         </div>
       </li>
       <% end %>
@@ -85,7 +85,7 @@
     <p>{{business.short_description}}</p>
     <p>{{deal.name}}</p>
     <img src="{{deal.deal_image}}"/>
-    <a href="/customer_deals/{{customer_deal.id}}/edit">Accept Deal!</a>
+    <a class="accept_pending_deal_dropdown_link" href="customer_deals/accept/{{customer_deal.id}}">Accept Deal!</a>
   </script>
 
   <div class="customer-deal-modal"></div>
