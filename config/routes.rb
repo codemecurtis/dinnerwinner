@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   devise_for :businesses, :controllers => {registrations: 'registrations'}
   devise_for :customers, :controllers => {registrations: 'registrations'}
   get '/auth/callback' => 'google#google_login'
-
   resources :customers
   get 'businesses/:business_id/request_list' => 'businesses#request_list'
   resources :businesses do
@@ -15,7 +14,8 @@ Rails.application.routes.draw do
 
   resources :customer_deals
 
-  post 'notifications/notify' => 'notifications#notify'
+  post 'customer_deals/notify' => 'customer_deals#notify'
+  patch 'customers/customer_deals/accept/:id' => 'customer_deals#accept_deal'
   # post 'customers/notify' => 'customers#notify'
   # post 'sendtext/message' => "sendtext#send_text_message"
 

@@ -1,71 +1,92 @@
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= devise_error_messages! %>
-    <% if resource.class == Customer %>
-      <div class="field">
-        <%= f.label :first_name %><br />
-        <%= f.text_field :first_name, autofocus: true %>
-      </div>
+<%= render partial: "/partials/header_new.html.erb" %>
+<div class="container signup">
+  <div class="edit-form span_6_of_12">
+    <h2 class="subtitle">Sign Up</h2>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+      <% if resource.class == Customer %>
+        <div class="field">
+          <li class="span_6_of_12">
+            <%= f.label :first_name %><br />
+            <%= f.text_field :first_name, autofocus: true, :class => 'span_11_of_12' %>
+          </li>
+
+          <li class="span_6_of_12">
+            <%= f.label :last_name %><br />
+            <%= f.text_field :last_name, autofocus: true, :class => 'span_11_of_12' %>
+          </li>
+        </div>
+
+        <div class="field">
+          <li class="span_6_of_12">
+            <%= f.label :phone_number %><br />
+            <%= f.telephone_field :phone_number, autofocus: true, :class => 'span_11_of_12' %>
+          </li>
+
+          <li class="span_6_of_12">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, :class => 'span_11_of_12' %>
+          </li>
+        </div>
+
+        <div class="field">
+          <li class="span_6_of_12">
+            <%= f.label :password %>
+              <% if @validatable %>
+                <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br />
+            <%= f.password_field :password, autocomplete: "off", :class => 'span_11_of_12' %>
+          </li>
+
+          <li class="span_6_of_12">
+            <%= f.label :password_confirmation %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "off", :class => 'span_11_of_12' %>
+          </li>
+        </div>
+
+      <% else %>
+
+        <div class="field">
+          <li class="span_6_of_12">
+            <%= f.label :business_name %><br />
+            <%= f.text_field :name, autofocus: true, :class => 'span_11_of_12' %>
+          </li>
+
+          <li class="span_6_of_12">
+            <%= f.label :phone_number %><br />
+            <%= f.telephone_field :phone_number, autofocus: true, :class => 'span_11_of_12' %>
+          </li>
+        </div>
 
       <div class="field">
-        <%= f.label :last_name %><br />
-        <%= f.text_field :last_name, autofocus: true %>
-      </div>
+        <li class="span_6_of_12">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, :class => 'span_11_of_12' %>
+        </li>
 
-      <div class="field">
-        <%= f.label :phone_number %><br />
-        <%= f.telephone_field :phone_number, autofocus: true %>
-      </div>
-
-      <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true %>
-      </div>
-
-      <div class="field">
-        <%= f.label :password %>
-        <% if @validatable %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
+        <li class="span_6_of_12">
+          <%= f.label :password %>
+          <% if @validatable %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "off", :class => 'span_11_of_12' %>
+        </li>
       </div>
 
       <div class="field">
         <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", :class => 'span_5_of_12' %>
       </div>
+      <% end %>
 
-    <% else %>
-
-      <div class="field">
-        <%= f.label :business_name %><br />
-        <%= f.text_field :name, autofocus: true %>
+      <div class="actions">
+        <%= f.submit "Sign up", class: "submit span_4_of_12" %>
       </div>
-
-      <div class="field">
-      <%= f.label :phone_number %><br />
-      <%= f.telephone_field :phone_number, autofocus: true %>
-    </div>
-
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %>
-    </div>
-
-    <div class="field">
-      <%= f.label :password %>
-      <% if @validatable %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    </div>
     <% end %>
-
-    <div class="actions">
-      <%= f.submit "Sign up", class: "submit span_3_of_12" %>
-    </div>
-  <% end %>
+  </div>
+</div>
+<% if resource.class == Customer %>
+  <%= render partial: "partials/footer.html.erb" %>
+<% else %>
+  <%= render partial: "partials/business_footer.html.erb" %>
+<% end %>

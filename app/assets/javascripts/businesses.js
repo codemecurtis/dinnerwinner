@@ -61,10 +61,23 @@ $(document).on('page:change', function(){
         $.modal.close();
         $('#requests-list').find($('#list'+data.id)).remove();
         console.log(data)
-      })
+
+    //     $.ajax({
+    //   url: '/customer_deals/notify',
+    //   type: "POST",
+    // }).done(function(){
+    //   console.log('TWILIO')
+    // }).fail(function(){
+    //   console.log('FAILLLLLLLLL')
+    // })
+       })
     });
 
+
+
+
   });
+
 
   $("body").on('submit','.create_mass_deal_form', function(e){
     e.preventDefault();
@@ -73,9 +86,8 @@ $(document).on('page:change', function(){
       data:$('#create-form').serialize(),
       type:'POST'
     }).done(function(data){
-      console.log(data)
-      var html = "<li id=mass"+data.id+" class='deal deal-"+data.id+"'><img src='"+data.deal_image+"'><h3> "+data.name+" </h3><p>"+ data.short_description +"</p><a class='cancel_mass_deal_link' href='/customer_deals/"+ data.id+"'>Cancel this offer</a></li>"
-      $(".mass-deals-list").append(html)
+      var html ="<li id='mass"+data.id+"'  class='deal'><div class='image-overlay'><h3>"+data.name+" </h3><a class='cancel_mass_deal_link' href='/customer_deals/"+ data.id+"'>Cancel this offer</a></div><div class='deal-tile span_3_of_12'><img class='tile-image' src='"+data.deal_image+"'></div>"
+      $(".todays-deals").prepend(html)
       $.modal.close();
     })
   })

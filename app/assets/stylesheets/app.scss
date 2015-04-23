@@ -21,17 +21,20 @@ body{
   background: $white;
   font-family: $open_sans;
 }
-.notice-container{
+.notice-container, .alert-container{
   text-align: center;
 }
-.notice{
+.notice, .alert{
   position: absolute;
   width: 100%;
   z-index: 10;
   background-color: $light_green;
   color: $white;
 }
-.notice span{
+.alert{
+  background-color: $red;
+}
+.notice span, .alert span{
   line-height: 2em;
 }
 
