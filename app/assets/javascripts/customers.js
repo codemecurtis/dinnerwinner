@@ -26,8 +26,7 @@ $(document).on('page:change', function(){
     }).done(function(data){
       // debugger
       console.log(data)
-      var html = "<li class=' accepted-deal span_6_of_12'><div class='accepted-deal-image span_5_of_12'><h3>"+ data.reservation_time + "</h3></div><div class='accepted-deal-info span_6_of_12'><p class='deal-business'></p><p class='deal-address'></p><p class='deal-title' id='h3"+ data.deal.id +"'>"+ data.deal.name +"</p></div></li>"
-      // $('.accepted-deals').text(html)
+      var html = "<li class=' accepted-deal span_6_of_12'><div class='accepted-deal-image span_5_of_12'><h3>"+ data.cd.reservation_time +"</h3></div><div class='accepted-deal-info span_6_of_12'><p class='deal-business'>"+ data.b.name +"</p><p class='deal-address'>"+ data.b.address +"</p><p class='deal-title' id='h3"+ data.d.id +"'>data.d.name </p></div></li>"
       $('.accepted-deals').append(html)
       $('#drop_list_item'+data.cd.id).remove()
       $('#pending_deal_count').text(data.pending_count)
