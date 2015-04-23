@@ -72,6 +72,11 @@ $(document).on('page:change', function(){
         $('.customer-deal-modal').modal({
           overlayClose: true
         });
+        $('.business-rating').raty({
+          path: '/assets/images',
+          readOnly: true,
+          score: response.requested_business.rating
+        });
         console.log("success");
       })
       .fail(function() {
