@@ -33,7 +33,8 @@ li {
   border: none;
   margin-top: 10px;
 }
-.request-bar option{
+.request-bar li{
+  margin-right: 10px;
 }
 .create-customer-deal{
   background: $blue_green;
