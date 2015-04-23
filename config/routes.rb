@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   post 'customer_deals/notify' => 'customer_deals#notify'
   patch 'customers/customer_deals/accept/:id' => 'customer_deals#accept_deal'
+  patch 'customers/customer_deals/accept_mass/:id' => 'customer_deals#accept_mass_deal'
   # post 'customers/notify' => 'customers#notify'
   # post 'sendtext/message' => "sendtext#send_text_message"
 

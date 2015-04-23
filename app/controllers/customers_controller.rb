@@ -8,6 +8,7 @@ class CustomersController < ApplicationController
   def show
     @mass_deals = CustomerDeal.where(mass_deal: true)
     authenticate_current_customer
+    # @all_customer_deals = CustomerDeal.where(customer_id: current_customer.id)
     @all_customer_deals = CustomerDeal.where(customer_id: current_customer.id)
     @pending_deals = []
     @accepted_deals = []
@@ -18,6 +19,14 @@ class CustomersController < ApplicationController
       elsif deal.deal_id != nil
         @accepted_deals << deal
       end
+
+      # CustomerDeal.all.each do |deal|
+      #   if deal.mass_users.include?(current_customer.id)
+      #     @accepted_deals << deal
+      #   end
+      # end
+
+      # @mass_deals_accepted = CustomerDeal.all
     end
 
     @neighborhoods = [
