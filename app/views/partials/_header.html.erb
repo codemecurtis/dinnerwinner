@@ -3,8 +3,8 @@
     <a class="rooster" href="/customers/<%= current_customer.id %>"><img class="header-logo" src="<%=image_path('white.png')%>" alt="Dinner Winner"/></a>
   </div>
   <ul class="right head-links">
-    <div class="avatar-container">
       <% if current_customer.google  %>
+    <div class="avatar-container">
         <img class="small-avatar" src="<%= current_customer.avatar%>">
     </div>
       <% else %>
