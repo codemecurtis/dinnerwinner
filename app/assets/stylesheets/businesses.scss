@@ -82,7 +82,20 @@
 .make_an_offer_modal{
   display: none;
 }
-
+.create_mass_deal_form{
+  color: #000000;
+  font-size: 1.5em;
+}
+.mass-deal-close{
+  position: relative;
+  top: 1em;
+}
+.create_mass_deal_form input{
+  margin: 20px 10px;
+}
+.create_mass_deal_form .deal-templates{
+  margin-bottom: 1em;
+}
 .deal.new-deal {
   width:330px;
   height: 300px;

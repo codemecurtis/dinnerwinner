@@ -91,15 +91,16 @@
   </div>
 </div>
 
-<div class="create-modal" id="create-form-container">
-
+<div class="create-modal span_12_of_12" id="create-form-container">
+  <h2 class="subtitle">Offer A New Mass Deal</h2>
   <form action="/businesses/<%= current_business.id %>/create_mass_deal" id="create-form" class="create_mass_deal_form">
+      <p>Pick a Template</p>
     <% @my_deals_templates.each do |template| %>
-      <input type="radio" name="deal_template" value="<%= template.id %>"><%= template.name %><br>
+      <input type="radio" class="deal-templates" name="deal_template" value="<%= template.id %>"><%= template.name %><br>
     <% end %>
-      <button type="submit">create</button>
+      <button type="submit"><a class="submit span_6_of_12" href="">create</a></button>
   </form>
-  <a href="#" class="simplemodal-close">cancel</a>
+      <a href="#" class="mass-deal-close simplemodal-close">cancel</a>
 </div>
 
 <div id="wrapper-for" class="make_an_offer_modal">
