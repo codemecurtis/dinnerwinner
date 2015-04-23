@@ -53,6 +53,8 @@
 
 .todays-deals {
   margin: auto;
+  margin-bottom: 6em;
+  margin-top: 5em;
 }
 
 .todays-deals li{
@@ -81,6 +83,66 @@ hr {
 
 .deal-line {
   padding: 10px;
+}
+
+/**********************************************************************/
+.accepted-deals-wrapper {
+  background-color: $blue_green;
+  font-family: $oswald;
+  color: white;
+  padding-bottom: 50px;
+  width: 100%;
+}
+.accepted-deals-wrapper h1{
+  margin-top: 0;
+  padding: 30px;
+}
+.accepted-deals{
+  margin: auto;
+  color: $grey;
+}
+.accepted-deal{
+  display: inline-block;
+  background-color: white;
+  padding: 20px 10px;
+  margin: 10px;
+}
+.accepted-deal-image, .accepted-deal-info{
+  display: inline-block;
+}
+.accepted-deal-info{
+  vertical-align: top;
+}
+.accepted-deal-image {
+  text-align: center;
+  position: relative;
+}
+.accepted-deal-image h3{
+  position: absolute;
+  top: 50%;
+  font-size: 3.5em;
+  color: lightgrey;
+}
+.deal-business {
+  font-size: 1.3em;
+  font-family: $oswald;
+}
+.deal-address{
+  font-size: 1em;
+  font-family: $open_sans_condensed;
+}
+.deal-title {
+  font-size: 1.1em;
+  margin-top: 17px;
+}
+.deal-description {
+  font-family: $open_sans_condensed;
+  vertical-align: top;
+}
+
+/**************MEDIA QUERIES********************/
+@media (max-width: 480px){
+
 }
 
 /**************DEALS ON BUSINESS SIDE********************/

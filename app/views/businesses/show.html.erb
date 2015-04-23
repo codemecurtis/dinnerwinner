@@ -32,7 +32,7 @@
 
 <div class="business-body">
 
-  <section class="accepted-deals">
+  <section class="accepted-deals-wrapper">
     <h1 class="subtitle">Accepted Deals</h1>
     <ul class="accepted-deals-list">
       <% @accepted_deals.each do |deal| %>
@@ -49,7 +49,7 @@
 
   <div class="mass-deals bar">
     <h1 class="subtitle">Mass Deals You're Offering</h1>
-    <ul class="todays-deals span_8_of_12">
+    <ul class="todays-deals span_9_of_12">
       <% @mass_deal.each do |deal| %>
         <% deal_template = Deal.find(deal.deal_id) %>
         <li id="mass<%= deal.id %>" class="deal deal-<%= deal_template.id %>">
