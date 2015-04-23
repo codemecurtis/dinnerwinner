@@ -30,50 +30,82 @@
   <% end %>
   </ul>
 
-  <!-- MODALS -->
-  <% @deals.each do |deal| %>
-    <div class="edit-modal" id="edit-<%= deal.id %>">
-      <form id="edit-form" action="<%= deal.id %>">
-        <input class="edit-form" type="text" name="title" value="<%= deal.name %>"><br>
-        <input class="edit-form" type="text" name="image" value="<%= deal.deal_image %>"><br>
-        <textarea class="textarea" name="edit_content"><%= deal.short_description %></textarea><br>
-        <input type="submit">
-      </form>
-      <a href="edit-<%= deal.id %>" class="cancel-button">cancel</a>
-    </div>
-  <% end %>  
 </div>
 
+<!-- MODALS -->
+<div class="create-modal" id="create-form-container">
+  <h2 class="subtitle">Create A New Deal</h2>
+  <form class="create-form" action="/businesses/<%= current_business.id %>/deals">
+    <div class="field">
+      <label for="title">Deal Title</label><br>
+      <input class="span_8_of_12" type="text" name="title"><br>
+    </div>
+    <div class="field">
+      <label for="image">Deal Image URL</label><br>
+      <input class="span_8_of_12" type="text" name="image" value="http://www.biz-logo.com/examples/063.gif"><br>
+    </div>
+    <div class="field">
+      <label for="content">Deal Content</label><br>
+      <textarea class="span_8_of_12" class="textarea" name="content"></textarea><br>
+    </div>
+    <a href="#" class="cancel-button submit">cancel</a>
+    <input type="submit" value="enter">
+  </form>
+</div>
 
-  <div class="create-modal" id="create-form-container">
-    <form class="create-form" action="/businesses/<%= current_business.id %>/deals">
-      <input type="text" name="title"><br>
-      <input type="text" name="image" value="http://www.biz-logo.com/examples/063.gif"><br>
-      <textarea class="textarea" name="content"></textarea><br>
-      <input type="submit" value="enter">
+<% @deals.each do |deal| %>
+  <div class="edit-modal" id="edit-<%= deal.id %>">
+    <h2 class="subtitle">Edit Your Deal</h2>
+    <form id="edit-form" action="<%= deal.id %>">
+      <div class="field">
+        <input class="span_8_of_12" type="text" name="title" value="<%= deal.name %>"><br>
+      </div>
+      <div class="field">
+        <input class="span_8_of_12" type="text" name="image" value="<%= deal.deal_image %>"><br>
+      </div>
+      <div class="field">
+        <textarea class="textarea span_8_of_12" name="edit_content"><%= deal.short_description %></textarea><br>
+      </div>
+      <a href="edit-<%= deal.id %>" class="cancel-button">cancel</a>
+      <input type="submit">
     </form>
-    <a href="#" class="cancel-button">cancel</a>
   </div>
+<% end %>  
+
+
 
 
 
 
 <script id="deals-template" type="text/x-handlebars-template">
+<h1 class="subtitle">Your Templates</h1>
+  <ul class="deal-templates">
+    <li class="deal new-deal">
+      <span>
+        <a class="create-button" href="">
+          +
+        </a>
+      </span>
+    </li>
   {{#each deals}}
 
-    <div class="deal-tile" id="tile-{{id}}">
-      <a href="{{id}}" class="delete-button">
-        <i class="fa fa-trash"></i>
-      </a>
-      <a href="{{id}}" class="edit-button">
-        <i class="fa fa-pencil-square-o" ></i>
-      </a>
-     <br>
-      <img id="img-{{id}}" src="{{deal_image}}">
-      <h3 id="h3-{{id}}">{{name}}</h3>
-      <p>{{created_at}}</p>
-      <p id="{{id}}">{{short_description}}</p>
-    </div>
+    <li class="deal" id="tile-{{id}}">
+      <div class="edit-buttons">
+        <a href="{{id}}" class="delete-button">
+          <i class="fa fa-trash"></i>
+        </a>
+        <a href="{{id}}" class="edit-button">
+          <i class="fa fa-pencil-square-o" ></i>
+        </a>
+      </div>
+      <div class="image-overlay">
+        <h3 id="h3-{{id}}" class="deal-title">{{name}}</h3>
+        <p class="deal-reservation-time">{{created_at}}</p>
+      </div>
+      <div class="deal-tile span_3_of_12">
+        <img id="img-{{id}}" class="tile-image" src="{{deal_image}}">
+      </div>
+    </li>
 
     <div class="edit-modal" id="edit-{{id}}">
       <form id="edit-form" action="{{id}}">

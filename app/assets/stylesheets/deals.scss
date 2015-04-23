@@ -130,3 +130,11 @@ hr {
   font-size: 0.8em;
   color: $blue-green;
 }
+.create-modal .subtitle, .edit-modal .subtitle{
+  font-family: $oswald;
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+.edit-modal .edit-form{
+  margin: 0;
+}
