@@ -3,16 +3,16 @@
     <a class="rooster" href="/customers/<%= current_customer.id %>"><img class="header-logo" src="<%=image_path('white.png')%>" alt="Dinner Winner"/></a>
   </div>
   <ul class="right head-links">
-    <div class="avatar-container">
-      <% if current_customer.google  %>
+    <% if current_customer.google  %>
+      <li class="avatar-container">
         <img class="small-avatar" src="<%= current_customer.avatar%>">
-    </div>
-      <% else %>
-      <% end %>
+      </li>
+    <% else %>
+    <% end %>
     <li>
       <h3>Welcome <%= current_customer.first_name %>!</h3>
     </li>
-    
+
     <li>
       <a class="check-deals-link" href="#">Pending Deals</a>
       <% if @pending_deals %>
