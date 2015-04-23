@@ -35,14 +35,18 @@
   <section class="accepted-deals-wrapper">
     <h1 class="subtitle">Accepted Deals</h1>
     <ul class="accepted-deals-list">
-      <% @accepted_deals.each do |deal| %>
-        <% temp = Deal.find(deal.deal_id) %>
-          <li class="deal deal-<%= temp.id %>">
-            <div class="image-overlay">
-              <h3> <%= temp.name %> </h3>
-            </div>
-            <img class="tile-image" src="<%= temp.deal_image %>">
-          </li>
+      <% if @accepted_deals.length > 0 %>
+        <% @accepted_deals.each do |deal| %>
+          <% temp = Deal.find(deal.deal_id) %>
+            <li class="deal deal-<%= temp.id %>">
+              <div class="image-overlay">
+                <h3> <%= temp.name %> </h3>
+              </div>
+              <img class="tile-image" src="<%= temp.deal_image %>">
+            </li>
+        <% end %>
+        <% else %>
+          <h3>No customers have accepted your offer!</h3>
       <% end %>
     </ul>
   </section>
