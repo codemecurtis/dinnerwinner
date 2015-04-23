@@ -105,7 +105,7 @@ hr {
 .accepted-deal{
   display: inline-block;
   background-color: white;
-  padding: 20px 10px;
+  padding: 10px 15px;
   margin: 10px;
 }
 .accepted-deal-image, .accepted-deal-info{
@@ -113,15 +113,15 @@ hr {
 }
 .accepted-deal-info{
   vertical-align: top;
+  padding-left: 10px;
 }
 .accepted-deal-image {
   text-align: center;
   position: relative;
 }
 .accepted-deal-image h3{
-  position: absolute;
-  top: 50%;
-  font-size: 3.5em;
+  margin-top: 20px;
+  font-size: 3em;
   color: lightgrey;
 }
 .deal-business {
@@ -133,8 +133,8 @@ hr {
   font-family: $open_sans_condensed;
 }
 .deal-title {
-  font-size: 1.1em;
-  margin-top: 17px;
+  font-size: 1em;
+  padding-top: 15px;
 }
 .deal-description {
   font-family: $open_sans_condensed;
