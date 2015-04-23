@@ -1,18 +1,16 @@
 <%= render template: "/partials/_header_business.html.erb" %>
 
-<div class="business-container span_11_of_12">
-  <div class="business-description span_1_of_12">
+<div class="business-container row span_12">
+  <div class="business-description span_1 col">
     <div class="business-info">
       <%= @business.name %>
     </div>
-    <div class="business-logo">
-      <img class="business-logo" src="<%= @business.logo %>">
-    </div>
+    <img class="business-logo" src="<%= @business.logo %>">
   </div>
-  <div class="requests span_7_of_12">
+  <div class="requests span_7 col">
     <ul id="requests-list"></ul>
   </div>
-  <div class="business-stats span_3_of_12">
+  <div class="business-stats span_3 col">
     <div class="business-offers-counter">
       <% if @accepted_deals.count == 1%>
         <%= @accepted_deals.count %> Deal Accepted
@@ -112,11 +110,11 @@
 <script id="requests-template" type="text/x-handlebrs-template">
   {{#each requests}}
     <li id="list{{id}}" class="deal deal-{{id}} deal-request span_9_of_12">
-      <span class="span_2_of_12"><i class="fa fa-bell"></i></span>
-      <span class="span_2_of_12">Customer name:<b> {{name}}</b></span>
-      <span class="span_2_of_12">Party of:<b> {{size}}</b></span>
-      <span class="span_2_of_12">Reservation time:<b> {{time}}</b></span>
-      <a class = "make_an_offer_link span_3_of_12" href="{{id}}">Make an offer</a>
+      <span class="span_1 col"><i class="fa fa-bell"></i></span>
+      <span class="span_2 col"><b>{{name}}</b></span>
+      <span class="span_2 col">Party of:<b> {{size}}</b></span>
+      <span class="span_4 col">Reservation time:<b> {{time}}</b></span>
+      <a class = "make_an_offer_link span_3" href="{{id}}">Make an offer</a>
     </li>
   {{/each}}
 </script>
