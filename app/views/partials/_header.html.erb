@@ -16,10 +16,10 @@
     <li>
       <a class="check-deals-link" href="#">Pending Deals</a>
       <% if @pending_deals %>
-        <span>(<%= @pending_deals.count %>)</span>
+        (<span id="pending_deal_count"><%= @pending_deals.count %></span>)
         <ul class="pending-deals span_5_of_12">
           <% @pending_deals.each do |customer_deal| %>
-          <li class="<%= customer_deal.id %> deal-line"><%= customer_deal.deal.name %></li><hr>
+          <li id="drop_list_item<%= customer_deal.id %>" class="<%= customer_deal.id %> deal-line"><%= customer_deal.deal.name %></li><hr>
           <% end %>
         </ul>
       <% end %>

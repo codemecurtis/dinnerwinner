@@ -20,13 +20,18 @@ $(document).on('page:change', function(){
 
   $('body').on('click', '.accept_pending_deal_dropdown_link', function(e){
     e.preventDefault();
-
+// debugger
     $.ajax({
-      url:$(this).attr('href'),
-      type: 'GET'
-    }).done(function(){
-      console.log("done done done")
-      //close the modal
+      url: $(this).attr('href'),
+      type: 'PATCH'
+      // dataType: "JSON"
+      // data: {current_pending_count: parseInt($('#pending_deal_count').text())}
+    }).done(function(data){
+      console.log(data);
+      // debugger
+      $('#drop_list_item'+data.cd.id).remove()
+      $('#pending_deal_count').text(data.pending_count)
+      $.modal.close();
     })
   })
 
