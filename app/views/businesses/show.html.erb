@@ -93,24 +93,26 @@
 
 <div class="create-modal span_12_of_12" id="create-form-container">
   <h2 class="subtitle">Offer A New Mass Deal</h2>
-  <form action="/businesses/<%= current_business.id %>/create_mass_deal" id="create-form" class="create_mass_deal_form">
-      <p>Pick a Template</p>
+  <form action="/businesses/<%= current_business.id %>/create_mass_deal" id="create-form" class="create_mass_deal_form span_9_of_12">
     <% @my_deals_templates.each do |template| %>
       <input type="radio" class="deal-templates" name="deal_template" value="<%= template.id %>"><%= template.name %><br>
+      <hr>
     <% end %>
-      <button type="submit"><a class="submit span_6_of_12" href="">create</a></button>
+      <button type="submit">create</button>
   </form>
       <a href="#" class="mass-deal-close simplemodal-close">cancel</a>
 </div>
 
-<div id="wrapper-for" class="make_an_offer_modal">
+<div id="wrapper-for" class="make_an_offer_modal span_9_of_12">
+  <h2 class="subtitle">Pick An Offer</h2>
   <form id="make-offer">
     <% @my_deals_templates.each do |deal| %>
-      <h3><%= deal.name %></h3>
-      <p><%= deal.short_description %></p>
-      <input type="radio" name="deal_template" value="<%= deal.id %>">
+      <h3 class="deal-title"><span><input type="radio" name="deal_template" value="<%= deal.id %>"></span><%= deal.name %></h3>
+      <p class="deal-description"><%= deal.short_description %></p>
+      <hr>
+      <!-- <input type="radio" name="deal_template" value="<%= deal.id %>"> -->
     <% end %>
-    <input type="submit" value="Make offer">
+    <input type="submit" class="offer-button" value="Make offer">
   </form>
 </div>
 
