@@ -36,9 +36,21 @@ class CustomerDealsController < ApplicationController
       customer_deal = CustomerDeal.find(params[:id])
       customer_deal.update_attributes(deal_id: params[:deal_template])
     end
+    if Customer.find(customer_deal.customer_id).phone_number != nil
       notify
+    end
     render :json => customer_deal
   end
+
+  # def accept_mass_deal
+  #   customer_deal = CustomerDeal.find(params[:id])
+  #   # customer_deal.update_attributes(accepted: true)
+  #   customer_deal.mass_users << current_customer.id
+
+  #   render :json => customer_deal
+  # end
+
+
 
   def accept_deal
     customer_deal = CustomerDeal.find(params[:id])
@@ -55,8 +67,10 @@ class CustomerDealsController < ApplicationController
       end
     end
 
-    newcount=CustomerDeal.where(mass_deal: false, customer_id:current_customer.id, accepted:false).count
-    render :json => {:cd => customer_deal, :pending_count => pending_deals.length ,:accept_count => accepted_deals.length}
+    deal_me = Deal.find(customer_deal.deal_id)
+    biz_me = Business.find(deal_me.business_id)
+
+    render :json => {:b => biz_me,:d =>deal_me ,:cd => customer_deal, :pending_count => pending_deals.length ,:accept_count => accepted_deals.length}
   end
 
   def notify

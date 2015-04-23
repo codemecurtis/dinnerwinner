@@ -55,7 +55,7 @@
           </li>
         <% end %>
       <% else %>
-        <h3>You haven't accepted any deals yet!</h3>
+        <h3></h3>
       <% end %>
     </ul>
   </div>
@@ -71,7 +71,7 @@
             <h3 id="h3<%= mass.deal.id %>">
               <%= mass.deal.name %>
             </h3>
-            <a class="accept-mass-deal-link" href="">Accept this offer</a>
+            <a class="accept-mass-deal-link" href="customers/customer_deals/accept_mass/<%= mass.id %>">Accept this offer</a>
           </div>
           <div class="deal-tile span_3_of_12" id="tile-<%= mass.deal.id %>">
             <a href=""><img class="tile-image" id="img<%= mass.deal.id %>" src="<%= mass.deal.deal_image %>"></a>

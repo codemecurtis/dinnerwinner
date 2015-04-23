@@ -20,20 +20,35 @@ $(document).on('page:change', function(){
 
   $('body').on('click', '.accept_pending_deal_dropdown_link', function(e){
     e.preventDefault();
-// debugger
     $.ajax({
       url: $(this).attr('href'),
       type: 'PATCH'
-      // dataType: "JSON"
-      // data: {current_pending_count: parseInt($('#pending_deal_count').text())}
     }).done(function(data){
-      console.log(data);
       // debugger
+      console.log(data)
+      var html = "<li class=' accepted-deal span_6_of_12'><div class='accepted-deal-image span_5_of_12'><h3>"+ data.cd.reservation_time +"</h3></div><div class='accepted-deal-info span_6_of_12'><p class='deal-business'>"+ data.b.name +"</p><p class='deal-address'>"+ data.b.address +"</p><p class='deal-title' id='h3"+ data.d.id +"'>data.d.name </p></div></li>"
+      $('.accepted-deals').append(html)
       $('#drop_list_item'+data.cd.id).remove()
       $('#pending_deal_count').text(data.pending_count)
       $.modal.close();
     })
   })
+
+//to accept a mass deal, but we have no way or telling which mass_deals you have accepted, because mass_deals can belong to many users, as opposed to one customer id
+
+  // $('body').on('click', '.accept-mass-deal-link', function(e){
+  //   e.preventDefault()
+  //   $.ajax({
+  //     url:$(this).attr('href'),
+  //     type: 'PATCH'
+  //   }).done(function(data){
+  //     console.log(data)
+  //     //append to accepted deals link
+  //     var html="lklkkj"
+  //     $('.accepted-deals').append(html)
+  //     // debugger
+  //   })
+  // })
 
 
   $('.pending-deals li').on('click', function(e) {
