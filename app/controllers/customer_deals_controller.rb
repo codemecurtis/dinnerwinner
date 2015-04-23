@@ -36,7 +36,7 @@ class CustomerDealsController < ApplicationController
       customer_deal = CustomerDeal.find(params[:id])
       customer_deal.update_attributes(deal_id: params[:deal_template])
     end
-    # notify
+      notify
     render :json => customer_deal
   end
 
@@ -64,7 +64,7 @@ class CustomerDealsController < ApplicationController
     @customer = Customer.find(@customer_deal.customer_id)
     @deal = Deal.find(@customer_deal.deal_id)
     @business = Business.find(@deal.business_id)
-    @client = Twilio::REST::Client.new ENV['account_sid'], ENV['auth_token']
+    @client = Twilio::REST::Client.new ENV['ACCOUNT_SID'], ENV['AUTH_TOKEN']
     @phone = "+1"+"#{@customer.phone_number.gsub(/\D+/, '')}"
     # @correct_phone
 
