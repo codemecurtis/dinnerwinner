@@ -216,3 +216,25 @@ hr {
 .make_an_offer_modal .deal-description{
   margin: 10px 0 20px 0;
 }
+
+.avatar-container{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: -3.5em;
+  top: -.7em;
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+}
+
+.small-avatar{
+  display: inline;
+  margin: 0 auto;
+  height: 80%;
+  width: auto;
+}
