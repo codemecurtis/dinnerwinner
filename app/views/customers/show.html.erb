@@ -38,45 +38,21 @@
 
   </div> <!-- close request bar -->
 
-  <h1 class="subtitle">Today's Deals</h1>
-  <ul class="todays-deals span_9_of_12">
 
-    <% if @mass_deals.length > 0 %>
-      <% @mass_deals.each do |mass| %>
-      <li>
-        <div class="image-overlay">
-          <h3 id="h3<%= mass.deal.id %>">
-            <%= mass.deal.name %>
-          </h3>
-          <a class="accept-mass-deal-link" href="">Accept this offer</a>
-        </div>
-        <div class="deal-tile span_3_of_12" id="tile-<%= mass.deal.id %>">
-          <a href=""><img class="tile-image" id="img<%= mass.deal.id %>" src="<%= mass.deal.deal_image %>"></a>
-        </div>
-      </li>
-      <% end %>
-    <% else %>
-      <h3>No Mass Deals Currently Offered</h3>
-    <% end %>
-  </ul> <!-- close mass deals -->
 
   <div class="accepted-deals-wrapper">
-  <h1 class="subtitle">Accepted Deals</h1>
-    <ul class="accepted-deals span_8_of_12">
+    <h1 class="subtitle">Accepted Deals</h1>
+    <ul class="accepted-deals span_9_of_12">
       <% if @accepted_deals.length > 0 %>
         <% @accepted_deals.each do |accepted| %>
           <li class=" accepted-deal span_6_of_12">
-            <div class="accepted-deal-image span_4_of_12">
-              <img class="span_8_of_12" id="img<%= accepted.deal.id %>" src="<%= accepted.deal.deal_image %>">
+            <div class="accepted-deal-image span_5_of_12">
+              <h3><%= accepted.reservation_time %></h3>
             </div>
-            <div class="span_6_of_12">
-              <p class="deal-business"><%= @business_name %></p>
+            <div class="accepted-deal-info span_6_of_12">
+              <p class="deal-business"><%= @business.name %></p>
+              <p class="deal-address"><%= @business.address %></p>
               <p class="deal-title" id="h3<%= accepted.deal.id %>"><%= accepted.deal.name %></p>
-              <p class="deal-description"><%= accepted.deal.short_description %></p>
-            </div>
-            <div class="small-print span_2_of_12">
-              <p class="deal-size">Party of <%= accepted.party_size %></p>
-              <p class="deal-time"><%= accepted.reservation_time %></p>
             </div>
           </li>
         <% end %>
@@ -86,6 +62,31 @@
     </ul>
   </div>
   <!-- close accepted deals -->
+  <div class="todays-deals">
+    <h1 class="subtitle">Today's Deals</h1>
+    <ul class="todays-deals span_9_of_12">
+
+      <% if @mass_deals.length > 0 %>
+        <% @mass_deals.each do |mass| %>
+        <li>
+          <div class="image-overlay">
+            <h3 id="h3<%= mass.deal.id %>">
+              <%= mass.deal.name %>
+            </h3>
+            <a class="accept-mass-deal-link" href="">Accept this offer</a>
+          </div>
+          <div class="deal-tile span_3_of_12" id="tile-<%= mass.deal.id %>">
+            <a href=""><img class="tile-image" id="img<%= mass.deal.id %>" src="<%= mass.deal.deal_image %>"></a>
+          </div>
+        </li>
+        <% end %>
+      <% else %>
+        <h3>No Mass Deals Currently Offered</h3>
+      <% end %>
+    </ul> <!-- close mass deals -->
+  </div>
+
+
 
   <script id="pending-deals" type="text/x-handlebars-template">
     <h4 class="business-name">{{business.name}}</h4>
