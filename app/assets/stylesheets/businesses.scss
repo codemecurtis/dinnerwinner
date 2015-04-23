@@ -59,23 +59,24 @@
   font-size: 45px;
 }
 
-.todays-deals .new-deal{
+.new-deal{
   width: 250px;
   height: 250px;
   background-color: lightgrey;
 }
-.todays-deals .new-deal span{
+.new-deal span{
   margin: 60px auto;
   display: block;
   text-align:center;
   font-size: 100px;
+  color: $white;
 }
-.todays-deals .new-deal span a{
+.new-deal span a{
   color: #FFFFFF;
   text-decoration: none;
 }
-.todays-deals .new-deal span a:hover{
-  text-shadow: 2px 6px 3px #000000;
+.new-deal span a:hover{
+  text-shadow: 2px 6px 3px #999;
 }
 
 .make_an_offer_modal{
@@ -87,4 +88,9 @@
   height: 300px;
   text-align: center;
   padding-top: 25px;
+}
+.active{
+  padding-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $white;
 }
