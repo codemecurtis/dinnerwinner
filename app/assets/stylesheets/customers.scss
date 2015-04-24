@@ -73,6 +73,7 @@ h1.subtitle {
 
 .customer-deal-modal{
   color: #000000;
+  text-align: center; 
 }
 .customer-deal-modal .business-name{
   font-size: 2em;
@@ -83,3 +84,16 @@ h1.subtitle {
 .customer-deal-modal .business-address{
   // text-align: justify;
 }
+.customer-deal-modal .business-image{
+  margin: 0 auto;
+}
+.business-image .deal-description{
+  margin: 0.3em 0 2em 0;
+}
+.business-image .deal-image{
+  width: 200px;
+  height: auto;
+}
+.business-image .deal-name{
+  font-size: 1.5em;
+  }

@@ -32,15 +32,18 @@
 
   <section class="accepted-deals-wrapper">
     <h1 class="subtitle">Accepted Deals</h1>
-    <ul class="accepted-deals-list">
+    <ul class="accepted-deals span_9_of_12">
       <% if @accepted_deals.length > 0 %>
         <% @accepted_deals.each do |deal| %>
           <% temp = Deal.find(deal.deal_id) %>
-            <li class="deal deal-<%= temp.id %>">
-              <div class="image-overlay">
-                <h3> <%= temp.name %> </h3>
+            <li class="accepted-deal span_6_of_12 deal-<%= temp.id %>">
+              <div class="accepted-deal-image span_5_of_12">
+                <h3><%= deal.reservation_time %></h3>
               </div>
-              <img class="tile-image" src="<%= temp.deal_image %>">
+              <div class="accepted-deal-info span_6_of_12">
+                <p class="deal-title">Customer name: <%= Customer.find(deal.customer_id).first_name%></p>
+                <p class="deal-title">Party size: <%= deal.party_size %></p>
+              </div>
             </li>
         <% end %>
         <% else %>

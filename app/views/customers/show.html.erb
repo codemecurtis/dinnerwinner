@@ -90,14 +90,14 @@
     <h4 class="business-name">{{business.name}}&nbsp;</h4>
     <p class="business-rating"></p>
     <p class="business-address">{{business.address}}</p>
-    <div class="business-image span_6 col left">
-      <p>{{deal.name}}</p>
-      <img class=" col" src="{{deal.deal_image}}"/>
-      <p>{{deal.short_description}}</p>
+    <div class="business-image span_6">
+    <img class="deal-image" src="{{deal.deal_image}}" alt="" />
+      <p class="deal-name">{{deal.name}}</p>
+      <p class="deal-description">{{deal.short_description}}</p>
     </div>
-    <div class="accept">
-      <a class="accept_pending_deal_dropdown_link" href="customer_deals/accept/{{customer_deal.id}}">Accept Deal!</a>
-    </div>
+      <button>
+        <a class="accept_pending_deal_dropdown_link" href="customer_deals/accept/{{customer_deal.id}}">Accept Deal!</a>
+      </button>
   </script>
 
   <div class="customer-deal-modal"></div>
