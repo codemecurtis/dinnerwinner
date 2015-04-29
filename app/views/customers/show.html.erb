@@ -55,7 +55,7 @@
           </li>
         <% end %>
       <% else %>
-        <h3></h3>
+        <h3 class="no-deals">You Have No Accepted Deals</h3>
       <% end %>
     </ul>
   </div>
@@ -87,13 +87,17 @@
 
 
   <script id="pending-deals" type="text/x-handlebars-template">
-    <h4 class="business-name">{{business.name}}</h4>
-    <p>{{business.rating}}</p>
-    <p>{{business.address}}</p>
-    <p>{{business.short_description}}</p>
-    <p>{{deal.name}}</p>
-    <img src="{{deal.deal_image}}"/>
-    <a class="accept_pending_deal_dropdown_link" href="customer_deals/accept/{{customer_deal.id}}">Accept Deal!</a>
+    <h4 class="business-name">{{business.name}}&nbsp;</h4>
+    <p class="business-rating"></p>
+    <p class="business-address span_6_of_12">{{business.address}}</p>
+    <div class="business-image span_6">
+    <img class="deal-image" src="{{deal.deal_image}}" alt="" />
+      <p class="deal-name span_12_of_12">{{deal.name}}</p>
+      <p class="deal-description">{{deal.short_description}}</p>
+    </div>
+      <button>
+        <a class="accept_pending_deal_dropdown_link" href="customer_deals/accept/{{customer_deal.id}}">Accept Deal!</a>
+      </button>
   </script>
 
   <div class="customer-deal-modal"></div>

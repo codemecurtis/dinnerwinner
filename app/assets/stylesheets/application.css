@@ -12,6 +12,7 @@
  *= require font-awesome.min
  *= require responsive.gs.12col.css
  *= require basic.css
+ *= require jquery.raty.css
  *= require_tree .
  *= require_self
  */

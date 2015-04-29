@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require jquery.simplemodal.js
 //= require handlebars
+//= require jquery.raty.js
 //= require_tree .
