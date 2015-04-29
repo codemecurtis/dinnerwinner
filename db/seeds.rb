@@ -40,7 +40,7 @@ end
 Deal.create(
   name: "Sonoma Wine Pairings & Brunch ",
   short_description:"A special event Sundays that incorporate this seasons favorite wine pairings with our classic brunch.",
-  deal_image: 'http://s3-media2.fl.yelpassets.com/bphoto/RgSY7vrLUfwWRh0-KuUpKQ/l.jpg',
+  deal_image: 'https://s3-media2.fl.yelpassets.com/bphoto/RgSY7vrLUfwWRh0-KuUpKQ/l.jpg',
   business_id: 15
 )
 CustomerDeal.create(deal_id: 1, mass_deal: true)
@@ -48,7 +48,7 @@ CustomerDeal.create(deal_id: 1, mass_deal: true)
 Deal.create(
   name: "Sangria Saturday!",
   short_description:"Ladies, your first sangria is on us!",
-  deal_image: 'http://s3-media2.fl.yelpassets.com/bphoto/_qTuOqLWPp_QhGtCWm-v1g/l.jpg',
+  deal_image: 'https://s3-media2.fl.yelpassets.com/bphoto/_qTuOqLWPp_QhGtCWm-v1g/l.jpg',
   business_id: 8
 )
 CustomerDeal.create(deal_id: 2, mass_deal: true)
@@ -56,7 +56,7 @@ CustomerDeal.create(deal_id: 2, mass_deal: true)
 Deal.create(
   name:"Tacos & Tecates Tuesday",
   short_description:"$1 Tecates with Tacos.",
-  deal_image: 'http://s3-media4.fl.yelpassets.com/bphoto/JZ2ZH2sPSWpY6DlF3DrkRA/l.jpg',
+  deal_image: 'https://s3-media4.fl.yelpassets.com/bphoto/JZ2ZH2sPSWpY6DlF3DrkRA/l.jpg',
   business_id: 8
 )
 CustomerDeal.create(deal_id: 3, mass_deal: true)
@@ -64,7 +64,7 @@ CustomerDeal.create(deal_id: 3, mass_deal: true)
 Deal.create(
   name:"Treat Yo-self!",
   short_description:"Our famous dessert crepe 50% off!",
-  deal_image: 'http://s3-media4.fl.yelpassets.com/bphoto/WCMJTainPxrR-LiVplgKwA/l.jpg',
+  deal_image: 'https://s3-media4.fl.yelpassets.com/bphoto/WCMJTainPxrR-LiVplgKwA/l.jpg',
   business_id: 11
 )
 CustomerDeal.create(deal_id: 4, mass_deal: true)
@@ -72,7 +72,7 @@ CustomerDeal.create(deal_id: 4, mass_deal: true)
 Deal.create(
   name:"Chef's Table Dining Experience",
   short_description:"Experience a private dining experience at the chef's table. For parties of 3 or smaller.",
-  deal_image: 'http://s3-media1.fl.yelpassets.com/bphoto/ywp5Nkr3UlIvfvvhHytfug/l.jpg',
+  deal_image: 'https://s3-media1.fl.yelpassets.com/bphoto/ywp5Nkr3UlIvfvvhHytfug/l.jpg',
   business_id: 20
 )
 CustomerDeal.create(deal_id: 5, mass_deal: true)
@@ -80,7 +80,7 @@ CustomerDeal.create(deal_id: 5, mass_deal: true)
 Deal.create(
   name: "Six Course Tasting Menu",
   short_description:"Experience six world cuisines in a thoughtfully designed tasting menu.",
-  deal_image: 'http://s3-media3.fl.yelpassets.com/bphoto/zRQX2YrSaLA3WLocvl8x8A/l.jpg',
+  deal_image: 'https://s3-media3.fl.yelpassets.com/bphoto/zRQX2YrSaLA3WLocvl8x8A/l.jpg',
   business_id: 20
 )
 CustomerDeal.create(deal_id: 6, mass_deal: true)
@@ -88,7 +88,7 @@ CustomerDeal.create(deal_id: 6, mass_deal: true)
 Deal.create(
   name:"Sustainable Harvest",
   short_description:"Enjoy a seasonal family-style dinner with commentary from local chef and sustainable farmer Alexis Hernandez.",
-  deal_image: 'http://s3-media3.fl.yelpassets.com/bphoto/JsQspaP11En_DPZsz-Q_mw/l.jpg',
+  deal_image: 'https://s3-media3.fl.yelpassets.com/bphoto/JsQspaP11En_DPZsz-Q_mw/l.jpg',
   business_id: 13
 )
 CustomerDeal.create(deal_id: 7, mass_deal: true)
@@ -96,7 +96,7 @@ CustomerDeal.create(deal_id: 7, mass_deal: true)
 Deal.create(
   name:"Fancy Beers with Fancy Burgers",
   short_description:"From 3-9 get a complimentary pour of San Francisco's finest brews with your fancy free-range burger.",
-  deal_image: 'http://s3-media1.fl.yelpassets.com/bphoto/qbHVl-8hq-qgupntooahgw/l.jpg',
+  deal_image: 'https://s3-media1.fl.yelpassets.com/bphoto/qbHVl-8hq-qgupntooahgw/l.jpg',
   business_id: 15
 )
 CustomerDeal.create(deal_id: 8, mass_deal: true)
@@ -104,7 +104,7 @@ CustomerDeal.create(deal_id: 8, mass_deal: true)
 Deal.create(
   name:"Rawbar Two-tier Giveaway",
   short_description:"First twenty guests will be treated to a 2-tier seafood presentation of Tomales Bay, Hog Island, and Point Reyes oysters.",
-  deal_image: 'http://s3-media4.fl.yelpassets.com/bphoto/38wn7cmhSX7KnxVIzOB-yQ/l.jpg',
+  deal_image: 'https://s3-media4.fl.yelpassets.com/bphoto/38wn7cmhSX7KnxVIzOB-yQ/l.jpg',
   business_id:20
 )
 CustomerDeal.create(deal_id: 9, mass_deal: true)
@@ -112,7 +112,7 @@ CustomerDeal.create(deal_id: 9, mass_deal: true)
 Deal.create(
   name:"Sunrise Surprise",
   short_description:"Start your morning with a complimentary scone when you buy a pound of coffee.",
-  deal_image: 'http://s3-media1.fl.yelpassets.com/bphoto/1E90p8sXdfIyAiTtSxTsaQ/l.jpg',
+  deal_image: 'https://s3-media1.fl.yelpassets.com/bphoto/1E90p8sXdfIyAiTtSxTsaQ/l.jpg',
   business_id: 18
 )
 CustomerDeal.create(deal_id: 10, mass_deal: true)
@@ -120,7 +120,7 @@ CustomerDeal.create(deal_id: 10, mass_deal: true)
 Deal.create(
   name: "Bread Making Class with Master Chef",
   short_description:"Learn to knead, roll, and bake artisinal bread.",
-  deal_image: 'http://s3-media1.fl.yelpassets.com/bphoto/ZE7f3O7MWlhztBZxoxwjNg/l.jpg',
+  deal_image: 'https://s3-media1.fl.yelpassets.com/bphoto/ZE7f3O7MWlhztBZxoxwjNg/l.jpg',
   business_id:18
 )
 CustomerDeal.create(deal_id: 11, mass_deal: true)
