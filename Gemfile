@@ -30,7 +30,7 @@ gem 'handlebars_assets'
 gem 'twilio-ruby', '~> 4.0.0'
 
 gem 'heroku-deflater', :group => :production
-
+gem 'rails_12factor'
 
 #google api stuff
 gem 'oauth2'
