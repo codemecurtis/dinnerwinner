@@ -18,7 +18,7 @@ params = {term: "food"}
 
 response = Yelp.client.search('san-francisco', params)
 response.businesses.each do |business|
-	formatted_neighborhood = business.location.neighborhood
+	formatted_neighborhood = business.location.neighborhoods
   formatted_address = business.location.display_address.join(",")
   b = Business.new(
    name: business.name,
