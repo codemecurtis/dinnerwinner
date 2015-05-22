@@ -135,7 +135,7 @@ CustomerDeal.create(deal_id: 11, mass_deal: true)
     "1:00 PM",
     "6:30 PM",
     "7:15 PM",
-    "8:00 PM", 
+    "8:00 PM",
     "9:00 PM"
   ]
   neighborhoods = [
@@ -166,7 +166,7 @@ end
     "1:00 PM",
     "6:30 PM",
     "7:15 PM",
-    "8:00 PM", 
+    "8:00 PM",
     "9:00 PM"
   ]
   CustomerDeal.create(

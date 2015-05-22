@@ -74,7 +74,7 @@ GOOGLE_API_SCOPES = ['profile','email'].join(' ')
 
   def auth_authorize_link
     auth_client.auth_code.authorize_url({
-                                            :redirect_uri => 'http://localhost:3000/auth/callback',
+                                            :redirect_uri => 'http://ancient-tor-7726.herokuapp.com/auth/callback',
                                             :scope => GOOGLE_API_SCOPES,
                                             :access_type => "offline"
                                         })
