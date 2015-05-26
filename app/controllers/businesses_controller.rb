@@ -82,7 +82,7 @@ class BusinessesController < ApplicationController
   private
 
   def update_business_params
-    params[:business].permit(:name, :email, :phone_number, :logo, :address, :short_description)
+    params.require(:business).permit(:name, :email, :phone_number, :logo, :address, :short_description)
   end
 
   def authenticate_current_business
